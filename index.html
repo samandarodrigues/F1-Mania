@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="rest/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <title id="top">F1 Mania</title>
+</head>
+
+<body>
+    <header>
+        <nav class="sidebar close">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <img src="rest/logo2.png" alt="Logo da F1 Mania">
+                    </span>
+    
+                    <div class="text logo-text">
+                        <span class="name">F1 Mania</span>
+                        <span class="profession">Blog de notícias</span>
+                    </div>
+                </div>
+    
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+    
+            <div class="menu-bar">
+                <div class="menu">
+    
+                    <li class="search-box">
+                        <i class='bx bx-search icon'></i>
+                        <input type="text" placeholder="Procurar...">
+                    </li>
+    
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="index.html">
+                                <i class='bx bx-home-alt icon' ></i>
+                                <span class="text nav-text">Página Inicial</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="rest/historia.html">
+                                <i class='bx bx-book-open icon' ></i>
+                                <span class="text nav-text">História da F1</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="rest/resultados.html">
+                                <i class='bx bx-bell icon'></i>
+                                <span class="text nav-text">Resultados</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="rest/perfil.html">
+                                <i class='bx bxs-edit icon'></i>
+                                <span class="text nav-text">Perfis</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="rest/calendario.html">
+                                <i class='bx bx-calendar icon' ></i>
+                                <span class="text nav-text">Calendário</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="rest/contato.html">
+                                <i class='bx bx-user icon'></i>
+                                <span class="text nav-text">Contato</span>
+                            </a>
+                        </li>
+    
+                    </ul>
+                </div>
+    
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="rest/entrar.html">
+                            <i class='bx bx-log-in-circle icon'></i>
+                            <span class="text nav-text">Entrar</span>
+                        </a>
+                    </li>
+    
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text text">Dark mode</span>
+    
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                    
+                </div>
+            </div>
+    
+        </nav>
+    </header>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+    </script>
+
+        <script>
+            var menuImage = document.getElementById("menu-image");
+            var menuTiposf1 = document.getElementById("menu-tipos-f1");
+    
+            // Quando a imagem do menu é clicada, mostrar/ocultar os tipos de livros
+            menuImage.addEventListener("click", function() {
+                if (menuTiposf1.style.display === "none" || menuTiposf1.style.display === "") {
+                    menuTiposf1.style.display = "block"; // Mostrar as opções de tipos de livros
+                } else {
+                    menuTiposf1.style.display = "none"; // Ocultar as opções de tipos de livros
+                }
+            });
+        </script>
+
+    <script>
+        document.addEventListener("click", function (event) {
+            // Crie um elemento de imagem para o carro
+            var car = document.createElement("img");
+            car.src = "https://assets.stickpng.com/images/580b585b2edbce24c47b2c8f.png";
+            car.classList.add("car-animation"); // Adicione a classe de animação
+
+            // Adicione o carro à página
+            document.body.appendChild(car);
+
+            // Remova o carro após a animação terminar
+            car.addEventListener("animationiteration", function () {
+                car.remove();
+            }, { once: true });
+        });
+    </script>
+
+    <div id="logo">
+        <h1 class="f1">FÓRMULA 1</h1>
+    </div>
+
+    <h1 class="fh">Notícias e Atualizações</h1>
+    <ul class="th3">
+        Mantenha-se Atualizado com a Emoção nas Pistas! Ao seguir nossas atualizações, você não apenas terá acesso a informações privilegiadas sobre as táticas e estratégias das equipes, mas também experimentará a emoção visceral das ultrapassagens incríveis, os desafios de circuitos icônicos e as histórias de superação que permeiam cada corrida.</ul><br>
+    
+    <div class="dark">
+    <section>
+        <article class="large-image">
+            <a href="rest/noticia1.html">
+                <div class="image-container">
+                    <img src="https://lncimg.lance.com.br/uploads/2023/06/000-33ak7tl-aspect-ratio-512-320.jpg"
+                        alt="Imagem Formula 1 - 1">
+                </div>
+                <h2 class="f1">Após a confirmação de Sargeant na Williams, confira o grid completo da F1 2024</h2>
+                <p class="f1">Pela primeira vez na história do esporte, um grid inteiro se repete para a próxima temporada</p>
+            </a>
+        </article>
+
+        <article class="large-image">
+            <a href="rest/noticia2.html">
+                <div class="image-container">
+                    <img src="https://cdn-5.motorsport.com/images/amp/YEQnrQ5Y/s1000/alfa-romeo-c43-cooling-detail-.jpg"
+                        alt="Imagem Formula 1 - 2">
+                </div>
+                <h2 class="f1">Alfa Romeo fora da F1? Entenda como parceria com Haas esfriou</h2>
+                <p class="f1">Alfa Romeo descarta seguir na F1 após fim da parceria com Sauber e foca em entrada no WEC</p>
+            </a>
+        </article>
+
+
+
+        <!-- Adicione os artigos restantes com imagens e texto aqui -->
+    </section>
+    <section>
+        <article class="large-image">
+            <a href="rest/noticia3.html">
+                <div class="image-container">
+                    <img src="https://media.contentapi.ea.com/content/dam/ea/f1/f1-23/common/articles/patch-note-v109/pj-f123-bel-w01-rus-unmarked.jpg.adapt.crop191x100.628p.jpg"
+                        alt="Imagem Formula 1 - 3">
+                </div>
+                <h2 class="f1">Glossário da Fórmula 1: todos os termos usados na categoria</h2>
+                <p class="f1">Aprenda o nosso glossário onde buscamos reunir a maioria dos termos usados na Fórmula 1!</p>
+            </a>
+        </article>
+
+        <article class="large-image">
+            <a href="rest/noticia4.html">
+                <div class="image-container">
+                    <img src="https://media.formula1.com/content/dam/fom-website/sutton/2022/AbuDhabi/Sunday/1442981935.jpg.img.1536.high.jpg"
+                        alt="Imagem Formula 1 - 4">
+                </div>
+                <h2 class="f1">Mesmo com 'matemática' de Leclerc, Mercedes garante o vice-campeonato de construtores; confira tabela final</h2>
+                <p class="f1">Por apenas três pontos de diferença a equipe de Toto Wolff garantiu o P2 diante da Ferrari</p>
+            </a>
+        </article>
+
+        <!-- Adicione os artigos restantes com imagens e texto aqui -->
+    </section>
+    <section>
+        <article class="large-image">
+            <a href="rest/noticia5.html">
+                <div class="image-container">
+                    <img src="https://pbs.twimg.com/media/GAAPfnRWkAAMXOE?format=jpg&name=4096x4096"
+                        alt="Imagem Formula 1 - 5">
+                </div>
+                <h2 class="f1">Suposta nova logo e nome da AlphaTauri vazam; confira</h2>
+                <p class="f1">Equipe passará por 'rebranding' em 2024 como parte de uma nova era</p>
+            </a>
+        </article>
+
+        <article class="large-image">
+            <a href="rest/noticia6.html">
+                <div class="image-container">
+                    <img style="overflow: hidden; width: 100%; height: auto;" src="https://istoe.com.br/wp-content/uploads/2023/02/mv-x-lh-x-cl.jpg"
+                        alt="Imagem Formula 1 - 6">
+                </div>
+                <h2 class="f1">Forbes divulga lista dos melhores salários da F1 2023; veja ranking</h2>
+                <p class="f1">Lista leva em conta o salário fixado pelo contrato mais os bônus de performance obtidos</p>
+            </a>
+        </article>
+
+        <!-- Adicione os artigos restantes com imagens e texto aqui -->
+    </section>
+    <section>
+        <article class="large-image">
+            <a href="rest/noticia7.html">
+                <div class="image-container">
+                    <img src="https://cdn-wp.thesportsrush.com/2023/05/ce80011f-f1-.jpg?w=3840&q=60"
+                        alt="Imagem Formula 1 - 7">
+                </div>
+                <h2 class="f1">Prost: "Se quiserem alcançar Verstappen, precisam fazer um trabalho melhor"</h2>
+                <p class="f1">Francês viu o piloto da Red Bull superar seu total de vitórias na categoria ao longo de 2023</p>
+            </a>
+        </article>
+
+        <article class="large-image">
+            <a href="rest/noticia8.html">
+                <div class="image-container">
+                    <img style="overflow: hidden; width: 100%; height: auto;" src="https://medias.itatiaia.com.br/generic/felipe-drugovich-enzo-e-pietro-fittipaldi-d1451fa2-791e-47a2-94b9-e5518ecc4e4a.webp"
+                        alt="Imagem Formula 1 - 8">
+                </div>
+                <h2 class="f1">LEGADOS: 6 pilotos brasileiros para ficar de olho para um futuro na F1</h2>
+                <p class="f1">Brasileiros são destaques nas categorias de base da F1. Veja quem são;</p>
+            </a>
+        </article>
+    </section>
+
+    <section>
+        <article class="large-image">
+            <a href="rest/noticia9.html">
+                <div class="image-container">
+                    <img src="https://e0.365dm.com/23/06/768x432/722cdb70983772b6047c3a025757d17f12e86b3a84809d47f34a5957a6dc6c52_6190409.jpg?20230617173450"
+                        alt="Imagem Formula 1 - 9">
+                </div>
+                <h2 class="f1">Diretor da Red Bull revela única área na qual equipe "falhou" em 2023</h2>
+                <p class="f1">Diretor técnico do time austríaco ainda falou sobre como é o clima na Red Bull em meio ao domínio</p>
+            </a>
+        </article>
+
+        <article class="large-image">
+            <a href="rest/noticia10.html">
+                <div class="image-container">
+                    <img src="https://www.f1mania.net/wp-content/uploads/2023/11/0001254619_HiRes_0U9VLNA04M6MS10A3CFSD0AEGGVR-crop-1700380729-2000x684.jpg">
+                        alt="Imagem Formula 1 - 10">
+                </div>
+                <h2 class="f1">Quando é a próxima corrida? Confira o calendário completo da F1 2024</h2>
+                <p class="f1">F1 Mania traz todas as informações para você se programar a tempo da próxima temporada da F1</p>
+            </a>
+        </article>
+
+    </section>    
+    
+    <section>
+        <article class="large-image">
+            <a href="rest/noticia11.html">
+                <div class="image-container">
+                    <img src="https://cdn-6.motorsport.com/images/amp/0L17Zgm2/s1100/formula-1-abu-dhabi-gp-2023-da-2.webp"
+                        alt="Imagem Formula 1 - 11">
+                </div>
+                <h2 class="f1">
+                    Ricciardo se sente "renascido" e "reenergizado" após retorno à F1</h2>
+                <p class="f1">Australiano fez um balanço da temporada 2023, marcada pelo acidente na Holanda</p>
+            </a>
+        </article>
+
+        <article class="large-image">
+            <a href="rest/noticia12.html">
+                <div class="image-container">
+                    <img src="https://dunapress.com/wp-content/uploads/2023/01/PlanetF1-1.jpg"
+                        alt="Imagem Formula 1 - 12">
+                </div>
+                <h2 class="f1">Wolff dá receita contra desinteresse de fãs por causa de domínio da Red Bull</h2>
+                <p class="f1">Corridas como GP do Catar deste ano e melhor trabalho dos rivais de Max Verstappen e cia. são destacados por chefe da Mercedes</p>
+            </a>
+        </article>
+
+    </section>
+    </section>
+
+    <div class="more-updates">
+        <button class="btn-more-updates">Mais Atualizações</button>
+    </div>
+
+    
+    <table class="index">
+        <caption>F1 2023</caption>
+        <tr>
+            <td>
+                <a href="rest/calendario.html">Calendário F1 2023: dias e horários das corridas da temporada</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="rest/perfil.html">F1 2023: veja lista de equipe e pilotos confirmados na temporada</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="rest/resultados.html">F1 2023: tabela de classificação do campeonato</a>
+            </td>
+        </tr>
+    </table><br>
+
+    <table class="index">
+        <caption>Especiais da temporada 2023</caption>
+        <tr>
+            <td>
+                <a href="rest/noticia3.html">Aprenda os termos da Fórmula 1 com nosso glossário!</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="rest/noticia4.html">Saiba o que rolou na última corrida da temporada de 2023, no GP de Abu Dhabi</a>
+            </td>
+        </tr>
+    </table><br>
+
+        <footer>
+            <p class="th5">&copy; 2023 Página Inicial na F1 Mania </p>
+        </footer>
+        <button onclick="topFunction()" id="backToTopBtn" title="Voltar para o topo"><i class='bx bxs-upvote'></i></button>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var button = document.getElementById('backToTopBtn');
+    
+                window.onscroll = function () {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        button.style.display = 'block';
+                    } else {
+                        button.style.display = 'none';
+                    }
+                };
+    
+                button.onclick = function () {
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
+                };
+            });
+        </script>
+    </body>
+</html>

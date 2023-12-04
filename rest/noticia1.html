@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <title id="top">F1 Mania</title>
+</head>
+
+<body>
+    <header>
+        <nav class="sidebar close">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <img src="logo2.png" alt="Logo da F1 Mania">
+                    </span>
+    
+                    <div class="text logo-text">
+                        <span class="name">F1 Mania</span>
+                        <span class="profession">Blog de notícias</span>
+                    </div>
+                </div>
+    
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+    
+            <div class="menu-bar">
+                <div class="menu">
+    
+                    <li class="search-box">
+                        <i class='bx bx-search icon'></i>
+                        <input type="text" placeholder="Procurar...">
+                    </li>
+    
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="../index.html">
+                                <i class='bx bx-home-alt icon' ></i>
+                                <span class="text nav-text">Página Inicial</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="historia.html">
+                                <i class='bx bx-book-open icon' ></i>
+                                <span class="text nav-text">História da F1</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="resultados.html">
+                                <i class='bx bx-bell icon'></i>
+                                <span class="text nav-text">Resultados</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="perfil.html">
+                                <i class='bx bxs-edit icon'></i>
+                                <span class="text nav-text">Perfis</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="calendario.html">
+                                <i class='bx bx-calendar icon' ></i>
+                                <span class="text nav-text">Calendário</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="contato.html">
+                                <i class='bx bx-user icon'></i>
+                                <span class="text nav-text">Contato</span>
+                            </a>
+                        </li>
+    
+                    </ul>
+                </div>
+    
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="entrar.html">
+                            <i class='bx bx-log-in-circle icon'></i>
+                            <span class="text nav-text">Entrar</span>
+                        </a>
+                    </li>
+    
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text text">Dark mode</span>
+    
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                    
+                </div>
+            </div>
+    
+        </nav>
+    </header>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+    </script>
+
+        <script>
+            var menuImage = document.getElementById("menu-image");
+            var menuTiposf1 = document.getElementById("menu-tipos-f1");
+    
+            // Quando a imagem do menu é clicada, mostrar/ocultar os tipos de livros
+            menuImage.addEventListener("click", function() {
+                if (menuTiposf1.style.display === "none" || menuTiposf1.style.display === "") {
+                    menuTiposf1.style.display = "block"; // Mostrar as opções de tipos de livros
+                } else {
+                    menuTiposf1.style.display = "none"; // Ocultar as opções de tipos de livros
+                }
+            });
+        </script>
+
+    <script>
+        document.addEventListener("click", function (event) {
+            // Crie um elemento de imagem para o carro
+            var car = document.createElement("img");
+            car.src = "https://assets.stickpng.com/images/580b585b2edbce24c47b2c8f.png";
+            car.classList.add("car-animation"); // Adicione a classe de animação
+
+            // Adicione o carro à página
+            document.body.appendChild(car);
+
+            // Remova o carro após a animação terminar
+            car.addEventListener("animationiteration", function () {
+                car.remove();
+            }, { once: true });
+        });
+    </script>
+
+    <div id="logo">
+        <h1 class="f1">FÓRMULA 1</h1>
+    </div>
+
+    <h1 class="hh4">Após a confirmação de Sargeant na Williams, confira o grid completo da F1 2024</h1>
+    <p class="th2">Principal categoria do automobilismo mundial vai para o próximo ano sem alterações no grid.</p>
+    <img class="imagem-destaque" src="https://pbs.twimg.com/media/GARytqqW4AAe0ic?format=jpg&name=small">
+    <p class="th2">Com a permanência do jovem na equipe, todo o atual grid continuará na categoria na próxima temporada; piloto de 22 anos foi o primeiro americano a pontuar na Fórmula 1 nos últimos 30 anos.</p>
+    <p class="th2">O grid da Fórmula 1 em 2024 já está definitivamente completo. O último nome a ser confirmado foi o de Logan Sargeant, cuja renovação para a próxima temporada foi confirmada pela Williams nesta sexta-feira. O americano de 22 anos pontuou apenas uma vez neste ano, décimo colocado no GP dos Estados Unidos, e estende o vínculo com o time após longa deliberação da equipe britânica. Sua permanência fará de 2024 a primeira temporada da história sem um novato na categoria.</p>
+    <img class="imagem-destaque" src="https://s2-ge.glbimg.com/DIRzd51SyDqhHgrIFuVJBegQAjA=/0x0:1024x683/640x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2023/e/G/UvqXl7TSKRD1A0o4Fhog/gettyimages-1567217475.jpg">
+    <p class="th2">Logan Sargeant no GP da Bélgica de F1 em 2023 — Foto: Beata Zawrzel/NurPhoto via Getty Images</p>
+    <p class="th2">- Tive uma jornada incrível com a equipe até aqui e estou grato pela oportunidade de continuar evoluindo como piloto com um grupo tão talentoso e dedicado. Temos planos animadores para o futuro e mal posso esperar para contribuir com o sucesso da equipe no próximo ano - declarou o jovem piloto.</p>
+    <p class="th2">Em comunicado oficial, a Williams atribuiu a decisão à velocidade fundamental para atuar em mais alto nível demonstrada pelo calouro. Porém, o chefe de equipe James Vowles afirmou após o GP de Abu Dhabi que a decisão seria tomada só depois que os dados do desempenho de Sargeant fossem avaliados.</p>
+    <div class="tweet-container">
+        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Sophomore year loading…🌀<br> <br>We’re thrilled to announce that <a href="https://twitter.com/LoganSargeant?ref_src=twsrc%5Etfw">@logansargeant</a> will continue to drive for the team next season! 🙌</p>&mdash; Williams Racing (@WilliamsRacing) <a href="https://twitter.com/WilliamsRacing/status/1730626593343545782?ref_src=twsrc%5Etfw">December 1, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div><br>
+    <p class="th2">- Quero checar uma temporada completa de dados mais uma vez e olhar o progresso, os erros, as discrepâncias. Buscar o crescimento (de Sargeant) e assegurar que estamos no caminho certo - explicou Vowles, na ocasião.</p>
+    <p class="th2">Sargeant, um dos três calouros da última temporada de F1 - além de Nyck de Vries, demitido pela AlphaTauri após o GP da Inglaterra, e Oscar Piastri, da McLaren -, terminou o ano no 21º lugar. Ele pontuou apenas no GP dos Estados Unidos, com um décimo lugar; porém, a posição o tornou o primeiro americano num top 10 da F1 desde o terceiro lugar de Michael Andretti na Itália, em 1993.</p>
+    <p class="th2"><b>A F1 retorna em 2 de março de 2024 com o GP do Bahrein, excepcionalmente em um sábado. Veja <a href="noticia10.html">calendário atualizado da próxima temporada</a>.</b></p>
+    <p class="ntc">________________________________________________________________________________</p>
+    <table class="index">
+        <caption style="font-family: 'Formula', sans-serif; text-align: center;">Leia Também</caption>
+        <tr>
+            <td>
+                <a href="noticia1.html"><u>Com metas sustentáveis, F1 esbarra na logística do calendário</u></a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="noticia1.html"><u>Consolidado na F1, Verstappen vai em busca do tri em 2023</u></a>
+            </td>
+        </tr>
+    </table><br>
+    <footer>
+        <p class="th5">&copy; 2023 Notícias na F1 Mania</p>
+    </footer> 
+    <button onclick="topFunction()" id="backToTopBtn" title="Voltar para o topo"><i class='bx bxs-upvote'></i></button>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('backToTopBtn');
+
+            window.onscroll = function () {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    button.style.display = 'block';
+                } else {
+                    button.style.display = 'none';
+                }
+            };
+
+            button.onclick = function () {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            };
+        });
+    </script>
+</body>
+</html>

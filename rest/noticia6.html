@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <title id="top">F1 Mania</title>
+</head>
+
+<body>
+    <header>
+        <nav class="sidebar close">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <img src="logo2.png" alt="Logo da F1 Mania">
+                    </span>
+    
+                    <div class="text logo-text">
+                        <span class="name">F1 Mania</span>
+                        <span class="profession">Blog de notícias</span>
+                    </div>
+                </div>
+    
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+    
+            <div class="menu-bar">
+                <div class="menu">
+    
+                    <li class="search-box">
+                        <i class='bx bx-search icon'></i>
+                        <input type="text" placeholder="Procurar...">
+                    </li>
+    
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="../index.html">
+                                <i class='bx bx-home-alt icon' ></i>
+                                <span class="text nav-text">Página Inicial</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="historia.html">
+                                <i class='bx bx-book-open icon' ></i>
+                                <span class="text nav-text">História da F1</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="resultados.html">
+                                <i class='bx bx-bell icon'></i>
+                                <span class="text nav-text">Resultados</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="perfil.html">
+                                <i class='bx bxs-edit icon'></i>
+                                <span class="text nav-text">Perfis</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="calendario.html">
+                                <i class='bx bx-calendar icon' ></i>
+                                <span class="text nav-text">Calendário</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="contato.html">
+                                <i class='bx bx-user icon'></i>
+                                <span class="text nav-text">Contato</span>
+                            </a>
+                        </li>
+    
+                    </ul>
+                </div>
+    
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="entrar.html">
+                            <i class='bx bx-log-in-circle icon'></i>
+                            <span class="text nav-text">Entrar</span>
+                        </a>
+                    </li>
+    
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text text">Dark mode</span>
+    
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                    
+                </div>
+            </div>
+    
+        </nav>
+    </header>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+    </script>
+
+        <script>
+            var menuImage = document.getElementById("menu-image");
+            var menuTiposf1 = document.getElementById("menu-tipos-f1");
+    
+            // Quando a imagem do menu é clicada, mostrar/ocultar os tipos de livros
+            menuImage.addEventListener("click", function() {
+                if (menuTiposf1.style.display === "none" || menuTiposf1.style.display === "") {
+                    menuTiposf1.style.display = "block"; // Mostrar as opções de tipos de livros
+                } else {
+                    menuTiposf1.style.display = "none"; // Ocultar as opções de tipos de livros
+                }
+            });
+        </script>
+
+    <script>
+        document.addEventListener("click", function (event) {
+            // Crie um elemento de imagem para o carro
+            var car = document.createElement("img");
+            car.src = "https://assets.stickpng.com/images/580b585b2edbce24c47b2c8f.png";
+            car.classList.add("car-animation"); // Adicione a classe de animação
+
+            // Adicione o carro à página
+            document.body.appendChild(car);
+
+            // Remova o carro após a animação terminar
+            car.addEventListener("animationiteration", function () {
+                car.remove();
+            }, { once: true });
+        });
+    </script>
+
+    <div id="logo">
+        <h1 class="f1">FÓRMULA 1</h1>
+    </div>
+
+    <h1 class="hh4">Forbes divulga lista dos melhores salários da F1 2023; veja ranking</h1>
+    <p class="th2">Lista leva em conta o salário fixado pelo contrato mais os bônus de performance obtidos</p>
+    <img class="imagem-destaque" src="https://cdn-2.motorsport.com/images/amp/0rG3AP52/s1100/max-verstappen-red-bull-racing.webp">
+    <p class="th2">Max Verstappen não arrasou somente nas pistas na temporada 2023 da Fórmula 1. Segundo o ranking publicado pela revista Forbes, o holandês também foi o que teve o maior salário, graças aos bônus obtidos pela conquista do tricampeonato.</p>
+    <p class="th2">A revista publicou recentemente a lista com os 10 maiores salários da categoria, com Verstappen acumulando um total de 70 milhões de dólares (R$344 milhões). O total considera o salário base e os bônus de performance recebidos ao final do ano. No caso do holandês, estamos falando de 45 milhões de salário e 25 milhões de extra.</p>
+    <p class="th2">Isso colocou Verstappen em outra lista da Forbes: a dos cinco atletas com menos de 25 anos mais bem pagos.</p>
+    <p class="th2">A publicação sinalizou que o cálculo dos salários é público e fez uma estimativa das compensações junto com a empresa Formula Money. As estimativas são feitas com base em documentos financeiros, arquivos legais e informações da imprensa, além de conversas com pessoas do setor. Todas as cifras estão arredondadas para o milhão mais próximo.</p>
+    <p class="th2">Lewis Hamilton é o segundo melhor colocado, com 55 milhões de dólares (R$270 milhões). O terceiro campeão do grid, Fernando Alonso, completa o top 3 com 34 milhões de dólares (R$167 milhões).</p>
+    <p class="th2">O top 5 conta ainda com Sergio Pérez, que recebeu um total de 26 milhões de dólares da Red Bull e com Charles Leclerc, com 19 milhões, cinco acima de Carlos Sainz.</p>
+    <table class="pfl" border="1">
+        <caption>
+            Confira a lista de melhores salários da F1 2023 segundo a Forbes:
+        </caption>
+        <thead class="pfl2">
+            <th>Posição</th>
+            <th>Piloto</th>
+            <th>Equipe</th>
+            <th>Salário (Dólares)</th>
+            <th>Bônus (Dólares)</th>
+            <th>Total (Dólares)</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1º</td>
+                <td>Max <p class="f1">VERSTAPPEN</p></td>
+                <td>Red Bull</td>
+                <td>45</td>
+                <td>25</td>
+                <td>70</td>
+            </tr>
+            <tr class="pfl3">
+                <td>2º</td>
+                <td>Lewis <p class="f1">HAMILTON</p></td>
+                <td>Mercedes</td>
+                <td>55</td>
+                <td>0</td>
+                <td>55</td>
+            </tr>
+            <tr>
+                <td>3º</td>
+                <td>Fernando<p class="f1">ALONSO</p></td>
+                <td>Aston Martin</td>
+                <td>24</td>
+                <td>10</td>
+                <td>34</td>
+            </tr>
+            <tr class="pfl3">
+                <td>4º</td>
+                <td>Sergio<p class="f1">PEREZ</p></td>
+                <td>Red Bull</td>
+                <td>10</td>
+                <td>16</td>
+                <td>26</td>
+            </tr>
+            <tr>
+                <td>5º</td>
+                <td>Charles<p class="f1">LECLERC</p></td>
+                <td>Ferrari</td>
+                <td>14</td>
+                <td>5</td>
+                <td>19</td>
+            </tr>
+            <tr class="pfl3">
+                <td>6º</td>
+                <td>Lando<p class="f1">NORRIS</p></td>
+                <td>McLaren</td>
+                <td>5</td>
+                <td>10</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>7º</td>
+                <td>Carlos<p class="f1">SAINZ</p></td>
+                <td>Ferrari</td>
+                <td>8</td>
+                <td>6</td>
+                <td>14</td>
+            </tr>
+            <tr class="pfl3">
+                <td>8º</td>
+                <td>George<p class="f1">RUSSELL</p></td>
+                <td>Mercedes</td>
+                <td>4</td>
+                <td>5</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>9º</td>
+                <td>Pierre<p class="f1">GASLY</p></td>
+                <td>Alpine</td>
+                <td>5</td>
+                <td>3</td>
+                <td>8</td>
+            </tr>
+            <tr class="pfl3">
+                <td>9º</td>
+                <td>Oscar<p class="f1">PIASTRI</p></td>
+                <td>McLaren</td>
+                <td>3</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="ntc">________________________________________________________________________________</p>
+    <table class="index">
+        <caption style="font-family: 'Formula', sans-serif; text-align: center;">Leia Também</caption>
+        <tr>
+            <td>
+                <a href="noticia1.html"><u>Após a confirmação de Sargeant na Williams, confira o grid completo da F1 2024</u></a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="noticia2"><u>Alfa Romeo fora F1? Entenda como parceria com Haas esfriou</u></a>
+            </td>
+        </tr>
+    </table><br>
+    <footer>
+        <p class="th5">&copy; 2023 Notícias na F1 Mania</p>
+    </footer> 
+    <button onclick="topFunction()" id="backToTopBtn" title="Voltar para o topo"><i class='bx bxs-upvote'></i></button>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('backToTopBtn');
+
+            window.onscroll = function () {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    button.style.display = 'block';
+                } else {
+                    button.style.display = 'none';
+                }
+            };
+
+            button.onclick = function () {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            };
+        });
+    </script>
+</body>
+</html>

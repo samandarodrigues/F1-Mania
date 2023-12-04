@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <title id="top">F1 Mania</title>
+</head>
+
+<body>
+    <header>
+        <nav class="sidebar close">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <img src="logo2.png" alt="Logo da F1 Mania">
+                    </span>
+    
+                    <div class="text logo-text">
+                        <span class="name">F1 Mania</span>
+                        <span class="profession">Blog de notícias</span>
+                    </div>
+                </div>
+    
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+    
+            <div class="menu-bar">
+                <div class="menu">
+    
+                    <li class="search-box">
+                        <i class='bx bx-search icon'></i>
+                        <input type="text" placeholder="Procurar...">
+                    </li>
+    
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="../index.html">
+                                <i class='bx bx-home-alt icon' ></i>
+                                <span class="text nav-text">Página Inicial</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="historia.html">
+                                <i class='bx bx-book-open icon' ></i>
+                                <span class="text nav-text">História da F1</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="resultados.html">
+                                <i class='bx bx-bell icon'></i>
+                                <span class="text nav-text">Resultados</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="perfil.html">
+                                <i class='bx bxs-edit icon'></i>
+                                <span class="text nav-text">Perfis</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="calendario.html">
+                                <i class='bx bx-calendar icon' ></i>
+                                <span class="text nav-text">Calendário</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="contato.html">
+                                <i class='bx bx-user icon'></i>
+                                <span class="text nav-text">Contato</span>
+                            </a>
+                        </li>
+    
+                    </ul>
+                </div>
+    
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="entrar.html">
+                            <i class='bx bx-log-in-circle icon'></i>
+                            <span class="text nav-text">Entrar</span>
+                        </a>
+                    </li>
+    
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text text">Dark mode</span>
+    
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                    
+                </div>
+            </div>
+    
+        </nav>
+    </header>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+    </script>
+
+        <script>
+            var menuImage = document.getElementById("menu-image");
+            var menuTiposf1 = document.getElementById("menu-tipos-f1");
+    
+            // Quando a imagem do menu é clicada, mostrar/ocultar os tipos de livros
+            menuImage.addEventListener("click", function() {
+                if (menuTiposf1.style.display === "none" || menuTiposf1.style.display === "") {
+                    menuTiposf1.style.display = "block"; // Mostrar as opções de tipos de livros
+                } else {
+                    menuTiposf1.style.display = "none"; // Ocultar as opções de tipos de livros
+                }
+            });
+        </script>
+
+    <script>
+        document.addEventListener("click", function (event) {
+            // Crie um elemento de imagem para o carro
+            var car = document.createElement("img");
+            car.src = "https://assets.stickpng.com/images/580b585b2edbce24c47b2c8f.png";
+            car.classList.add("car-animation"); // Adicione a classe de animação
+
+            // Adicione o carro à página
+            document.body.appendChild(car);
+
+            // Remova o carro após a animação terminar
+            car.addEventListener("animationiteration", function () {
+                car.remove();
+            }, { once: true });
+        });
+    </script>
+
+    <div id="logo">
+        <h1 class="f1">FÓRMULA 1</h1>
+    </div>
+
+    <h1 class="hh7">Contato: Estamos Aqui para Ouvir Você!</h1>
+    <img class="imagem-destaque2" src=https://image-cdn.essentiallysports.com/wp-content/uploads/George-Russell-Charles-Leclerc.jpg?width=600"><br>
+    <p class="th3">Se você tem alguma dúvida, sugestão, feedback ou apenas deseja se conectar conosco, estamos prontos para ouvir e responder. Sua opinião é muito importante para nós e queremos garantir que sua experiência conosco seja a melhor possível.</p><br>
+
+<p class="th4">Redes Sociais:</p><br>
+<p class="th3">Siga-nos nas redes sociais para obter atualizações, notícias e interagir com nossa comunidade. Estamos presentes no Facebook, Twitter e Instagram. Você pode nos encontrar como "@f1mania".<br>
+
+<p class="th4">E-mail:</p><br>
+<p class="th3">Se preferir, você pode nos enviar um e-mail diretamente em f1mania@gmail.com. Responderemos o mais rápido possível.</p><br>
+
+<p class="th4">Telefone:</p><br>
+<p class="th3">Para questões urgentes ou suporte imediato, ligue para nós em +55 (99) 9999-9999. Nossa equipe de suporte estará à disposição para ajudar.</p><br>
+
+<p class="th4">Endereço:</p><br>
+<p class="th3">Caso deseje nos visitar pessoalmente, nosso escritório está localizado em PopFiscauã. No entanto, recomendamos agendar uma visita com antecedência para garantir que estaremos disponíveis para atendê-lo.</p><br>
+
+<p class="th4">Horário de Atendimento:</p><br>
+<p class="th3">Estamos disponíveis para atendê-lo de segunda a sexta-feira, das 07:00 às 2:00. Durante esse período, nossa equipe estará pronta para responder suas perguntas e atender às suas necessidades.<br>
+Agradecemos por entrar em contato e estamos ansiosos para ouvir você. Sua opinião e feedback são essenciais para melhorarmos continuamente nossos produtos e serviços. Juntos, podemos construir uma experiência ainda melhor.<br>
+
+Atenciosamente,<br>
+
+F1 Mania</p>
+
+<h1 class="hh7">Quem Somos: As Mentes Velozes por Trás do Site "F1 Mania"</h1>
+<img class="imagem-destaque2" src="https://images.ps-aws.com/c?url=https%3A%2F%2Fd3cm515ijfiu6w.cloudfront.net%2Fwp-content%2Fuploads%2F2022%2F07%2F03190815%2Fcarlos-sainz-lando-norris-talk-planetf1.jpg"><br>
+<p class="th3">Somos alunas do Instituto Federal do Piauí (IFPI), campus Paulistana.<br>
+Bem-vindo ao "F1 Mania", sua fonte definitiva para todas as informações sobre o mundo da Fórmula 1. Este site foi criado com paixão e dedicação por duas amigas apaixonadas por automobilismo e tecnologia, que também estão estudando Informática para Internet. Conheça um pouco mais sobre nós:<br>
+
+Ana Beatriz, a amiga que aprendeu a gostar de Fórmula 1, é responsável por aprender cada dia mais sobre o assunto para o pleno desenvolvimento do site e para acompanhar sua amiga.<br>
+
+Ana Beatriz também está cursando Informática para Internet, com um foco em comunicação digital e produção de conteúdo para a web. Sua formação a torna uma especialista em criar conteúdo envolvente e relevante para o público online.<br>
+Samanda, a verdadeira fanática da Fórmula 1, é responsável por trazer à vida a cobertura editorial do "F1 Mania". Com um amor inabalável pela F1, ela cria conteúdo apaixonado e informativo para manter os fãs da Fórmula 1 atualizados.<br>
+Samanda também está cursando Informática para Internet, com um foco em comunicação digital e produção de conteúdo para a web. Sua formação a torna uma especialista em criar conteúdo envolvente e relevante para o público online.<br>
+Além de seu amor pelo automobilismo, Samanda é uma entusiasta de viagens, música e culinária. Ela acredita que a narrativa é a chave para transmitir a emoção e a complexidade da Fórmula 1 aos fãs.<br>
+
+Unindo nossa paixão pelo automobilismo e nossa formação em Informática para Internet, o "F1 Mania" tem como objetivo oferecer aos fãs da Fórmula 1 um local onde eles possam encontrar informações atualizadas, análises profundas e uma comunidade engajada para compartilhar sua paixão.</p><br><br>
+<p class="th4">O que Você Pode Esperar do "F1 Mania":</p>
+<li class="th3">Cobertura completa das corridas de Fórmula 1, incluindo análises, notícias e estatísticas atualizadas.</li><br>
+<li class="th3">Conteúdo exclusivo, incluindo entrevistas com pilotos, equipes e especialistas no esporte.</li><br>
+<li class="th3">Recursos interativos, como simuladores de corrida e concursos para envolver nossa comunidade.</li><br>
+<li class="th3">Tutoriais e guias para ajudar os entusiastas a compreender melhor o mundo da Fórmula 1.</li><br>
+<li class="th3">Um espaço para os fãs se reunirem, discutirem e compartilharem sua paixão pelo automobilismo.</li><br><br>
+<p class="th3">"F1 Mania" é o resultado da união da paixão pelo automobilismo e do conhecimento em Informática para Internet. Estamos entusiasmadas em compartilhar nossa paixão e nosso conhecimento com você, e esperamos que nosso site se torne sua fonte favorita de informações sobre a Fórmula 1. Acompanhe-nos nas corridas e nas atualizações constantes, enquanto juntos aceleramos nesse emocionante mundo automobilístico!<br>
+
+Agradecemos por escolher "F1 Mania" como sua fonte de informações sobre a Fórmula 1 e esperamos que você aproveite cada visita ao nosso site.</p><br><br>
+
+<form id="contactForm">
+    <label for="name">Nome:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">E-mail:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="message">Mensagem:</label><br>
+    <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+    <button type="button" onclick="submitForm()">Enviar</button>
+</form>
+
+<footer>
+    <p class="th5">&copy; 2023 Contato na F1 Mania </p>
+</footer>
+<button onclick="topFunction()" id="backToTopBtn" title="Voltar para o topo"><i class='bx bxs-upvote'></i></button>
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('backToTopBtn');
+
+            window.onscroll = function () {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    button.style.display = 'block';
+                } else {
+                    button.style.display = 'none';
+                }
+            };
+
+            button.onclick = function () {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            };
+        });
+    </script>
+<script>
+    function submitForm() {
+        // Obtenha uma referência ao formulário
+        var form = document.getElementById("contactForm");
+
+        // Crie um objeto FormData para coletar os dados do formulário
+        var formData = new FormData(form);
+
+        // Exiba os dados do formulário no console (simulando o envio)
+        for (var pair of formData.entries()) {
+            console.log(pair[0] + ': ' + pair[1]);
+        }
+
+        // Simulação de envio bem-sucedido com mensagem personalizada para F1 MANIA
+        alert("Dados do formulário enviados para F1 Mania com sucesso!");
+
+        // Limpe o formulário (opcional)
+        form.reset();
+    }
+</script>
+    </body>
+</html>

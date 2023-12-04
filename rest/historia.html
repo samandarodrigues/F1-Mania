@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <title id="top">F1 Mania</title>
+</head>
+
+<body>
+    <header>
+        <nav class="sidebar close">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <img src="logo2.png" alt="Logo da F1 Mania">
+                    </span>
+    
+                    <div class="text logo-text">
+                        <span class="name">F1 Mania</span>
+                        <span class="profession">Blog de notícias</span>
+                    </div>
+                </div>
+    
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+    
+            <div class="menu-bar">
+                <div class="menu">
+    
+                    <li class="search-box">
+                        <i class='bx bx-search icon'></i>
+                        <input type="text" placeholder="Procurar...">
+                    </li>
+    
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="../index.html">
+                                <i class='bx bx-home-alt icon' ></i>
+                                <span class="text nav-text">Página Inicial</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="historia.html">
+                                <i class='bx bx-book-open icon' ></i>
+                                <span class="text nav-text">História da F1</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="resultados.html">
+                                <i class='bx bx-bell icon'></i>
+                                <span class="text nav-text">Resultados</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="perfil.html">
+                                <i class='bx bxs-edit icon'></i>
+                                <span class="text nav-text">Perfis</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="calendario.html">
+                                <i class='bx bx-calendar icon' ></i>
+                                <span class="text nav-text">Calendário</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="contato.html">
+                                <i class='bx bx-user icon'></i>
+                                <span class="text nav-text">Contato</span>
+                            </a>
+                        </li>
+    
+                    </ul>
+                </div>
+    
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="entrar.html">
+                            <i class='bx bx-log-in-circle icon'></i>
+                            <span class="text nav-text">Entrar</span>
+                        </a>
+                    </li>
+    
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text text">Dark mode</span>
+    
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                    
+                </div>
+            </div>
+    
+        </nav>
+    </header>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+    </script>
+
+        <script>
+            var menuImage = document.getElementById("menu-image");
+            var menuTiposf1 = document.getElementById("menu-tipos-f1");
+    
+            // Quando a imagem do menu é clicada, mostrar/ocultar os tipos de livros
+            menuImage.addEventListener("click", function() {
+                if (menuTiposf1.style.display === "none" || menuTiposf1.style.display === "") {
+                    menuTiposf1.style.display = "block"; // Mostrar as opções de tipos de livros
+                } else {
+                    menuTiposf1.style.display = "none"; // Ocultar as opções de tipos de livros
+                }
+            });
+        </script>
+
+    <script>
+        document.addEventListener("click", function (event) {
+            // Crie um elemento de imagem para o carro
+            var car = document.createElement("img");
+            car.src = "https://assets.stickpng.com/images/580b585b2edbce24c47b2c8f.png";
+            car.classList.add("car-animation"); // Adicione a classe de animação
+
+            // Adicione o carro à página
+            document.body.appendChild(car);
+
+            // Remova o carro após a animação terminar
+            car.addEventListener("animationiteration", function () {
+                car.remove();
+            }, { once: true });
+        });
+    </script>
+
+    <div id="logo">
+        <h1 class="f1">FÓRMULA 1</h1>
+    </div>
+    <h1 class="fh">História da Fórmula 1</h1>
+    <ul class="th">
+    Conheça a história do maior competição automobilística do mundo
+
+Com 72 anos de história, a Fórmula 1 é considerada a maior competição automobilística do mundo. E a popularidade do esporte só cresce! Recheada de corridas inesquecíveis, a competição registrou uma audiência de 1,55 bilhão de pessoas em 2021, somando público, canais digitais e televisão.
+
+Além disso, a F1 se tornou a liga esportiva que mais cresce nas redes sociais, com um total de quase 50 milhões de seguidores no Facebook, Twitter, Instagram, YouTube, TikTok e outras mídias, de acordo com relatório divulgado pela própria liga.
+
+Neste ano, a Porto Seguro Bank é patrocinadora oficial da Fórmula 1 e irá proporcionar uma série de experiências emocionantes e benefícios exclusivos. Para entrar no clima, nós preparamos um guia com tudo que você precisa saber sobre a história do torneio. Continue lendo este artigo e descubra!
+
+Neste artigo, você vai encontrar:</ul><br>
+
+<ul class="th">
+<a href="#origem">• A origem da Fórmula 1</a><br>
+<a href="#termos">• Principais termos da Fórmula 1</a><br>
+<a href="#decadas">• Fórmula 1 ao longo das décadas</a><br>
+<a href="#atualidade">• Fórmula 1 na atualidade</a><br>
+<a href="#recordes">• Os grandes recordes da Fórmula 1</a><br>
+<a href="#curiosidades">• Curiosidades sobre a Fórmula 1</a><br></ul><br>
+
+
+
+<h2 class="hh5" id="origem">A origem da Fórmula 1</h2>
+<img class="imagem-destaque2" src="https://carsughi.uol.com.br/wp-content/uploads/2019/07/Largada-1950.jpg"><br>
+<p class="th">A <b>Fórmula 1</b> (F1) foi criada pela Federação Internacional de Automobilismo (FIA) e surgiu, oficialmente, em 1950. A ideia era reunir todos os Grande Prêmios (GP) da Europa, que já aconteciam em países como Inglaterra, França, Itália, Mônaco, Suíça e Bélgica, e criar um campeonato unificado.
+
+O nome foi escolhido para representar a “fórmula” que todas as equipes devem seguir para construir seus carros. Isso significa respeitar alguns critérios obrigatórios com relação ao tipo de motor, a quantidade de cilindros e o tamanho do automóvel, por exemplo.
+
+Essas regras foram instauradas para permitir uma competição equilibrada, ao mesmo tempo em que dá liberdade para os engenheiros focarem nos detalhes e diferenciais de suas máquinas.
+
+A primeira corrida oficial da Fórmula 1 aconteceu no dia 13 de maio de 1950, no circuito de Silverstone, na Inglaterra. O vencedor foi o italiano Nino Farina, que pilotava um Alfa Romeo, considerado um dos maiores fabricantes de carros da Europa, ao lado de nomes como Ferrari, Maserati e Mercedes.
+
+Nos três primeiros anos de F1, o campeonato foi disputado apenas na Europa e nos Estados Unidos (em Indianápolis). Foi somente em 1954 que a competição aconteceu fora desse circuito, na Argentina. Em 1958, foi a vez do Marrocos receber a Fórmula 1, se tornando o primeiro país africano a sediar o evento.
+
+Duas décadas depois, em 1972, o Brasil teve a sua primeira prova oficial de F1, realizada no autódromo de Interlagos. Neste ano, inclusive, são celebrados os 50 anos de Fórmula 1 em solo brasileiro!
+</p><br>
+<h2 class="hh5" id="termos">Principais termos da Fórmula 1</h2>
+<img class="imagem-destaque2" src="https://www.f1mania.net/wp-content/uploads/2022/10/0001179282_HiRes_0QYXJ400LE1YF40LZP8G00LZLY80-crop-1667910340-2000x684.jpg"><br>
+<p class="th">Assim como as bandeiras, alguns termos usados no esporte já ganharam fama entre o público que costuma assistir às corridas. Confira os 10 mais populares na tabela abaixo.
+
+<h2 class="hh6">Termo / Significado</h2>
+<p class="th"><b class="th6">Aderência:</b> Contato dos pneus com a pista. Quanto maior o contato, maior a aderência.<br>
+<b class="th6">Aerofólio:</b> Peça que pressiona o carro no chão para que ele não decole em alta velocidade.<br>
+<b class="th6">Boxes:</b> Local onde mecânicos e o restante da equipe trabalham nos carros.<br>
+<b class="th6">Safety Car:</b> Carro de segurança que entra na pista quando há algum acidente.<br>
+<b class="th6">DriveThrough:</b> Penalidade que obriga o piloto a passar pelos boxes com velocidade reduzida.<br>
+<b class="th6">Grid de Largada:</b> Local demarcado onde os carros se posicionam antes da largada.<br>
+<b class="th6">GuardRail:</b> Barreira de proteção que separa a área de escape e a parte exterior do circuito.<br>
+<b class="th6">Paddock:</b> Área onde membros das equipes e convidados circulam.<br>
+<b class="th6">PitStop:</b> Momento em que o carro entra nos boxes para trocar os pneus e reabastecer.<br>
+<b class="th6">Pódio:</b> Local em que é realizada a premiação para os primeiros colocados da corrida.</p><br>
+<h2 class="th3">◦ Conheça todos os termos do esporte acessando o <a href="noticia3.html">Glossário da Fórmula 1</a></h2><br>
+<h2 class="hh5" id="decadas">Fórmula 1 ao longo das décadas</h2>
+<img class="imagem-destaque2" src="https://ogimg.infoglobo.com.br/in/24573837-86d-b19/FT1500A/690/header-f1-2.jpg"><br>
+    <h2 class="hh5">Anos 1950</h2>
+    <div class="container">
+    <table border="1">
+        <tr class="pfl2">
+            <th>Eventos Notáveis</th>
+            <th>Destaque</th>
+        </tr>
+        <tr>
+            <td>Expansão da Fórmula 1</td>
+            <td>Aumento de corridas de 6 para 11 por temporada e entrada de novos países.</td>
+        </tr>
+        <tr class="pfl3">
+            <td>Jack Brabham</td>
+            <td>Campeão em 1959 e 1960, pilotando um Cooper com motor traseiro.</td>
+        </tr>
+        <tr>
+            <td>Primeira Mulher na Fórmula 1</td>
+            <td>Maria Teresa de Filippis participou da competição em 1958.</td>
+        </tr>
+    </table></div>
+
+    <h2 class="hh5">Anos 1960</h2>
+    <div class="container"><table border="1">
+        <tr class="pfl2">
+            <th>Eventos Notáveis</th>
+            <th>Destaque</th>
+        </tr>
+        <tr>
+            <td>"Era Britânica"</td>
+            <td>Grandes nomes do automobilismo inglês, como Jim Clark, Jackie Stewart, entre outros.</td>
+        </tr>
+        <tr class="pfl3">
+            <td>Expansão Internacional</td>
+            <td>Corridas fora da Europa, como México, Estados Unidos, Canadá e África do Sul.</td>
+        </tr>
+        <tr>
+            <td>Vitória da Ford</td>
+            <td>American Ford venceu o campeonato equipando carros da Lotus.</td>
+        </tr>
+    </table></div>
+
+    <h2 class="hh5">Anos 1970</h2>
+    <div class="container"><table border="1">
+        <tr class="pfl2">
+            <th>Eventos Notáveis</th>
+            <th>Destaque</th>
+        </tr>
+        <tr>
+            <td>Corrida no Brasil</td>
+            <td>Realização da primeira corrida de Fórmula 1 no Brasil em 1972.</td>
+        </tr>
+        <tr class="pfl3">
+            <td>Campeões Brasileiros</td>
+            <td>Emerson Fittipaldi venceu em 1972 e 1974.</td>
+        </tr>
+        <tr>
+            <td>Rivalidade Lauda e Hunt</td>
+            <td>Rivalidade épica entre Niki Lauda e James Hunt, inspirando o filme "Rush".</td>
+        </tr>
+    </table></div>
+
+    <h2 class="hh5">Anos 1980</h2>
+    <div class="container"><table border="1">
+        <tr class="pfl2">
+            <th>Eventos Notáveis</th>
+            <th>Destaque</th>
+        </tr>
+        <tr>
+            <td>Domínio Brasileiro</td>
+            <td>Nelson Piquet e Ayrton Senna conquistaram títulos.</td>
+        </tr>
+        <tr class="pfl3">
+            <td>Rivalidade Senna e Prost</td>
+            <td>Rivalidade intensa entre Ayrton Senna e Alain Prost.</td>
+        </tr>
+        <tr>
+            <td>Avanços Tecnológicos</td>
+            <td>Suspensão ativa e mudanças na aerodinâmica.</td>
+        </tr>
+    </table></div>
+
+    <h2 class="hh5">Anos 1990</h2>
+    <div class="container"><table border="1">
+        <tr class="pfl2">
+            <th>Eventos Notáveis</th>
+            <th>Destaque</th>
+        </tr>
+        <tr>
+            <td>Vitórias e Tragédias</td>
+            <td>Vitórias da Williams e morte de Ayrton Senna em 1994.</td>
+        </tr>
+        <tr class="pfl3">
+            <td>Michael Schumacher</td>
+            <td>Início da "Era Schumacher" com vitórias consecutivas.</td>
+        </tr>
+        <tr>
+            <td>Evolução Tecnológica</td>
+            <td>Introdução da suspensão ativa pela Williams.</td>
+        </tr>
+    </table></div>
+
+    <h2 class="hh5">Anos 2000</h2>
+    <div class="container"><table border="1">
+        <tr class="pfl2">
+            <th>Eventos Notáveis</th>
+            <th>Destaque</th>
+        </tr>
+        <tr>
+            <td>Supremacia Ferrari</td>
+            <td>Ferrari dominou a década com Michael Schumacher.</td>
+        </tr></table></div>
+
+<h2 class="hh5" id="atualidade">Fórmula 1 na atualidade</h2>
+<img class="imagem-destaque2" src="https://www.f1mania.net/wp-content/uploads/2019/06/D9wJd2OX4AIX2KX-L-crop-1561301806-1200x410.jpg"><br>
+<ul class="th">A década de 2010 consagrou o talento do britânico Lewis Hamilton, que se tornou o segundo heptacampeão de Fórmula 1, ao lado de Schumacher. Hamilton, que já havia sido campeão em 2008, venceu em quase todos os anos de 2014 a 2020, pela Mercedes. O único ano no qual ele não terminou em primeiro lugar foi 2016. Entretanto, a Mercedes manteve sua sequência de vitórias, com o alemão Nico Rosberg. 
+
+Hamilton ainda conseguiu quebrar os recordes de vitórias e pole positions (primeira posição na classificação para a corrida) de Schumacher e de Senna, o qual considerava o seu ídolo.
+
+Outros recordes quebrados durante a década de 2010 ficaram por conta de Max Verstappen, que se tornou o piloto mais jovem a vencer uma corrida de F1 (com 18 anos e 7 meses) e Sebastian Vettel, que se tornou o mais jovem campeão de Fórmula 1, com 23 anos e 3 meses.
+
+Vettel também levou os títulos do campeonato em 2011, 2012 e 2013, tornando-se tetracampeão e consagrando o seu nome como um dos maiores da Fórmula 1 na atualidade, ao lado de Hamilton.</ul><br>
+
+<h2 class="hh5" id="recordes">Os grandes recordes da Fórmula 1</h2>
+<img class="imagem-destaque2" src="https://midias.agazeta.com.br/2020/05/01/ayrton-senna-conquistou-tres-titulos-mundiais-de-formula-1-e-se-tornou-um-dos-maiores-pilotos-da-historia-da-categoria-238593-article.jpg"><br>
+<h3 class="hh6"3>Mais títulos conquistados</h3>
+<ul class="th">O alemão Michael Schumacher e o britânico Lewis Hamilton foram os únicos em toda a história da Fórmula 1 a conquistar o heptacampeonato. Juan Manuel Fangio vem em segundo lugar, com cinco títulos e Alain Prost e Sebastian Vettel empatam em terceiro lugar com quatro títulos. Ayrton Senna, Nelson Piquet, Niki Lauda, Jack Brabham e Jackie Stewart venceram três campeonatos cada.</ul>
+
+<h3 class="hh6">Mais vitórias na Fórmula 1</h3>
+<ul class="th">Mais uma vez Hamilton e Schumacher fizeram história com suas vitórias. Em primeiro lugar, Hamilton, com 100 corridas finalizadas em primeiro lugar. Em segundo, Schumacher, com 91. Sebastian Vettel conquistou o terceiro lugar com 53 vitórias, sendo seguido de perto por Alain Prost, com 51. Ayrton Senna também entra para o recorde, com 41 vitórias na Fórmula 1.</ul>
+
+<h3 class="hh6">Mais corridas disputadas</h3>
+<ul class="th">O finlandês Kimi Raikkonen tem, até hoje, o título de piloto com mais corridas disputadas na história da Fórmula 1: ao todo, são 346. O espanhol Fernando Alonso fica em segundo lugar, com 329, e o brasileiro Rubens Barrichello fecha a tríade, com 326 corridas. Jenson Button e Michael Schumacher têm 309 e 308 corridas, respectivamente.</ul>
+
+<h3 class="hh6">Equipes com mais títulos</h3>
+<ul class="th">A Ferrari reina absoluta com 15 títulos na Fórmula 1. A McLaren fica em segundo lugar com 12 e a Mercedes em terceiro com 9. Williams e Lotus finalizam o grupo, com 7 e 5 títulos conquistados, respectivamente.</ul><br>
+
+<h3 class="hh5" id="curiosidades">Curiosidades sobre a Fórmula 1</h3>
+<img class="imagem-destaque2" src="https://www.esportelandia.com.br/wp-content/uploads/2019/10/Curiosidades-da-F%C3%B3rmula-1.jpg"><br>
+<ol class="th">1ª. Com mais de 70 anos de história, a Fórmula 1 tem muitos fatos inusitados e curiosos. Confira 10 deles na lista abaixo!
+<li class="th">2ª. A velocidade máxima atingida durante uma corrida pertence ao colombiano Juan Pablo Montoya, que chegou a 372,6 km/h, no Grande Prêmio da Itália, em 2005.<br></li>
+<li class="th">3ª. A Red Bull fez o pit stop mais rápido da história em 2019, ao trocar os quatro pneus do carro de Max Verstappen em 1,82 segundo de acordo com a cronometragem oficial.<br></li>
+<li class="th">4ª. Em 2002, Michael Schumacher teve 100% de aproveitamento ao subir ao pódio em todas as 17 corridas que disputou no ano.<br></li>
+<li class="th">5ª. O italiano Luigi Fagioli é o piloto mais velho a vencer uma corrida na Fórmula 1. Aos 53 anos de idade, ele foi o primeiro colocado no GP da França, em 1951.<br></li>
+<li class="th">6ª. Ao todo, nove mulheres já participaram da Fórmula 1, sendo seis como pilotos oficiais e quatro como pilotos de testes.<br></li>
+<li class="th">7ª. Em 1997, no Grande Prêmio da Europa, três pilotos tiveram o mesmo tempo de classificação para a pole position: 1 minuto e 21,072 segundos.<br></li>
+<li class="th">8ª. O circuito de Monza, na Itália, recebeu o maior número de corridas em toda a história da Fórmula 1, ficando de fora somente em 1980, devido a reformas.<br></li>
+<li class="th">9ª. Em 2021, os quilômetros percorridos nas corridas de Fórmula 1 daria para dar três voltas completas na Terra: foram 120 mil km rodados.</li>
+<li class="th">10ª. Um carro de Fórmula 1 chega aos 100 km/h em 2,6 segundos.
+<li class="th">11ª. Devido ao esforço e ao calor, um piloto de Fórmula 1 perde uma média de 2 kg durante uma corrida
+    </ol><br>
+<footer>
+    <p class="th5">&copy; 2023 História da Fórmula 1 na F1 Mania </p>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var button = document.getElementById('backToTopBtn');
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                button.style.display = 'block';
+            } else {
+                button.style.display = 'none';
+            }
+        };
+
+        button.onclick = function () {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        };
+    });
+</script>
+<button onclick="topFunction()" id="backToTopBtn" title="Voltar para o topo"><i class='bx bxs-upvote'></i></button>
+</body>
+</html>

@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <title id="top">F1 Mania</title>
+</head>
+
+<body>
+    <header>
+        <nav class="sidebar close">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <img src="logo2.png" alt="Logo da F1 Mania">
+                    </span>
+    
+                    <div class="text logo-text">
+                        <span class="name">F1 Mania</span>
+                        <span class="profession">Blog de notícias</span>
+                    </div>
+                </div>
+    
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+    
+            <div class="menu-bar">
+                <div class="menu">
+    
+                    <li class="search-box">
+                        <i class='bx bx-search icon'></i>
+                        <input type="text" placeholder="Procurar...">
+                    </li>
+    
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="../index.html">
+                                <i class='bx bx-home-alt icon' ></i>
+                                <span class="text nav-text">Página Inicial</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="historia.html">
+                                <i class='bx bx-book-open icon' ></i>
+                                <span class="text nav-text">História da F1</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="resultados.html">
+                                <i class='bx bx-bell icon'></i>
+                                <span class="text nav-text">Resultados</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="perfil.html">
+                                <i class='bx bxs-edit icon'></i>
+                                <span class="text nav-text">Perfis</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="calendario.html">
+                                <i class='bx bx-calendar icon' ></i>
+                                <span class="text nav-text">Calendário</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="contato.html">
+                                <i class='bx bx-user icon'></i>
+                                <span class="text nav-text">Contato</span>
+                            </a>
+                        </li>
+    
+                    </ul>
+                </div>
+    
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="entrar.html">
+                            <i class='bx bx-log-in-circle icon'></i>
+                            <span class="text nav-text">Entrar</span>
+                        </a>
+                    </li>
+    
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text text">Dark mode</span>
+    
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                    
+                </div>
+            </div>
+    
+        </nav>
+    </header>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+    </script>
+
+        <script>
+            var menuImage = document.getElementById("menu-image");
+            var menuTiposf1 = document.getElementById("menu-tipos-f1");
+    
+            // Quando a imagem do menu é clicada, mostrar/ocultar os tipos de livros
+            menuImage.addEventListener("click", function() {
+                if (menuTiposf1.style.display === "none" || menuTiposf1.style.display === "") {
+                    menuTiposf1.style.display = "block"; // Mostrar as opções de tipos de livros
+                } else {
+                    menuTiposf1.style.display = "none"; // Ocultar as opções de tipos de livros
+                }
+            });
+        </script>
+
+    <script>
+        document.addEventListener("click", function (event) {
+            // Crie um elemento de imagem para o carro
+            var car = document.createElement("img");
+            car.src = "https://assets.stickpng.com/images/580b585b2edbce24c47b2c8f.png";
+            car.classList.add("car-animation"); // Adicione a classe de animação
+
+            // Adicione o carro à página
+            document.body.appendChild(car);
+
+            // Remova o carro após a animação terminar
+            car.addEventListener("animationiteration", function () {
+                car.remove();
+            }, { once: true });
+        });
+    </script>
+
+    <div id="logo">
+        <h1 class="f1">FÓRMULA 1</h1>
+    </div>
+
+    <h1 class="hh4">Glossário da Fórmula 1</h1>
+    <p class="th2">Segue abaixo o nosso glossário onde buscamos reunir a maioria dos termos usados na Fórmula 1.</p>
+    <img class="imagem-destaque" src="https://boletimdopaddock.com.br/wp-content/uploads/2021/10/piloto-de-formula-1-antes-do-inicio-da-competicao_941600-8739.jpg">
+    <p class="th2"><b class="f1">Aba de Gurney:</b> Uma aba ajustável de fibra de carbono ou alumínio colocado na traseira de uma asa, usada para adicionar mais 25% de downforce – alterar a quantidade de pressão aerodinâmica que aquela asa dá sem trocar as configurações da asa.<br><br>
+
+        <b class="f1">Abandono (Retirement):</b> Quando um carro precisa sair da corrida por causa de um acidente ou falha mecânica que impossibilita a sua permanência.<br><br>
+        
+        <b class="f1">Achatamento (Flat spot):</b> É o termo usado para denominar a área de um pneu usada maciçamente em um ponto imediatamente após uma frenagem extrema ou em uma rodada. A área fica achatada, e isso estraga o desempenho do pneu, causando frequentemente uma severa vibração. Pode forçar o piloto a fazer uma parada para trocar o jogo de pneus.<br><br>
+        
+        <b class="f1">Acordo de Concorde ou Pacto de Concórida:</b> Contrato entre todas as equipes, a FIA e a FOM. Ele foi assinado pela primeira vez em 04 de março de 1981, na sede da FIA na Praça de Concórdia em Paris. O pacto vem sendo renovado desde então. É um acordo entre as partes, um documento comercial que define regulamentos, segurança e acordo comercial. Ele define também o prêmio que será dividida ente os times, além das receitas televisivas.<br><br>
+        
+        <b class="f1">Aderência (Grip):</b> Intensidade do contato entre os pneus em movimento e a superfície da pista. Volume de tração que um carro possui em qualquer ponto, afetando o grau de dificuldade para o piloto manter o controle do carro nas curvas. Um carro com boa aderência é mais estável de guiar.<br><br>
+        
+        <b class="f1">Aerodinâmica (Aerodynamics):</b> O estudo do fluxo de ar ao redor e sobre um objeto. Parte fundamental do projeto de um carro de Fórmula 1, mas também necessário em outras categorias. Aerodinâmica em carros de corrida tem duas preocupações básicas: a criação de aderência que empurre o carro para baixo minimizando as forças laterais que empurram o carro para fora da linha ideal em curvas, e ao mesmo tempo minimize o arrasto e a turbulência em retas, que diminuem a velocidade do carro.<br><br>
+        
+        <b class="f1">Aerofólio:</b> As asas invertidas encaixadas na traseira do carro e no bico, que dão pressão aerodinâmica a máquina, ajudando a contornar nas curvas. Peça que tem função de pressionar a parte traseira do carro contra o solo e com isso dar maior estabilidade. Em monopostos existem os aerofólios dianteiros e traseiros. Em carros de turismo e protótipos não existe aerofólio dianteiro, mas sim Spoiler (ver mais abaixo). Peça que funciona como uma asa de avião e pressiona a traseira do carro contra o solo, aumentando a carga sobre as rodas e dando mais potência e melhorando o direcionamento.<br><br>
+        
+        <b class="f1">Aeroscreen:</b> Foi um sistema de segurança adotado pela IndyCar para proteger os seus pilotos. A Red Bull fez o estudo para a implementação do dispositivo, buscando reduzir os riscos de lesnao em caso de um acidente. Ele é formado por uma tela laminada de policarbonato que conta com um revestimento antireflexo no interior do escudo. Foi introduzido na temporada de 2020.</p><br>
+    <img class="imagem-destaque" src="https://boletimdopaddock.com.br/wp-content/uploads/2017/01/aeroscreen.jpg">
+    <p class="th2">(Assim como o halo, o aeroscreen é um dispositivo usado para a segurança dos pilotos – Foto: reprodução Indy)</p>
+    <p class="th2"><b class="f1">Airbox:</b> Abertura na carroceria, acima da cabeça do piloto, projetada para sugar o ar do ambiente para os cilindros.<br><Br>
+
+        <b class="f1">Ajudas de pilotagem:</b> Uma variedade de aparelhos eletrônicos, como suspensão ativa e controle de tração, que ajudava os pilotos a manter seus carros no melhor nível, com a melhor aceleração em todos os momentos. Eles foram banidos no começo dos anos 1990.<br><br>
+        
+        <b class="f1">Alambrado Armco:</b> Marca da barreira de metal que tem sido usada para impedir que os carros voem para fora das pistas do mundo desde a década de 60.<br><br>
+        
+        <b class="f1">Alça de emergência:</b> Anel no flanco das carrocerias, pintado em vermelho, permitindo aos comissários de pista, através de um longo gancho acionar simultaneamente os extintores e o corta-circuito elétrico.<br><br>
+        
+        <b class="f1">Altura do chassi ou altura do carro (Ride Heights):</b> Altura entre a superfície da pista e o assoalho do carro.<br><br>
+        
+        <b class="f1">Análise técnica:</b> Uma checagem técnica dos carros, pelos oficiais, para garantir que nenhum deles está fora do regulamento ou tem alguma especificação fora do padrão.<br><br>
+        
+        <b class="f1">Análise:</b> Uma sessão de perguntas e respostas entre os pilotos e engenheiros depois de todas as vezes que eles correm, quando eles discutem o comportamento do carro e sugerem mudanças no acerto.<br><br>
+        
+        <b class="f1">Apelação (Appeal):</b> Ação tomada por uma equipe em favor de seus pilotos ou do próprio time quando eles são punidos e tentam reverter aquela penalidade aplicada pelos comissários da corrida.<br><br>
+        
+        <b class="f1">Apêndices aerodinâmicos:</b> peças sobressalentes que possuem funções aerodinâmicas, também conhecidas como ‘aletas’.<br><br>
+        
+        <b class="f1">Apex:</b> É o ponto de uma curva que o piloto terá como objetivo fazer o carro passar. O apex é na linha mais rápida da curva. Algumas curvas têm mais de um apex.<br><br>
+        
+        <b class="f1">Apoio de pés:</b> A frente do cockpit onde os pés do piloto têm contato com os pedais.<br><br>
+        
+        <b class="f1">Aquaplanagem:</b> Fenômeno que ocorre quando a pista está bem molhada. Uma camada de água se forma entre o pneu e o asfalto, tirando toda a aderência (contato) e mantendo o carro suspenso, é justamente quando as rodas de um carro perdem o contato com a superfície da pista.<br><br>
+        
+        <b class="f1">Aquaplanar:</b> Ocorre quando uma camada de água se acumula entre os pneus de um carro e a superfície da pista. O carro perde o contato com a pista e torna-se incontrolável (muito comum em carros de passeio também).<br><br>
+        
+        <b class="f1">Aquecedor de Pneus (Tyre warmer):</b> Capa elétrica que envolve o pneus, ela serve para deixar os pneus na temperatura ideal para o uso. Também são conhecidos como cobertores térmicos ou mantas térmicas.</p><br>
+   
+    <img class="imagem-destaque" src="https://boletimdopaddock.com.br/wp-content/uploads/2017/01/Tyrrell-X-Wing-1998_101d7b8599c0cc599ee16e9637ccc19e.jpg">
+    <p class="th2">(Várias equipes usaram a X-Wing, eram apêndices aerodinâmicos. O nome é justamente por conta do filme Star Wars – Foto: reprodução)</p>
+    <p class="th2"><b class="f1">Aspiração normal:</b> Qualquer motor que não seja super carregado ou com turbo. Não há indução forçada de ar.<br><br>
+
+        <b class="f1">Assentamento (Bottoming):</b> Quando, por meio de forte compressão, o chassi de um carro bate na superfície da pista e atinge a parte inferior de seu curso de suspensão, raspando o assoalho no asfalto.<br><br>
+        
+        <b class="f1">Assoalho:</b> Um nível separado do carro que é colocado do lado de baixo do monobloco. As equipes na Fórmula 1 usam para instalar apêndies aerodinâmicos para contribuir com o seu projeto, deixando o carro mais eficiênte. Geralmente feita de madeira e fibra. Quando entram em contato direto com o asfalto acabam gerando faíscas.<br>
+    
+    </p>
+    <img class="imagem-destaque" src="https://boletimdopaddock.com.br/wp-content/uploads/2017/01/assoalho.jpg">
+    <p class="th2">(Assoalho de um carro de Fórmula 1 – Foto: reprodução)</p>
+    <p class="th2"><b class="f1">Autoblocante:</b> Mecanismo que limita a ação do diferencial e evita que as rodas girem livremente em velocidades diferentes.<br><br>
+
+        <b class="f1">Autoclave:</b> Forno usado para cozimento de peças feitas em fibra de carbono.<br><br>
+        
+        <b class="f1">Balaclava:</b> Máscara protetora a prova de fogo que os pilotos usam por baixo do capacete, para evitar queimaduras no rosto e pescoço.<p><br>
+    <img class="imagem-destaque" src="https://boletimdopaddock.com.br/wp-content/uploads/2017/01/SI202109100222_hires_jpeg_24bit_rgb-1.jpg">
+    <p class="th2">(Balaclava – Foto: reprodução Red Bull)</p>
+    <p class="th2"><b class="f1">Balanceamento de Freios (Brake balance):</b> Mudança que é feita de dentro do cockpit para alterar a distribuição da potência de frenagem do carro entre as rodas dianteiras e traseiras, de acordo com o desejo do piloto.<br><br>
+
+        <b class="f1">Bandeiras:</b> Instrumentos usados pelos fiscais e comissários para comunicação com os pilotos, existem diversas cores, justamente para passar várias informações.<br><br>
+        
+        <b class="f1">Bandeirinha (Fiscal de pista) ou (Marshal):</b> Fiscal encarregado de acionar as bandeiras de comunicação durante treinos e corridas. Oficial da corrida que supervisiona a segurança durante uma prova. Os fiscais têm diversas tarefas a cumprir, incluindo observar a segurança do público para que ninguém coloque em risco pilotos ou a si próprios. Os bandeirinhas atuam também como bombeiros, ajudando a remover de carros da pista ou alertando outros competidores agitando as bandeiras de aviso para assinalar a condição daquele trecho ou de algo que ocorreu em outra parte da pista.<br><br>
+        
+        <b class="f1">Bandeja inferior:</b> Um braço da suspensão, que sai da roda e vai até a parte inferior do amortecedor, no qual após a roda passar por uma ondulação este braço puxa o amortecedor para cima.<br><br>
+        
+        <b class="f1">Bandeja superior:</b> Um braço da suspensão, que sai da roda e vai até a parte superior do amortecedor, no qual após a roda passar por uma ondulação este braço empurra o amortecedor para baixo.<br><br>
+        
+        <b class="f1">Barbatana:</b> Aerofólios pequenos dispostos no bico de cada lado do carro ou peças aerodicâmica em formato de uma barbatana de tubarão.<p><br>
+    <img class="imagem-destaque" src="https://boletimdopaddock.com.br/wp-content/uploads/2017/01/barbatanas-tubarao.jpg">
+    <p class="th2">(Exemplo de dois tipos de barbatana – Foto reprodução Force India)</p>
+    <p class="th2"><b class="f1">Barge board (Bargeboard):</b> Pedaço de carroceria montado verticalmente entre as rodas dianteiras e o início dos sidepods para facilitar o fluxo de ar em torno dos lados do carro.<p><br>
+    <img class="imagem-destaque" src="https://boletimdopaddock.com.br/wp-content/uploads/2017/01/Barge-board.jpg">
+    <p class="th2">(Barge board – Foto: reprodução F1)</p>
+    <p class="th2"><b class="f1">Barra estabilizadora:</b> Barra de torção ligando as duas rodas de um mesmo eixo, limitando a inclinação lateral do carro e também o equilibrando, pois age separadamente na dianteira e na traseira. Uma parte da suspensão colocada para prevenir derrapagens.</p>
+    <p class="th2"><b class="f1">Bater o assoalho no chão:</b>  Quando o chassi de um carro atinge a superfície da pista por causa de uma forte compressão, chegando ao nível mais baixo da suspensão. Em alguns circuitos por conta da configuração dos carros, eles acabam encostando os assoalhos no chão e gerando uma faísca.</p>
+    <img class="imagem-destaque" src="https://boletimdopaddock.com.br/wp-content/uploads/2017/01/Faiscas.jpg">
+    <p class="th2">(O assoalho entrando em contato com asfalto – Foto: reprodução)</p>
+    <p class="th2"><b class="f1">Biscoito:</b>ermo usado para se referir ao tipo de pneu com ranhuras indicado para pistas molhadas.</p>
+    <p class="th2"><b class="f1">Bitola:</b> Distância separando o meio de cada uma das rodas de um mesmo eixo.</p>
+    <p class="th2"><b class="f1">Bolhas nos pneus (<i>Blistering</i>):</b> Acontece em consequência do superaquecimento de um pneu, ou de parte dele. O aquecimento excessivo pode fazer com que a borracha amoleça e se solte em pedaços do corpo do pneu. Uma ação que ocorre de dentro para fora do pneu, o contato entre as camadas internas do composto.Quando ela chega a última camada, as bolhas são formadas. A camada final fica ‘arrepiada’.</p>
+    <img class="imagem-destaque" src="https://boletimdopaddock.com.br/wp-content/uploads/2017/01/hamilton-silverstone-2020.jpg">
+    <p class="th2">(Pneu que está sofrendo com a ação das bolhas – Foto: reprodução)</p>
+    <p class="th2">Essas bolhas podem surgir por conta de uma seleção inadequada de um composto (por exemplo, um que seja demasiado suave para as condições do circuito), pressão muito alta dos pneus, ou um mau acerto de carro.</p>
+    <p class="th2"><b class="f1">Borboletas (<i>Paddles</i>):</b> Alavancas colocadas em ambos os lados da parte traseira do volante, usadas pelo piloto para mudar as marchas para cima ou para baixo.</p>
+    <img class="imagem-destaque" src="https://boletimdopaddock.com.br/wp-content/uploads/2017/01/f1-traseira-volante-mercedes-w12-2021.jpg">
+ <p class="th2">(Visão traseira de um volante de F1 – Foto: reprodução)</p>
+    <p class="th2"><b class="f1">Boxes (<i>Pits</i>):</b> Local onde ficam os carros e que compreende a garagem (parte coberta onde ficam guardados os equipamentos e carros), <i>pit-lane</i> e pista. Área do trajeto separada da reta de largada/chegada por um muro, para onde os carros são levados para troca de pneus e combustível durante a corrida ou para mudanças de ajuste. Cada carro deve parar em sua respectiva garagem dentro dos boxes.</p>
+    <p class="th2"><b class="f1">Brake-by-wire:</b> Sistema de freios usados pela primeira vez nas rodas traseiras. Um sistema eletrônico que mede a força que o piloto coloca no pedal, que determina em uma fração de segundo a força que será aplicanas pinças dos freios traseiros. Um carro de Fórmula 1 possui dois sistemas de freio, em caso de um falhar.</p>
+    <p class="th2"><b class="f1"><i>Brake-test:</i></b> Manobra desleal, na qual o piloto que está na frente dá uma “beliscada” no freio em pontos improváveis, para assustar aquele que vem atrás, tentando ultrapassagem.</p>
+    <p class="th2"><b class="f1">CAD/CAM:</b> Um programa de computador para projetar as partes e o motor do carro.</p>
+    <p class="th2"><b class="f1">Caixa de Ar:</b> O receptáculo de ar localizado acima da cabeça do piloto, que capta ar para o motor.</p>
+    <img class="imagem-destaque" src="https://boletimdopaddock.com.br/wp-content/uploads/2017/01/b5a3-5971-617c-4259af8ea7d2_74794c459da83baba0d33986babde743b225156e.jpg">
+ <p class="th2">(Essa abertura que fica no popular ‘Santo Antônio’ – Foto: reprodução Alpine)</p>
+    <p class="th2"><b class="f1">Caixa de brita (<i>Gravel trap</i>):</b> É projetado com o objetivo de diminuir a velocidade dos carros que escapam da pista. Leito de cascalho na parte externa das curvas, muito usado ainda em circuitos antigos. Área de proteção na parte externa das curvas, onde é colocada brita com o objetivo de diminuir a velocidade dos carros em caso de derrapagem ou acidente, para evitar choques maiores contra as barreiras de proteção. Geralmente o carro atola e fica impedido de voltar à pista.</p>
+    <p class="th2"><b class="f1">Caixa preta</b>: O gravador de dados que ajuda os investigadores de acidentes a coletarem as forces-g e outras cargas físicas experimentadas por um carro e seu piloto durante um acidente.</p>
+    <p class="th2"><b class="f1">Caixas laterais:</b> Caixas situadas de cada lado do monoposto, abrigando geralmente, os radiadores.</p>
+    <p class="th2"><b class="f1">Cambagem:</b> É o ângulo da roda quando visto de frente ou de traseira. Cambagem positiva é quando o topo das rodas estão mais afastados do carro do que a parte de baixo. Cambagem negativa é o oposto e é muito mais frequentemente usada em carros de corrida, embora possa não ser o mesmo em ambas as rodas dianteiras e traseiras. A cambagem geralmente é a mesma de ambos os lados em carros que competem em pistas mistas ou de rua. Em carros que competem em ovais, como na Indy, a curvatura pode variar de um lado para outro e isso é muitas vezes benéfico. Cambagem positiva raramente é usada, exceto em alguns casos de ovais na Indy, quando um lado do carro pode ter curvatura positiva enquanto a outra negativa.</p>
+    <img class="imagem-destaque" src="https://boletimdopaddock.com.br/wp-content/uploads/2017/01/cambagem.png">
+ <p class="th2">(Cambagem – Foto: reprodução)</p>
+    <p class="th2"><b class="f1">Câmbio semiautomático</b>: Sistema de câmbio em que a mudança de marchas é feita por comandos eletrônicos colocados atrás do volante. Um aumenta, outro reduz a marcha, sem ter que usar uma alavanca de câmbio ou o pedal da embreagem.</p> 
+    <p class="th2"><b class="f1">Câmbio sequencial:</b> Sistema de mudança em que o piloto empurra a alavanca de câmbio para frente para aumentar a velocidade ou puxa para trás, para reduzir.</p>
+    <p class="th2"><b class="f1">Câmeras Onboard:</b> As pequenas câmeras que são colocadas ao redor do carro, em diferentes ângulos, para ajudar na captação das imagens dele em pista.</p>
+    <p class="th2"><b class="f1">Carenagem:</b> Carroceria do F-1, que tem por objetivo proporcionar eficiência aerodinâmica ao carro. A seção de fibra de carbono que tem por objetivo proporcionar eficiência aerodinâmica ao carro, colocada sobre o monobloco antes dos carros deixarem os boxes, assim como a cobertura do motor, do cockpit e o cone do bico do carro.</p>
+    <p class="th2"><b class="f1">Carroceria (<i>Bodywork</i>):</b> As seções de fibra de carbono ajustadas ao monocoque antes de o carro deixar os boxes, tais como tampa do motor, cobertura da cabine do piloto e nariz do carro.
+    <p class="th2"><b class="f1">Célula de combustível:</b> O tanque flexível usado como tanque de combustível.</p>
+    <p class="th2"><b class="f1">Centralina (CE):</b> Central eletrônica do carro, que controla a injeção de gasolina no motor e a ignição. É uma das peças que compõe o motor ou unidade de potência.</p>
+    <p class="th2"><b class="f1">Centro de pressão:</b> Onde todas as forças aerodinâmicas de um carro se concentram. Assim como o centro de gravidade de um carro, este também precisa se localizar no meio do carro.</p>
+    <p class="th2"><b class="f1">CFD (ou <i>DCF</i>):</b> Dinâmica Computacional dos Fluidos é uma função que ajuda os projetistas a avaliar o fluxo de ar sobre e em volta do carro.</p>
+    <p class="th2"><b class="f1">Chacoalhada:</b> Um breve teste feito quando uma equipe está testando uma parte diferente do carro pela primeira vez, antes de voltar e pilotar a 100% para fazer um tempo rápido.</p>
+    <p class="th2"><b class="f1">Chassi (Chassis):</b> Estrutura básica do carro que envolve o piloto e sustenta os componentes do carro, na qual se encaixam o motor e a suspensão.</p>
+    <p class="th2"><b class="f1">Chassi tubular:</b> A maneira com a qual os chassis eram feitos até a introdução dos monoblocos na metade da década de 1960, com uma moldura de tubos finos de metal cobertos com uma pele de metal.</p>
+    <img class="imagem-destaque" src="https://boletimdopaddock.com.br/wp-content/uploads/2017/01/chassi-tubular.jpeg">
+<p class="th2">(Uma estrutura tubular que depois é revestida por metal – Foto reprodução)</p>
+    <p class="th2"><b class="f1">Checagem técnica (<i>Scrutineering</i>):</b> A checagem técnica dos carros é feita pelos fiscais de prova para assegurar que nenhum deles está fora do regulamento. Verificam peso e as especificações presentes no regulamento daquela temporada.</p>
+    <p class="th2"><b class="f1">Chicane (<I>Chicane</I>):</b> Espécie de corte feita no traçado no meio de uma reta, com o objetivo de reduzir a velocidade dos carros em sua passagem naquele trecho. Praticamente um desvio do traçado original, fui muito adotado, já que os carros granharam muita velocidade nos últimos anos.</p>
+    <img class="imagem-destaque" src="https://boletimdopaddock.com.br/wp-content/uploads/2017/01/chicane.jpg">
+<p class="th2">(Chicane em Monza – Foto reprodução)</p>
+    <p class="th2"><b class="f1">Cilindrada:</b> Volume em cm3 deslocados pelos pistões dentro dos cilindros do motor.</p>
+    <p class="th2"><b class="f1">Circuito:</b> Local onde são realizadas as provas do Mundial.</p>
+    <p class="th2"><b class="f1">Classificação (<i>Qualifying</i>):</b> Sessão decisiva do sábado, em que os pilotos competem para obter o melhor tempo possível de forma a determinar o grid de largada para a corrida. Na Fórmula 1 é dividido em Q1, Q2 e Q3, mas cada categoria escolhe o seu formato. Pode ser por grupos ou até mesmo por tempo de duração, mas a posição será determinada pelo melhor tempo obtido pelo piloto.</p>
+    <p class="th2"><b class="f1">Cobertor térmico:</b> Dispositivo que envolve os pneus e os mantém aquecidos antes de uma largada ou de um pit-stop.</p>
+    <p class="th2"><b class="f1">Cockpit (<I>Cockpit</I>):</b> A parte do chassi em que o piloto se senta. Lugar em que o piloto dirige o carro. Cabine que envolve o piloto. Projetada e produzida para resistir a impactos de várias toneladas, dependendo da categoria.</p>
+    <p class="th2"><b class="f1">Coletores de ar laterais:</b> Buracos no final das laterais de um carro para tirar o fluxo de ar das rodas traseiras.</p>
+    <p class="th2"><b class="f1">Comissão técnica:</b> A parte da entidade que comanda o esporte responsável pelas decisões no regulamento técnico.</p>
+    <p class="th2"><b class="f1">Comissários de prova (<i>Steward</i>): </b>A cada Grande Prêmio, a FIA determina os comissários que irão supervisionar o desenrolar da competição e tomar decisões quanto a possíveis infrações técnicas e/ou esportivas.</p>
+    <p class="th2"><b class="f1">Composto do pneu (<i>Compondo</i>):</b> É a parte que forma um pneu, toda a sua composição. Para fazer um pneu eles acabam usando diversos tipos de borracha, além de cerca de dez ingredientes, tais como borracha, polímeros, enxofre, carbono e petróleo. Cada um deles inclui um vasto número de variantes, podendo ser usados em maior ou menor grau. Uma pequena mudança na mistura pode alterar o desempenho do composto.</p>
+    <img class="imagem-destaque" src="https://boletimdopaddock.com.br/wp-content/uploads/2021/02/Pneus-Pirelli-para-o-GP-da-Russia-1-300x200.jpg">
+<p class="th2">(Foto: reprodução/Pirelli)</p>
+    <p class="th2"><b class="f1">Compressor:</b> Dispositivo mecânico para aumentar a carga de ar admitida nos cilindros do motor.</p>
+
+    <p class="th2"><b class="f1">Computador de bordo:</b> Terminal que armazena informações sobre o comportamento de carro na pista e que podem ser transmitidas aos terminais dos boxes por ondas magnéticas ou por conexão feita durante o pit stop.</p>
+
+    <p class="th2"><b class="f1">Construtor:</b> Uma companhia que constrói carros especializados para automobilismo. Difere-se no termo ‘equipe’, já que algumas equipes no passado costumavam comprar carros de outros construtores e se inscreverem na Fórmula 1. Hoje temos o campeonato de construtores na grande maioria das competições, pois os times constroem ou projetam os seus carros.</p>
+
+    <p class="th2"><b class="f1">Controle de Tração (<i>Traction control</i>):</b> Sistema computadorizado que detecta se alguma das rodas traseiras está perdendo tração – ou seja, rotação – e transfere mais força para a roda com maior tração, distribuindo assim a aderência de modo mais eficiente. Foi proibido a partir da temporada de 2008.</p>
+
+    <p class="th2"><b class="f1">Corrida chuvosa:</b> Declarada pelo diretor da prova, quando chove antes da largada de um Grande Prêmio se em todas as ocasiões anteriores que os carros estiveram na pista ela estava seca.</p>
+
+    <p class="th2"><b class="f1"><i>Crash-test</i>:</b> Teste de resistência/colisão do chassi realizado pela FIA antes de homologar um carro.</p>
+
+    <p class="th2"><b class="f1">Damper:</b> Um aparelho usado para controlar o movimento vertical da suspensão.</p>
+
+    <p class="th2"><b class="f1">Decaimento das rodas:</b> O movimento sentido sob aceleração, freada e curvas.</p>
+
+    <p class="th2"><b class="f1">Defeito localizado no pneu:</b> Acontece quando um pneu desgasta apenas em um local depois de uma forte freada o efeito de dechapar, ou por conta de uma rodada. Isto arruína o manuseio do carro, causando muita vibração, forçando um piloto a parar nos boxes para colocar um novo jogo de pneus.</p>
+
+    <p class="th2"><b class="f1">Defletor:</b> Apêndice aerodinâmico dos carros de F-1.</p>
+
+    <p class="th2"><b class="f1">Defletores Laterais:</b> Pedaços de carenagem colocados verticalmente entre as rodas dianteiras e o começo das laterais, para ajudar o ar a fluir mais suavemente pela lateral do carro.</p>
+
+    <p class="th2"><b class="f1">DFC:</b> Dinâmica de Fluidos Computacional é comumente descrito como “um túnel de vento em um computador”. A utilização da enorme capacidade computacional somada a programas sofisticados, que permite aos engenheiros simular e analisar as propriedades aerodinâmicas de uma peça antes mesmo de ser fabricada.</p>
+
+    <p class="th2"><b class="f1">Diferencial:</b> A ligação entre a caixa de câmbio e as rodas. Equipamento que transmite a potência do motor para as rodas traseiras.</p>
+
+    <p class="th2"><b class="f1">Difusor (<i>Diffuser</i>):</b> Peça de função aerodinâmica localizada embaixo na traseira que facilita a passagem do ar pelo carro, além de proporcionar mais estabilidade na traseira. A seção traseira do assoalho, em que o ar que flui embaixo do carro circula. O desenho do difusor é crucial, já que controla a velocidade com que o ar sai da parte inferior de um F1. Quanto mais rápido isso ocorrer, menor é a pressão de ar abaixo do carro. Consequentemente, maior é a pressão aerodinâmica gerada.</p>
+    <img class="imagem-destaque" src="https://boletimdopaddock.com.br/wp-content/uploads/2017/01/Difusor-mclaren.jpg">
+<p class="th2">(Difusor é essa parte traseira do carro que parece ter vários dentes – Foto: reprodução)</p>
+    <p class="th2"><b class="f1">Difusor soprado:</b> Foi uma forma que os projetistas encontraram para trabalhar com os gases que saem do escapamento, como eles deixam o carro com uma pressão considerável, modificaram o escapamento, para que os gases fossem eliminados junto ao assoalho e com o desenho ideal, o difusor se aproveitava dessa pressão extra para fornecer mais aderência ao carro. Foi usado até 2011.</p>
+
+    <p class="th2"><b class="f1">Diretor de prova:</b> Responsável pelas decisões tomadas durante toda a corrida. Dirigente designado pela FIA e responsável pelas decisões durante a prova, como o início da corrida, acionamento das bandeiras, desclassificação de piloto, punição por irregularidades, paralisação de uma prova ou entrada do “safety car”.</p>
+
+    <p class="th2"><b class="f1">Distância entre eixos:</b> Distância que separa o eixo dianteiro do eixo traseiro.</p>
+
+    <p class="th2"><b class="f1"><i>Downforce</i>:</b> Através de alguns ajustes e utilização de apêndices aerodinâmicos, os carros acabam ficando mais colados ao solo por conta da força vertical que empurram eles em direção ao solo, isso se dá pela passagem que o ar tem em toda a extensão do carro.</p>
+
+    <p class="th2"><b class="f1">Drive-through (<i>Drive-through penalty</i>):</b> Uma das punições que podem ser distribuídas a critério dos comissários de prova enquanto a corrida ainda está acontecendo. O piloto deve entrar na área dos boxes respeitando o limite de velocidade e voltar à corrida sem parar.</p>
+
+    <p class="th2"><b class="f1">DRS:</b> Sigla em inglês para Drag Reduction System, ou Sistema de Redução de Arrasto. Trata-se de um sistema introduzido em 2011 – para ajudar nas ultrapassagens – onde em determinadas partes da pista, o piloto pode “abrir” os flaps da asa traseira e o carro ganha muita velocidade em reta. Durante treinos os pilotos podem usar o sistema onde quiserem, mas durante a corrida somente no(s) ponto(s) determinado(s) pela FIA e se o piloto estiver até a 1 segundo de distância para o que vai à frente.</p>
+    <img class="imagem-destaque" src="https://boletimdopaddock.com.br/wp-content/uploads/2017/01/f1-drs-700.jpg">
+<p class="th2">(DRS – Foto: reprodução)</p>
+    <p class="th2"><b class="f1">ECU (Engine Control Unit ou UCE):</b> O cérebro eletrônico do motor – unidade de controle eletrônico – que ajusta o nível de ignição e fluxo de combustível para a melhor eficiência do motor ou unidade de controle eletrônico é o computador central que gerencia as emissões e o consumo de combustível do motor, temperatura da água do radiador, quantidade de oxigênio no escapamento, determina por quanto tempo o injetor de combustível deve ficar aberto, controla a tração e outras inúmeras funções vitais de funcionamento e performance dos motores de rua e de competição. Na F1 a ECU é padronizada para controlar custos e evitar que as equipes burlem o regulamento. Mas na maioria das categorias, como na MotoGP, a ECU é livre.</p>
+
+    <p class="th2"><b class="f1">Efeito Coanda:</b> Descoberto pelo romeno Henri Marie Coanda (07/06/1886 – 25/11/1972) define que qualquer fluido tende a seguir o contorno da superfície curva com a qual se depara. Utilizado por algumas equipes de Formula 1 a partir de 2012, para canalizar os gases quentes do escape em direção ao difusor, através da curvatura da carenagem.</p>
+
+    <p class="th2"><b class="f1">Efeito solo:</b> Forma de se obter aderência através da retirada do ar que circula sob o carro, criando-se uma área de baixa pressão que atrai o carro para o solo. Uma técnica aerodinâmica que resulta do fato das laterais do carro selarem o ar debaixo dele, criando uma área de pressão negativa, que suga o carro para baixo, aumentando a pressão aerodinâmica proveniente das asas. Tipo de downforce que é gerado pelo assoalho de um carro de corrida. Pensado por Colin Chapman na década de 70, é o tipo de downforce mais eficaz que existe. O assoalho do carro (juntamente com as saias laterais) é construído de forma que pareça uma asa de avião invertida. Isso aumenta a velocidade do fluxo de ar sob o carro e gera um enorme efeito de sucção. Na F1 é proibido e o assoalho do carro tem que ser obrigatoriamente plano. Os difusores têm uma função semelhante, mas muito menos eficaz.</p>
+
+    <p class="th2"><b class="f1">Eficiência Aerodinâmica:</b> Uma proporção que compara o arrasto do carro com sua pressão aerodinâmica.</p>
+
+    <p class="th2"><b class="f1">Equilíbrio Aerodinâmico:</b> Quando um carro tem equilíbrio na frente e atrás quanto ao fluxo de ar sobre ele. Sem isso, o carro estará desequilibrado e escapará na frente, caso haja menor pressão aerodâmica na frente, ou pode escapar de traseira, caso haja menor pressão aerodâmica na traseira.</p>
+
+    <p class="th2"><b class="f1">Equilíbrio dos freios:</b> Um botão no cockpit que altera a divisão dos freios do carro entre a frente e a traseira, de acordo com o desejo de um piloto.</p>
+
+    <p class="th2"><b class="f1">Equipe de testes:</b> A maioria das equipes tem uma equipe separada para conduzir seus programas de testes na semana após cada GP, permitindo que sua equipe de corrida descanse.</p>
+
+    <p class="th2"><b class="f1">Escuderia (<i>Scuderia</i>):</b> É a equipe de F1, nome mais utilizados por equipes italianas como Scuderia Ferrari e Scuderia AlphaTauri.</p>
+
+    <p class="th2"><b class="f1"><i>E-Prix</i>:</b> Denominação escolhida para definir os eventos da Fórmula E.</p>
+
+    <p class="th2"><b class="f1">Fechar a porta:</b> Manobra do piloto para impedir a ultrapassagem, mudança no traçado. Quando um piloto coloca meio carro à frente do adversário, este já não pode “fechar a porta”.</p>
+
+    <p class="th2"><b class="f1">FIA:</b> O órgão que regulamenta o esporte, a Federação Internacional de Automobilismo, que comanda todo o automobilismo internacional é a entidade máxima do automobilismo mundial e responsável pelas regras do Mundial de F-1.</p>
+
+    <p class="th2"><b class="f1">Fibra de Carbono:</b> Camadas de fibras que são ‘cozinhadas’ para se tornarem um material do qual o monobloco, peças aerodinâmicas e a suspensão são feitos.</p>
+
+    <p class="th2"><b class="f1">Fiscal:</b> Um oficial que tem o dever de tirar carros batidos ou abandonados e seus pilotos de posições perigosas ao redor do circuito, ou de agitar bandeiras para informar pilotos de perigos pendentes.</p>
+
+    <p class="th2"><b class="f1"><i>Fly by wire</i>:</b> Sistema de computador em que chips enviam ao motor o impulso do pé do piloto ao acelerador. Sistema de aceleração sem cabo, proibido pela FIA.</p>
+
+    <p class="th2"><b class="f1"><i>Flying lap</i>:</b> Volta de treino em que o piloto atinge condições para tentar a pole position.</p>
+
+    <p class="th2"><b class="f1">FOCA:</b> Associação dos Construtores da Fórmula Um, um órgão organizado pelos donos das equipes para representar seus interesses quando eles conflitam com o órgão máximo do esporte, a FIA.</p>
+
+    <p class="th2"><b class="f1">FOM:</b> Formula One Management era a empresa responsável pelo gerenciamento dos direitos comerciais da categoria. Seu proprietário era Bernie Ecclestone, ex-dono da equipe Brabham e foi considerado o “chefão” da Fórmula 1 na época. Depois a Liberty Media passou a ser a detentora dos direitos comerciais da Fórmula 1.</p>
+
+    <p class="th2"><b class="f1">Força de sustentação:</b> Perda de aderência pela aerodinâmica, que produz uma força de baixo para cima.</p>
+
+    <p class="th2"><b class="f1">Força descendente:</b> Pressão de cima para baixo exercida sobre o carro pelos dispositivos aerodinâmicos para mantê-lo no chão.</p>
+
+    <p class="th2"><b class="f1">Força G (<i>G-force</i>):</b> É a força física equivalente a uma unidade da gravidade que é multiplicada durante as rápidas mudanças de direção ou de velocidade. Elas acontecem principalmente em curvas, acelerações e freadas. Os pilotos suportam diferentes níveis de forças G quando fazem curvas, na aceleração e nas frenagens. A força G também é muito falada quando um piloto sofre uma batida e o impacto que ele absorveu.</p>
+
+    <p class="th2"><b class="f1">Forças Maiores:</b> Uma situação na qual uma equipe ou um piloto não tem opções sob as circunstâncias. Frequentemente citado como exemplo, se estiver chovendo muito forte, e um ou mais pilotos ficaram com um tempo fora dos 107% na qualificação, eles podem ser admitidos na corrida devido a forças maiores.</p>
+
+    <p class="th2"><b class="f1">Formação de Bolhas ou blisters:</b> É o que acontece aos pneus quando eles desgastaram demais, especialmente quando as temperaturas estão muito altas.</p>
+
+    <p class="th2"><b class="f1">Fórmula:</b> Designação para carros monopostos de competição. Tipo F1, F2, F3, Indy, Fórmula E, Fórmulas Regionais e W Series.</p>
+
+    <p class="th2"><b class="f1">Fornos industriais:</b> Usados pelas equipes para ‘cozinhar’ suas partes de fibras de carbono durante o processo de construção.</p>
+
+    <p class="th2"><b class="f1">Fota:</b> Formula One Teams Association é a associação das equipes que disputam a categoria.</p>
+
+    <p class="th2"><b class="f1">FP1, FP2 e FP3:</b> No Brasil são conhecidos como TL1, TL2 e TL3, que são os treinos livres feitos antes de uma classificação e servem como uma forma dos pilotos e equipes reconhecerem a pista. Necessários para a preparação dos carros antes das outras sessões do fim de semana.</p>
+
+    <p class="th2"><b class="f1">Freada com o pé esquerdo (Left-foot braking):</b> Um estilo de frenagem popular nos anos 1990, depois da chegada da embreagem na mão, para que os pilotos mantenham o pé direito no acelerador e dedicar o esquerdo às freadas.</p>
+
+    <p class="th2"><b class="f1">FT3:</b> Material flexível para fabricação dos tanques de combustível. Homologado segundo normas chamadas FT3, nome emprestado da aviação norte-americana.</p>
+
+    <p class="th2"><b class="f1">GP:</b> Grande Prêmio, denominação usada para corridas de campeonatos de fórmulas, Indy e MotoGP. Os GPs da Fórmula 1 levam o nome dos países ou cidades onde as provas serão realizadas.</p>
+
+    <p class="th2"><b class="f1">Grand Chelem:</b> Piloto que faz pole position, melhor volta e vence a corrida sem perder a liderança (sempre permanece na primeira posição, mesmo nas paradas de box).</p>
+
+    <p class="th2"><b class="f1">Granulação (<i>Graining)</i>):</b> Quando um carro desliza, pode fazer com que pequenos pedaços de borracha (grains) se soltem dos sulcos dos pneus. Esses detritos então se colam à superfície do pneu, separando-o da superfície da pista de forma superficial. Para o piloto, o efeito é como o de dirigir sobre rolamentos de esferas. A condução cuidadosa pode limpar a granulação em poucas voltas, mas afeta o ritmo do piloto. Estilo de condução, condições da pista, ajuste do carro, quantidade de combustível e o próprio pneu desempenham um papel na granulação. Na essência, quanto mais o pneu deslizar sobre a superfície da pista, mais provável será a ocorrência do processo de granulação.</p>
+    <p class="th2"><b class="f1">Grid:</b> Todos os carros ou motos de uma competição formam o grid de uma competição.</p>
+
+    <p class="th2"><b class="f1">Grid de largada:</b> Alinhamento para a largada organizado de acordo com os melhores tempos na classificação.</p>
+
+    <p class="th2"><b class="f1">Grip:</b> Palavra muito usada pelos pilotos, que significa aderência.</p>
+
+    <p class="th2"><b class="f1">Guard rail:</b> Barreira metálica de proteção utilizada em circuitos para delimitar o traçado.</p>
+
+    <p class="th2"><b class="f1">Guinada oposta:</b> Quando um carro faz uma curva com as rodas dianteiras viradas ‘para dentro’ da curva (isto é, no ângulo oposto da direção da curva), com o carro sendo ‘virado’ pelo acelerador.</p>
+
+    <p class="th2"><b class="f1"><i>Hairpin</i> (Grampo em português):</b> Curva muito fechada, geralmente de 180º. Cotovelo.</p>
+
+    <p class="th2"><b class="f1">Halo (<i>Safety Device</i>):</b> É uma peça de proteção adotada em carros de Fórmula 1, para atuar como uma forma de proteção para a cabeça do piloto. Os estudos começaram em 2016 e seguiram por 2017, foram introduzidos no campeonato de 2018. A barra envolve a cabeça do piloto, conectado em três pontos do carro.</p>
+    <img class="imagem-destaque" src="https://boletimdopaddock.com.br/wp-content/uploads/2021/09/Acidente-Hamilton-e-Verstappen.jpeg">
+<p class="th2">(O halo salvou Lewis Hamilton do acidente com Max Verstappen – Foto: reprodução)</p>
+    <p class="th2">Apesar da estética que foi muito críticada, o halo já ajudou a salvar a vida e os pilotos de vários acidentes que poderiam ser graves.</p>
+    <img class="imagem-destaque" src="https://boletimdopaddock.com.br/wp-content/uploads/2018/10/Interlagos-Simula%C3%A7%C3%A3o-de-Seguran%C3%A7a-cockpit-com-halo-65.jpg">
+<p class="th2">(Foto: Débora Santos | BPress)</p>
+    <p class="th2"><b class="f1">Hat Trick:</b> Piloto que faz pole position, melhor volta na corrida e vence a corrida – mas não lidera todas as voltas da prova.</p>
+
+    <p class="th2"><b class="f1">HP:</b> Unidade de medida de potência do motor. Do inglês “horse-power”.</p>
+
+    <p class="th2"><b class="f1">Instabilidade dianteira:</b> Quando a dianteira do carro não quer fazer uma curva e escorrega para frente enquanto um piloto tenta virar para o apêndice.</p>
+
+    <p class="th2"><b class="f1">Instabilidade traseira:</b> Quando a traseira de um carro não quer fazer uma curva e tenta ultrapassar a dianteira enquanto o piloto passa pelo apêndice da curva. Isto normalmente exige uma correção através de uma guinada oposta.</p>
+
+    <p class="th2"><b class="f1">Keep the Delta:</b> Uma expressão usada que significa diminuir o ritmo. Usado geralmente quando o Safety Car ou o Safety Car Virtual é ativo.</p>
+
+    <p class="th2"><b class="f1">KERS (<i>KERS</i>):</b> Foi o Sistema de Recuperação de Energia Cinética (<i>Kinetic Energy Recovery Systems</i>), ou KERS, tem como função restaurar a perda de energia cinética do carro durante a freada, armazenando-a para, posteriormente, disponibilizá-la para o motor impulsionar o carro. O piloto tem acesso a essa potência adicional por períodos limitados por volta. O acionamento se dá por meio de um botão no volante.</p>
+
+    <p class="th2"><b class="f1">Kevlar:</b> Marca de uma forma muito forte de material de fibra de carbono, introduzida na década de 80.</p>
+
+    <p class="th2"><b class="f1">Largada Abortada:</b> Quando a largada de uma corrida é cancelada por questões de segurança, como após um acidente, ou quando pilotos ou outras pessoas estão em posições perigosas depois que as luzes vermelhas se apagam. Logo acontece uma nova largada.</p>
+
+    <p class="th2"><b class="f1">Largada empurrada:</b> Quando um carro é empurrado pelos fiscais, para que o motor pegue no tranco. Isto é legal apenas se o carro está numa posição na pista que não traz perigo aos outros. Caso contrário, a largada empurrada leva à desclassificação.</p>
+
+    <p class="th2"><b class="f1">Largada Queimada:</b> Quando um piloto deixa o grid antes das cinco luzes vermelhas se apagarem durante a largada. Os sensores detectam qualquer movimento prematuro, e uma largada queimada faz o piloto ser punido com 10 segundos de stop and go.</p>
+
+    <p class="th2"><b class="f1">Lastro (<i>Ballast</i>):</b> Pesos fixados ao redor do carro para maximizar seu equilíbrio e levá-lo até ao limite mínimo de peso. Outras competições também usam como uma forma de aumentar o peso dos carros e diminuir a sua eficiência, vai de acordo com o regulamento de uma competição. A Stock Car no Brasil tem o Lastro de Sucesso.</p>
+
+    <p class="th2"><b class="f1">Levantamento:</b> O oposto de pressão aerodinâmica, quando o fluxo de ar sob o bico, laterais e asas tenta levantar o carro da pista.</p>
+
+    <p class="th2"><b class="f1">Limitador de giro:</b> Mecanismo que impede o motor de girar exageradamente.</p>
+
+    <p class="th2"><b class="f1">Linha ideal:</b> Melhor trajetória.</p>
+
+    <p class="th2"><b class="f1">Long run:</b> Quando um piloto completa muitas voltas na pista sem parar no box. Durante os treinos livres é definido como simulação de corrida.</p>
+
+    <p class="th2"><b class="f1">Macarrão (<i>Graining</i>):</b> Quando um carro derrapa, pode soltar pequenos pedaços de borracha dos pneus, que parecem tiras finas de macarrão. Essas tiras do pneu podem ficar grudadas nos pneus entre o pneu propriamente dito e a superfície de pista. Para o piloto, o efeito é como dirigir numa pista cheia de pedrinhas ou bolas de gude. Uma pilotagem cuidadosa pode limpar essas tiras do pneu em algumas voltas, mas, obviamente, tem um efeito sobre o ritmo do piloto. O estilo de condução, condições da pista, acerto do carro, carga de combustível e calibragem do pneu podem causar a formação do macarrão. Em essência, quanto mais o pneu se move sobre a superfície da pista (ou seja, derrapa), mais provável a formação do macarrão.</p>
+
+    <p class="th2"><b class="f1">Mapeamento do motor:</b> Uma técnica usada por uma UCE para combinar a taxa de ignição e o timing do motor.</p>
+
+    <p class="th2"><b class="f1">Marcas de Pneus:</b> A área de contato entre os pneus de um carro e a superfície da pista, vital em termos de tração e consequentemente no manuseio do carro.</p>
+
+    <p class="th2"><b class="f1">Meia-asa:</b> Um pequeno aerofólio colocado atrás da cabeça dos pilotos, acima da asa traseira, como tem sido visto desde o final dos anos 1990.</p>
+
+    <p class="th2"><b class="f1">Modo Ataque (<i>Attack Mode</i>):</b> Um sistema usado na Fórmula E para gerar mais ultrapassagens mas também fornecer ao piloto uma potência extra em um tempo determinado da prova. A potência salta de 220 kW para 250 kW. Geralmente fica posicionado em uma área externa de uma curva, onde o piloto precisa sair do traçado convencional para ativá-lo.</p>
+    <img class="imagem-destaque" src="https://boletimdopaddock.com.br/wp-content/uploads/2017/01/Modo-ataque.jpg">
+<p class="th2">(O Modo Ataque nesta figura é identificado com o traçado em azul – Foto: reprodução)</p>
+    <p class="th2"><b class="f1">Monobloco:</b> Uma única peça onde o cockpit está com o motor preso atrás dele e a suspensão em cada lado.</p>
+    <p class="th2"><b class="f1">Monocoque (<i>Monocoque</i>):</b> Um projeto pioneiro criado pela Lotus na década de 1960, mas agora utilizado por todos, o monocoque envolve uma grande parte do chassi ou ele inteiro, em uma única peça resistente, rígida e mais leve possível. É onde o piloto se senta e onde o resto do carro está ligado, pense nisso como o corpo principal do carro. Tipo de chassi em aço ou material sintético formando uma única estrutura, que substitui os chassis compostos de tubos e soldados. Estrutura tubular única, na qual se localiza o cockpit, com o motor fixado em sua traseira e a suspensão dianteira em ambos os lados da parte frontal.</p>
+    <img class="imagem-destaque" src="https://boletimdopaddock.com.br/wp-content/uploads/2017/01/Mitter_Gerhard_-_Lotus1965-1300-x-868-1210x642-1.jpg">
+<p class="th2">(Lotus usada durante os anos 1960 – Foto: reprodução)</p>
+    <p class="th2"><b class="f1">Monoposto:</b> Carro feito especificamente para competição, com lugar para apenas o piloto, sem cobertura para a cabeça e com as rodas para fora do corpo do carro. São os modelos usados nas categorias chamadas “fórmula”.</p>
+
+    <p class="th2"><b class="f1">Motor home:</b> Caminhão ou ônibus das equipes que serve como local de descanso ou reuniões.</p>
+
+    <p class="th2"><b class="f1">Muro do Box (<i>Pit wall</i>):</b> Onde o chefe da equipe e engenheiros ficam durante a corrida, normalmente sob um toldo, para manter os monitores protegidos do sol e da chuva.</p>
+
+    <p class="th2"><b class="f1">Não-classificado:</b> Quando um piloto ainda está pilotando no final da corrida, mas cobriu menos que 90% da distância total da prova.</p>
+
+    <p class="th2"><b class="f1">Nariz Tyrrell:</b> Bico do tipo aerobarco, com abas que prendem os spoilers. é mais alto do que os normais para criar um efeito-solo entre as rodas dianteiras, melhorando a estabilidade.</p>
+
+    <p class="th2"><b class="f1">Nomex:</b> Uma marca do tipo de material a prova de fogo que é usado na fabricação de macacões.</p>
+
+    <p class="th2"><b class="f1">Overcut:</b> É o contrário do Undercut (ver abaixo), neste caso o piloto permance mais tempo em pista do que o seu rival direto, desfrutando da pista livre, mas também contando com um pneu que não está tão desgastado. Por fazer uma sequência de voltas rápidas, ele ganha a posição do rival. No entanto, ele precisa contar que o adversário vai pegar tráfego, além disso terá mais dificuldade quanto o aquecimento dos pneus.</p>
+
+    <p class="th2"><b class="f1">Paddock (<i>Paddock</i>):</b> Área fechada localizada atrás dos boxes onde as equipes mantêm transportes e abrigos para motores. Não é permitida a entrada do público Área dos boxes, cabines de TV e camarotes de um autódromo.</p>
+
+    <p class="th2"><b class="f1">Parque fechado (<i>Parc Fermé</i>):</b> Área cercada para onde os carros são conduzidos depois da fase de qualificação ou da corrida, onde os membros das equipes não têm permissão para tocá-los a não ser sob a estrita supervisão dos fiscais da corrida. O local onde os carros são estacionados logo depois de um treino ou corrida para que eles possam ser inspecionados pelos fiscais, sem qualquer possibilidade de adulteração pelas equipes.</p>
+
+    <p class="th2"><b class="f1">Pilotos (<i>Driver</i>):</b> A equipe pode ter quantos pilotos quiser sob contrato, mas apenas dois podem disputarem uma corrida da Fórmula 1. Todos eles, no entanto, precisam ter a superlicença, documento que os autoriza a dirigirem um carro de Fórmula 1. Os pilotos são aqueles que vão guiar o carro durante um evento. Dependendo da competição eles até fazem o revezamento do carro, mas tudo é definido pelo regulamento.</p>
+
+    <p class="th2"><b class="f1">Pirulito (<i>Lollipop</i>):</b> Placa presa a um bastão colocada à frente do carro durante um pit stop para informar ao piloto que deve aplicar os freios e então engatar a primeira marcha antes de o carro ser liberado dos macacos.</p>
+
+    <p class="th2"><b class="f1">Pit lane:</b> Corredor onde estão localizados os boxes das equipes, uma faixa usada para a passagem dos carros.</p>
+
+    <p class="th2"><b class="f1">Pit stop:</b> Parada nos boxes, durante a corrida, para troca de pneus e/ou reabastecimento de combustível.</p>
+
+    <p class="th2"><b class="f1">Placa de pit (<i>Pit board</i>):</b> Placa erguida por sobre o muro do box para informar ao piloto sua posição na corrida, o intervalo de tempo em relação ao carro à sua frente e/ou o de trás, além do número de voltas restantes.</p>
+
+    <p class="th2"><b class="f1">Placa final:</b> A placa no fim de uma asa.</p>
+
+    <p class="th2"><b class="f1">Placa informativa:</b> Uma placa levantada no muro dos boxes para informar um piloto sua posição na corrida, o intervalo de tempo para o carro à frente e para o carro de trás, além do número de voltas para o fim da prova.</p>
+    <img class="imagem-destaque" src="https://boletimdopaddock.com.br/wp-content/uploads/2017/01/placa-de-box.jpeg">
+<p class="th2">(Placa que serve como comunicação visual entre equipe e piloto – Foto: reprodução W Series)</p>
+    <p class="th2"><b class="f1">Placa Lateral da Asa Dianteira:</b> Componente que aumenta a eficiência aerodinâmica ao desviar o fluxo de ar dos pneus dianteiros.</p>
+
+    <p class="th2"><b class="f1">Placas de Câmbio:</b> Alavancas localizadas em cada lado do volante, utilizadas pelo piloto para subir ou descer as marchas.</p>
+
+    <p class="th2"><b class="f1">Plano de Referência:</b> Um nível imaginário no qual partes específicas do carro devem estar localizadas, como a altura mínima do carro ao chão ou as dimensões máximas da asa traseira.</p>
+
+    <p class="th2"><b class="f1">Pneu de Chuva Extrema:</b> Pneu com sulcos maiores, projetado para dispersar eficientemente a água em condições de chuva intensa. Na Fórmula 1 atual, esses pneus são identificados pela cor azul.</p>
+    <img class="imagem-destaque" src="https://boletimdopaddock.com.br/wp-content/uploads/2017/01/Pneu-de-chuva-extrema.jpeg">
+<p class="th2">(Pne usado em caso de chuva extrema, onde a chuva está presente com mais força em todo o circuito – Foto: reprodução)</p>
+    <p class="th2"><b class="f1">Pneu de Chuva Extrema:</b> Usado em caso de chuva intensa em todo o circuito. Apresenta sulcos mais profundos para melhorar a drenagem da água. </p>
+    <img class="imagem-destaque" src="https://boletimdopaddock.com.br/wp-content/uploads/2021/01/thursdayrussia15-scaled.jpg">
+<p class="th2">(Pneus de Chuva, gama itermediária da Pirelli – Foto: Pirelli)</p>
+    <p class="th2"><b class="f1">Pneu <i>slick</i>:</b> Um pneu feito sem nenhum sulco, usado desde o começo da década de 1970 Não fazem a drenagem da água, por isso não são ideais para uma pista com chuva.</p>
+    <img class="imagem-destaque" src="https://boletimdopaddock.com.br/wp-content/uploads/2021/03/Max-Verstappen-Bahrein-duelo-de-pneus-com-Lewis-Hamilton.-jpg_Easy-Resize.com_.jpg">
+<p class="th2">(O pneu <i>slick</i> não tem nenhum sulco, sua superfície é lisa – Foto: reprodução)</p>
+    <p class="th2"><b class="f1">Na Fórmula 1 atual</b>, eles são de <span class="f2">13 polegadas</span>, mas para <span class="f2">2022</span> a categoria vai introduzir os pneus de <span class="f2">18 polegadas</span>.</p>
+
+    <p class="th2"><b class="f1">Pódio:</b> Onde os três primeiros recebem troféu e escutam os hinos dos países dos pilotos e da equipe vencedora.</p>
+
+    <p class="th2"><b class="f1">Pole position (<i>Pole position</i>):</b> Melhor colocação para a largada. Lugar do piloto que fizer o melhor tempo a classificação.</p>
+
+    <p class="th2"><b class="f1">Pontuação:</b> Pontos que são distribuídos aos pilotos, uma bonificação concedida seguindo o regulamento. Em algumas competições a pontuação vai além dos dez primeiros colocados. Alguns pilotos também podem receber uma pontuação pela posição que conquistaram na classificação ou até mesmo após uma volta rápida na corrida.</p>
+
+    <p class="th2"><b class="f1">Prancha de madeira (<i>Plank</i>):</b> Como o nome já diz, uma placa de sólida ajustada no meio do assoalho de todos os carros, desde o bico até a traseira, introduzida na metade da década de 1990 para checar se os carros não estavam correndo muito próximos da superfície da pista, algo que era indicado se a madeira se desgastasse.</p>
+
+    <p class="th2"><b class="f1">Pressão aerodinâmica (<i>Downforce</i>):</b> Força aerodinâmica aplicada para baixo quando um carro anda para frente. Isso é aproveitado para melhorar a tração do carro e seu manuseio nas curvas.</p>
+
+    <p class="th2"><b class="f1">Protesto (<i>Protest</i>):</b> Ação movida por uma equipe quando considera que outra equipe ou competidor transgrediram as regras.</p>
+
+    <p class="th2"><b class="f1"><i>Punta-tacco:</i></b> Termo italiano para ponta e salto do sapato. Recurso utilizado durante a frenagem para a entrada de uma curva. O piloto freia, pisa na embreagem acelera e reduz marcha(s) nessa sequência, praticamente ao mesmo tempo. Serve para elevar a rotação do motor durante as reduções de marcha. A ponta do pé direito freia, o calcanhar (ou o lado direito do pé) dá uma pequena acelerada com a embreagem acionada, enquanto o piloto reduz a(s) marcha(s).</p>
+
+    <p class="th2"><b class="f1">Qualificação:</b> Sessão oficial antes de uma corrida que determina a posição de largada de um piloto.</p>
+
+    <p class="th2"><b class="f1">Queimar a largada (<i>Jump start</i>):</b> Procedimento irregular de movimento do carro antes da luz verde. Quando um piloto sai de sua posição no grid de largada antes que as cinco luzes vermelhas se apaguem para assinalar o início da prova. Sensores detectam o movimento prematuro e o piloto recebe uma penalidade.</p>
+
+    <p class="th2"><b class="f1">Reabastecimento:</b> Parada para colocação de combustível. A Fórmula 1 não tem mais o reabastecimento, mas outras categorias ainda usam esse método em suas competições.</p>
+
+    <p class="th2"><b class="f1">RPMs:</b> Rotações por minuto, ou seja, quantas vezes um motor é capaz de virar durante um minuto. Um carro (de série) super esportivo de rua pode virar cerca de <span class="f2">7.000 RPM</span>, enquanto uma moto da MotoGP ou um carro de F1 podem virar cerca de <span class="f2">18.000 a 19.000 RPM</span>.</p>
+
+    <p class="th2"><b class="f1">Safety Car (<i>Safety Car</i>):</b> Veículo que é enviado para a pista em caso de acidente ou quando há a necessidade de resolver uma ocorrência na pista, adotado por motivo de segurança, ele neutraliza a prova. Também chamado de carro madrinha, é o carro de auxílio que lidera a fila de pilotos na volta de aquecimento.</p>
+
+    <p class="th2"><b class="f1">Safety Car Virtual:</b> Usado como um alerta no volante dos carros e também pelas placas na pista. Uma forma de neutralizar a corrida e fazer os pilotos reduzirem a sua velocidade, onde não podem fazer ultrapassagens.</p>
+
+    <p class="th2"><b class="f1">Saias:</b> Extensões removíveis da parte inferior dos defletores laterais, que se estendiam até a superfície da pista no final da década de 70 para impedir que o fluxo de ar passasse por baixo do carro pela lateral, para que se alcançasse a área de baixa pressão necessária para o efeito solo.</p>
+
+    <p class="th2"><b class="f1">Saída de frente (<i>Understeer</i>):</b> Quando a parte dianteira do carro "não quer" fazer a curva e ele escorrega para fora da trajetória assim que o piloto tenta virá-lo em direção à tangente.</p>
+
+    <p class="th2"><b class="f1">Saída de traseira (<i>Oversteer</i>):</b> Ocorre quando a extremidade traseira do carro não quer contornar uma curva e tenta ultrapassar a extremidade dianteira no momento em que o piloto contorna em direção à tangente. Isso frequentemente requer um contra esterço para correção, de forma que o piloto vira as rodas dianteiras em direção à derrapagem.</p>
+
+    <p class="th2"><b class="f1">Saídas de periscópio:</b> Escapamentos que saem pelo topo das laterais do carro ao invés da traseira.</p>
+
+    <p class="th2"><b class="f1">Santo Antônio:</b> O arco de metal ou de fibra de carbono na traseira do cockpit, colocado para proteger a cabeça do piloto no caso do carro capotar.</p>
+
+    <p class="th2"><b class="f1">Semieixo flutuante:</b> Suspensão em ‘V’ que conecta as rodas ao carro, com dois pontos de apoio em cada lado do monobloco na frente e dois pontos de apoio em cada lado do motor na traseira.</p>
+
+    <p class="th2"><b class="f1">Setores (<i>Sectors</i>):</b> Para fins de tomada de tempos, a pista é dividida em três setores, cada um compreendendo um terço da volta. Esses trechos são oficialmente conhecidos como Setor 1, Setor 2 e Setor 3.</p>
+
+    <p class="th2"><b class="f1">Shakedown (<i>Shakedown</i>):</b> Um breve teste, para dar aquela ‘balançada’ no carro, ou melhor, uma verificada breve nos sistemas. Testa suas funções básicas de funcionamento antes de fazer um teste completo buscando tempo.</p>
+
+    <p class="th2"><b class="f1">Sidepods (<i>Sidepod</i>):</b> Áreas que ficam de ambos os lados do carro (ao lado do piloto) que geralmente acomodam os radiadores e eletrônica do carro em monopostos.</p>
+    <img class="imagem-destaque" src="https://boletimdopaddock.com.br/wp-content/uploads/2017/01/sidpods.jpeg">
+<p class="th2">(Sidpods – Foto: reprodução)</p>
+    <p class="th2"><b class="f1">Simulação de Classificação:</b> Quando os pilotos deixam os boxes em um treino livre, com o tanque do carro mais vazio e também estão usando os pneus mais novos. Os pilotos trabalham para buscar as voltas mais rápidas, simulando o que vão fazer durante a classificação. Também estão buscando determinar se a volta é melhor com os pneus macios ou médios.</p>
+
+    <p class="th2"><b class="f1">Simulação de Corrida:</b> Quando os pilotos deixam os boxes com o tanque mais cheio e permanecem mais tempo na pista completando algumas voltas durante os treinos livres. Eles também usam este momento para verificar a durabilidade dos pneus. Também estão buscando determinar as estratégias que vão trabalhar durante a corrida.</p>
+
+    <p class="th2"><b class="f1">Sobreviseira:</b> Película plástica colocada sobre a viseira do capacete. Elas ficam em camadas e os pilotos as trocam várias vezes em uma corrida, bastando arrancá-las do capacete.</p>
+
+    <p class="th2"><b class="f1">Sobre-esterço (<i>Oversteer</i>):</b> Tendência de o carro sair de traseira na entrada (durante a freada) ou durante o contorno da curva.</p>
+
+    <p class="th2"><b class="f1">‘<i>Splash and dash</i>’ ou ‘<i>Splash and Go</i>’:</b> Um pit stop rápido, quando um piloto entra nos boxes apenas para colocar alguns litros de combustível e garantir que ele chegue até o final.</p>
+
+    <p class="th2"><b class="f1">Spoiler:</b> Nome dado a uma peça na dianteira baixa do carro, cuja função é aumentar a aderência na parte frontal do carro.</p>
+
+    <p class="th2"><b class="f1">Sprint:</b> Uma corrida mais rápida que geralmente tem um número de voltas reduzido e também não necessita da parada nos boxes.</p>
+
+    <p class="th2"><b class="f1">Sprint Qualifying:</b> Corrida rápida na Fórmula 1 mas que funciona como uma classificação para determinar o grid de largada da corrida principal que será disputada no domingo. Além disso, ela modifica todo o formato do fim de semana da Fórmula 1.</p>
+    
+    <p class="th2"><b class="f1">Stint:</b> Sequência de voltas sem parar no box.</p>
+
+    <p class="th2"><b class="f1"><i>Stop & go</i> ou <i>Stop and go</i> (<i>Stop-go penalty</i>)</b>: Penalização dada ao piloto, na qual ele é chamado ao box e precisa parar por 10 segundos antes de retornar à pista – sem poder trocar os pneus/ninguém pode tocar o carro.</p>
+
+    <p class="th2"><b class="f1">Sub esterço (<i>Understeer</i>):</b> Oposto do sobre esterço, o carro tem tendência a sair de frente nas mesmas situações.</p>
+
+    <p class="th2"><b class="f1">Superlicença:</b> É a “carteira de motorista” do piloto de F1, conferida anualmente. Punições podem fazer com que o piloto perca pontos na superlicença e não possa mais competir em um evento de Fórmula 1. Concedida para pilotos que estão na base, mediante a uma pontuação obtida em um tempo de competição.</p>
+
+    <p class="th2"><b class="f1">Supervisor da Prova:</b> Oficial da corrida com responsabilidade geral pelo Grande Prêmio.</p>
+
+    <p class="th2"><b class="f1">Suspensão ativa:</b> Sistema eletrônico de suspensão que mantém o carro a uma altura constante da pista, diminuindo o impacto das irregularidades da pista. Um tipo de suspensão que muda automaticamente sua configuração com um computador que reage para regular a altura do carro sobre as ondulações. Foi banida no final de 1993.</p>
+    <img class="imagem-destaque" src="https://i.imgur.com/rg9Kjs7.gif">
+    <p class="th2"><b class="f1">Tanque flexível:</b> Um tanque de combustível deformável que não só é mais fácil de ser colocado em um carro de corrida do que os cilindros de metal usados nos primórdios, mas também são menos prováveis de se danificarem durante um acidente.</p>
+
+    <p class="th2"><b class="f1">T-car:</b> Carro reserva.</p>
+    
+    <p class="th2"><b class="f1">Telemetria (<i>Telemetry</i>):</b> Medição do comportamento do carro, usando transmissão de dados por ondas. Sistema que transmite dados relativos aos componentes do carro (como motor e chassi) para os computadores dos boxes, permitindo que os engenheiros monitorem o comportamento dos carros.</p>
+    
+    <p class="th2"><b class="f1">Temporada:</b> Referência a um período de anos ou provas.</p>
+    
+    <p class="th2"><b class="f1">Teste de batidas:</b> Algo que todo construtor deve submeter seu carro a cada ano para provar que seu último design é forte o bastante para correr.</p>
+    
+    <p class="th2"><b class="f1"><i>Tifosi</i>:</b> Fãs, em italiano. Na F1, é como são conhecidos os torcedores principalmente da Ferrari, mas também pode ser usado para outros torcedores de equipes italianas.</p>    
+    <img class="imagem-destaque" src="https://boletimdopaddock.com.br/wp-content/uploads/2017/01/torcedores-da-Ferrari.jpg">
+    <p class="th2">(Os torcedores da Ferrari são conhecidos como <i>Tiffosi</i> – Foto: reprodução)</p><p class="th2">
+    <b class="f1">Tipos de composto do Pneu (<i>Tyre compound</i>):</b> Tipo de mistura de borracha usado na construção do pneu. Começa no super macio e passa pelo macio e médio até chegar ao duro. Cada tipo oferece desempenho e uso diferentes.</p>
+
+    <p class="th2"><b class="f1">Torque:</b> Literalmente, o giro ou a força de um motor, o torque é geralmente usado como uma medida da flexibilidade de um motor. Um motor pode ter muita potência, mas se tiver pouco torque, aquela potência só poderá ser aproveitada dentro de uma faixa pequena de RPMs, tornando de uso limitado para o piloto. Um motor com mais torque – mesmo que tenha menos potência – pode se provar mais rápido em muitas pistas, já que a potência fica disponível dentro uma faixa muito mais ampla de RPMs e, portanto, mais acessível. Bom torque é particularmente vital em circuitos de baixa e média velocidades, onde a aceleração em saída das curvas é essencial para um bom tempo.</p>
+    
+    <p class="th2"><b class="f1">Tração (<i>Traction</i>):</b> Grau de capacidade que o carro possui para transferir força para o asfalto de forma a aumentar o avanço. Na Fórmula 1 é o quanto um carro é capaz de transferir potência para a pista antes de perder aderência (derrapar).</p>
+    
+    <p class="th2"><b class="f1">Transponder:</b> Um sensor colocado no carro para ativar um cronômetro ao lado da pista, que marca o tempo de volta e a velocidade do carro.</p>
+    
+    <p class="th2"><b class="f1">Treino oficial:</b> Geralmente remete a classificação.</p>
+    
+    <p class="th2"><b class="f1">Treinos livres (<i>Practice</i>):</b> Sessões cronometradas que acontecem na sexta-feira e sábado pela manhã, Na Fórmula 1 agora elas têm duração de 1 hora. Pode ser qualquer treino em que as equipes vão verificar o carro, buscar um acerto ideal e estabelecer a verificação da durabilidade dos pneus.</p>
+    
+    <p class="th2"><b class="f1">Túnel de vento:</b> Projetado artificialmente para otimização aerodinâmica, usado desde 1980 pelas equipes de Fórmula 1. O ar é acelerado através de ventiladores especiais dentro de um recinto fechado para simular o fluxo de ar que o carro vai encontrar andando na pista. A maioria das equipes de F1 utilizam modelos em escala de 60% para testar em seus túneis, embora algumas tenham túneis grandes o suficiente para testar seus carros em escala 100%.</p>
+    
+    <p class="th2"><b class="f1">Turbo:</b> Um motor que recircula seus próprios gases de exaustão para ativar um compressor que aumenta a indução do motor, dando maior potência.</p>
+    
+    <p class="th2"><b class="f1">Turbulência (<i>Turbulence</i>):</b> Resultado da perturbação do fluxo de ar causado por uma interrupção de sua passagem (um ar sujo), como ocorre quando o fluxo atinge a asa traseira e seu caminho é alterado pelas lâminas horizontais dessa asa.</p>
+    
+    <p class="th2"><b class="f1">Undercut:</b> não tem uma tradução direta para o português, assim como outros termos do automobilismo. No entanto, o undercut é a ação do piloto ter o seu pit-stop antecipado, para tentar ganhar a posição do piloto que está à frente. No entanto, é apenas uma tentativa, pois nem sempre essa estratégia acaba dando certo.</p>
+    
+    <p class="th2"><b class="f1">Vácuo (<i>Slipstreaming</i>):</b> Área situada imediatamente atrás do carro onde pressão do ar é mais baixa que a pressão atmosférica. Tática de pilotagem na qual um piloto consegue se aproximar de um carro à sua frente, de maneira em que ele se beneficie de uma redução de arrasto e, com isso, ganhe mais velocidade para tentar fazer uma ultrapassagem.</p>
+    
+    <p class="th2"><b class="f1">Venturi:</b> Um tubo que se estreita, no qual o fluxo de ar é forçado a sair sob pressão.</p>
+    
+    <p class="th2"><b class="f1">Viseiras destacáveis</b> o mesmo que <b class="f1">sobreviseira (<i>Tear-off strips</i>):</b> Tiras de plástico transparente que os pilotos fixam ao visor dos capacetes antes do começo da corrida e que são removidas à medida que vão ficando sujas.</p>
+    
+    <p class="th2"><b class="f1">Volta de alinhamento</b> ou <b class="f1">Volta de aquecimento</b> ou “<b class="f1">Volta de apresentação</b>” (<i>Reconnaissance lap</i>):</b> Volta que antecede a largada, para o aquecimento dos pneus. Volta completa em que os pilotos deixam os boxes e alinham-se no grid para a largada. Se um piloto decidir fazer várias voltas de alinhamento, precisa desviar pela área dos boxes, já que o grid estará lotado com o pessoal das equipes.</p>
+    
+    <p class="th2"><b class="f1">Volta de formação</b> (<i>Formation lap</i>):</b> À volta antes do início da corrida, quando os carros fazem o percurso desde o grid de largada até retornar à formação determinada para dar início à corrida. É chamada também de volta de aquecimento e volta de apresentação.</p>
+    
+    <p class="th2"><b class="f1">Volta de instalação</b> (<i>Installation lap</i>):</b> Primeira volta realizada na chegada ao circuito, para testar as funções e os componentes do carro – tais como acelerador, freios e direção – antes de voltar aos boxes, sem cruzar a linha de chegada.</p>
+    
+    <p class="th2"><b class="f1">Volta de reconhecimento:</b> Uma volta completada quando os pilotos deixam os boxes para formarem o grid de largada. Se um piloto decide fazer várias, ele deve passar pelo pit-lane, porque o grid, na reta principal, estará cheio de pessoal das equipes.</p>
+    
+    <p class="th2"><b class="f1">Volta de teste:</b> Uma volta feita ao se chegar a um circuito, testando funções como acelerador, freios e volantes antes de voltar aos boxes, sem mesmo cruzar a linha de chegada.</p>
+    
+    <p class="th2"><b class="f1">Vortex:</b> Área onde o ar fica comprimindo e girando. Um ar “turbulento” é uma combinação de pequenos vórtices. Os exemplos mais óbvios são os vórtices que podem ser vistos saindo dos lados de uma asa traseira em condições úmidas. Estes vórtices estão sempre lá, mas só ficam visíveis em determinadas condições.</p>
+    
+    <p class="th2"><b class="f1">Warm-Up:</b> Um período de meia-hora pela manhã do domingo de corrida no qual os pilotos e as equipes fazem os últimos ajustes nos acertos dos seus carros, correndo com o tanque cheio.</p>
+    
+    <p class="th2"><b class="f1">X-Prix:</b> Denominação escolhida para os eventos do Extreme E, categoria off-road elétrica.</p>
+    
+    <p class="th2"><b class="f1">‘Yaw’:</b> O movimento lado-a-lado sentido por um chassi sob aceleração, freada e curvas.</p>
+    
+    <p class="th2"><b class="f1">Zebra:</b> Encontra-se nas duas laterais da pista, geralmente com duas faixas diagonais pintadas em cores diferentes, onde o carro após a saída da tangência da curva, pode se apoiar para ter mais tração. Em dias de chuva a zebra costuma ficar muito escorregadia e os pilotos evitam passar por cima delas.</p>
+    
+    <p class="th2"><b class="f1">Zona de Classificação:</b> Foi introduzido na metade da década de 90. Para se qualificar para um Grande Prêmio, um piloto tem que fazer uma volta dentro do limite de 107% do tempo de qualificação do pole position.</p>    
+    <p class="ntc">________________________________________________________________________________</p>
+    <table class="index">
+        <caption style="font-family: 'Formula', sans-serif; text-align: center;">Leia Também</caption>
+        <tr>
+            <td>
+                <a href="noticia1.html"><u>Após a confirmação de Sargeant na Williams, confira o grid completo da F1 2024</u></a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="noticia2"><u>Alfa Romeo fora F1? Entenda como parceria com Haas esfriou</u></a>
+            </td>
+        </tr>
+    </table><br>
+    <footer>
+        <p class="th5">&copy; 2023 Notícias na F1 Mania</p>
+    </footer> 
+    <button onclick="topFunction()" id="backToTopBtn" title="Voltar para o topo"><i class='bx bxs-upvote'></i></button>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('backToTopBtn');
+
+            window.onscroll = function () {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    button.style.display = 'block';
+                } else {
+                    button.style.display = 'none';
+                }
+            };
+
+            button.onclick = function () {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            };
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <title id="top">F1 Mania</title>
+</head>
+
+<body>
+    <header>
+        <nav class="sidebar close">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <img src="logo2.png" alt="Logo da F1 Mania">
+                    </span>
+    
+                    <div class="text logo-text">
+                        <span class="name">F1 Mania</span>
+                        <span class="profession">Blog de notícias</span>
+                    </div>
+                </div>
+    
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+    
+            <div class="menu-bar">
+                <div class="menu">
+    
+                    <li class="search-box">
+                        <i class='bx bx-search icon'></i>
+                        <input type="text" placeholder="Procurar...">
+                    </li>
+    
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="../index.html">
+                                <i class='bx bx-home-alt icon' ></i>
+                                <span class="text nav-text">Página Inicial</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="historia.html">
+                                <i class='bx bx-book-open icon' ></i>
+                                <span class="text nav-text">História da F1</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="resultados.html">
+                                <i class='bx bx-bell icon'></i>
+                                <span class="text nav-text">Resultados</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="perfil.html">
+                                <i class='bx bxs-edit icon'></i>
+                                <span class="text nav-text">Perfis</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="calendario.html">
+                                <i class='bx bx-calendar icon' ></i>
+                                <span class="text nav-text">Calendário</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="contato.html">
+                                <i class='bx bx-user icon'></i>
+                                <span class="text nav-text">Contato</span>
+                            </a>
+                        </li>
+    
+                    </ul>
+                </div>
+    
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="entrar.html">
+                            <i class='bx bx-log-in-circle icon'></i>
+                            <span class="text nav-text">Entrar</span>
+                        </a>
+                    </li>
+    
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text text">Dark mode</span>
+    
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                    
+                </div>
+            </div>
+    
+        </nav>
+    </header>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+    </script>
+
+        <script>
+            var menuImage = document.getElementById("menu-image");
+            var menuTiposf1 = document.getElementById("menu-tipos-f1");
+    
+            // Quando a imagem do menu é clicada, mostrar/ocultar os tipos de livros
+            menuImage.addEventListener("click", function() {
+                if (menuTiposf1.style.display === "none" || menuTiposf1.style.display === "") {
+                    menuTiposf1.style.display = "block"; // Mostrar as opções de tipos de livros
+                } else {
+                    menuTiposf1.style.display = "none"; // Ocultar as opções de tipos de livros
+                }
+            });
+        </script>
+
+    <script>
+        document.addEventListener("click", function (event) {
+            // Crie um elemento de imagem para o carro
+            var car = document.createElement("img");
+            car.src = "https://assets.stickpng.com/images/580b585b2edbce24c47b2c8f.png";
+            car.classList.add("car-animation"); // Adicione a classe de animação
+
+            // Adicione o carro à página
+            document.body.appendChild(car);
+
+            // Remova o carro após a animação terminar
+            car.addEventListener("animationiteration", function () {
+                car.remove();
+            }, { once: true });
+        });
+    </script>
+
+    <div id="logo">
+        <h1 class="f1">FÓRMULA 1</h1>
+    </div>
+<h1 class="hh4">Quando é a próxima corrida? Confira o calendário completo da F1 2024</h2>
+<p class="th2">F1 Mania traz todas as informações para você se programar a tempo da próxima temporada da F1</p>
+<img class="imagem-destaque" src="https://www.tomadadetempo.com.br/wp-content/uploads/2021/07/capa-11.jpg"><br>
+<p class="th2">A temporada 2023 da Fórmula 1 acabou, e muitos já estão olhando para o próximo ano para ver quando que a abstinência chegará ao fim. Neste campeonato, vimos 22 corridas com muita ação e um domínio impressionante de Max Verstappen e a Red Bull.<br><br>
+    A temporada 2024 da F1 começará oficialmente em 29 de fevereiro e seguirá até 08 de dezembro, com um recorde de 24 GPs previstos. A pré-temporada acontecerá no Bahrein no fim de fevereiro, apenas uma semana antes da corrida de abertura, também no Sakhir..</p>
+<p class="th2">Curiosamente, as duas primeiras provas do ano, no Bahrein e na Arábia Saudita, acontecerão nas noites de sábado, com a mudança feita para evitar choque com o Ramadã, período sagrado para os muçulmanos, com início marcado para 10 de março.</p>
+<p class="th2">Esse marco exigiu o adiantamento do GP da Arábia Saudita em um dia, do domingo para o sábado, e com a prova sendo uma rodada dupla no Bahrein, optou-se por fazer o mesmo no Sakhir para que as equipes não corram risco de terem prejuízo com o envio dos fretes.</p>
+<p class="th2">O GP da China também deve voltar ao calendário pela primeira vez desde 2019, após uma ausência de quatro anos devido à política do país contra a pandemia da Covid-19.</p>
+<h2 class="hh">Quando será a próxima corrida da F1?</h2>
+<p class="th2">A próxima corrida da F1 acontecerá em 02 de março de 2024, com a F1 viajando para o Bahrein para a abertura da temporada. O circuito receberá também as atividades de pré-temporada, entre a quarta-feira, 21 de fevereiro, e a sexta-feira, dia 23.</p>
+<img class="imagem-destaque" src="https://cdn-2.motorsport.com/images/mgl/68yrWrQ0/s800/sergio-perez-red-bull-racing-r.webp">
+<p class="th2">(Fotógrafo: Zak Mauger / Motorsport Images)</p>
+<h2 class="hh">Qual é o calendário de 2024 da F1?</h2>
+<p class="th2">A temporada 2024 da F1 começa oficialmente no dia 29 de fevereiro no Bahrein, com os primeiros treinos livres da etapa, mas a pré-temporada acontece entre 21 e 23 do mesmo mês. Este é o calendário completo do próximo ano:</p>
+
+    <table class="pfl" border="1">
+        <tr class="pfl2">
+            <th>Data</th>
+            <th>Evento</th>
+            <th>Local</th>
+        </tr>
+        <tr>
+            <td>29 de fevereiro a 02 de março</td>
+            <td>GP do Bahrein</td>
+            <td>Sakhir</td>
+        </tr>
+        <tr class="pfl3">
+            <td>07 a 08 de março</td>
+            <td>GP da Arábia Saudita</td>
+            <td>Jeddah</td>
+        </tr>
+        <tr>
+            <td>22 a 24 de março</td>
+            <td>GP da Austrália</td>
+            <td>Melbourne/td>
+        </tr>
+        <tr class="pfl3">
+            <td>05 a 07 de abril</td>
+            <td>GP do Japão</td>
+            <td>Suzuka</td>
+        </tr>
+        <tr>
+            <td>19 a 21 de abril</td>
+            <td>GP da China</td>
+            <td>Xangai</td>
+        </tr>
+        <tr class="pfl3">
+            <td>03 a 05 de maio</td>
+            <td>GP de Miami (EUA)</td>
+            <td>Miami</td>
+        </tr>
+        <tr>
+            <td>17 a 19 de maio</td>
+            <td>GP da Emilia Romagna </td>
+            <td>Ímola</td>
+        </tr>
+        <tr class="pfl3">
+            <td>24 a 26 de maio</td>
+            <td>GP de Mônaco</td>
+            <td>Mônaco</td>
+        </tr>
+        <tr>
+            <td>07 a 09 de junho</td>
+            <td>GP do Canadá</td>
+            <td>Montreal</td>
+        </tr>
+        <tr class="pfl3">
+            <td>21 a 23 de junho</td>
+            <td>GP da Espanha</td>
+            <td>Barcelona</td>
+        </tr>
+        <tr>
+            <td>28 a 30 de junho</td>
+            <td>GP da Áustria</td>
+            <td>Red Bull Ring</td>
+        </tr>
+        <tr class="pfl3">
+            <td>05 a 07 de julho</td>
+            <td>GP da Grã-Bretanha</td>
+            <td>Silverstone</td>
+        </tr>
+        <tr>
+            <td>19 a 21 de julho</td>
+            <td>GP da Hungria</td>
+            <td>Hungaroring</td>
+        </tr>
+        <tr class="pfl3">
+            <td>26 a 28 de julho</td>
+            <td>GP da Bélgica</td>
+            <td>Spa-Francorchamps</td>
+        </tr>
+        <tr>
+            <td>23 a 25 de agosto</td>
+            <td>GP da Holanda</td>
+            <td>Zandvoort</td>
+        </tr>
+        <tr class="pfl3">
+            <td>30 de agosto a 01 de setembro</td>
+            <td>GP da Itália</td>
+            <td>Monza</td>
+        </tr>
+        <tr>
+            <td>13 a 15 de setembro</td>
+            <td>GP do Azerbaijão</td>
+            <td>Baku</td>
+        </tr>
+        <tr class="pfl3">
+            <td>20 a 22 de setembro</td>
+            <td>GP de Singapura</td>
+            <td>Marina Bay</td>
+        </tr>
+        <tr>
+            <td>18 a 20 de outubro</td>
+            <td>GP dos Estados Unidos</td>
+            <td>Circuito das Américas</td>
+        </tr>
+        <tr class="pfl3">
+            <td>25 a 27 de outubro</td>
+            <td>GP do México</td>
+            <td>Hermanos Rodríguez</td>
+        </tr>
+        <tr>
+            <td>01 a 03 de novembro</td>
+            <td>GP de São Paulo (BRA)</td>
+            <td>Interlagos</td>
+        </tr>
+        <tr class="pfl3">
+            <td>21 a 23 de novembro</td>
+            <td>GP de Las Vegas (EUA)</td>
+            <td>Las Vegas</td>
+        </tr>
+        <tr>
+            <td>29 de novembro a 01 de dezembro</td>
+            <td>GP do Catar</td>
+            <td>Losail</td>
+        </tr>
+        <tr class="pfl3">
+            <td>06 a 08 de dezembro</td>
+            <td>GP de Abu Dhabi (UAE)</td>
+            <td>Yas Marina</td>
+        </tr>
+    </table><br>
+    <p class="th2">A FIA, órgão regulador da F1, fez um esforço para regionalizar o calendário para 2024 de forma a tornar o esporte mais sustentável.<br><br>
+
+        O CEO da Fórmula 1, Stefano Domenicali, disse: "Estou feliz por anunciar o calendário de 2024 com 24 corridas, que entregará uma temporada emocionante para nossos fãs ao redor do mundo. Há um grande interesse e demanda contínua pela F1, e eu acredito que esse calendário acerta o balanço ideal entre corridas tradicionais e novos palcos".</p><br>
+    <img class="imagem-destaque" src="https://cdn-1.motorsport.com/images/mgl/6O1aK4G2/s800/mohammed-bin-sulayem-president-1.webp">
+    <p class="th2">(Fotógrafo: Mark Sutton / Motorsport Images)</p>
+    <p class="th2">"Quero agradecer a todos os promotores e parceiros pelo apoio e esforço para chegarmos a esse grande calendário. Nossa jornada por um cronograma mais sustentável seguirá nos próximos anos em meio a nossa busca pela neutralização das emissões de carbono até 2030".</p>
+    <p class="th2">O GP do Japão foi adiantado de setembro para abril, criando uma perna asiática no começo do ano. A corrida será a quarta da temporada, logo antes do GP da China.</p>
+    <p class="th2">Com o GP do Japão passando para o começo do ano, a etapa do Azerbaijão foi jogada para o segundo semestre, uma semana antes do GP de Singapura. O GP do Catar também foi trocado, indo para mais tarde no ano em uma rodada tripla que começa com Las Vegas e termina em Abu Dhabi, o que deve diminuir as chances dos pilotos sofrerem com o calor como foi neste ano.</p>
+    <p class="ntc">________________________________________________________________________________</p>
+    <table class="index">
+        <caption style="font-family: 'Formula', sans-serif; text-align: center;">Leia Também</caption>
+        <tr>
+            <td>
+                <a href="noticia1.html"><u>Com metas sustentáveis, F1 esbarra na logística do calendário</u></a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="noticia1.html"><u>Consolidado na F1, Verstappen vai em busca do tri em 2023</u></a>
+            </td>
+        </tr>
+    </table><br>
+    <footer>
+        <p class="th5">&copy; 2023 Notícias na F1 Mania</p>
+    </footer> 
+    <button onclick="topFunction()" id="backToTopBtn" title="Voltar para o topo"><i class='bx bxs-upvote'></i></button>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('backToTopBtn');
+
+            window.onscroll = function () {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    button.style.display = 'block';
+                } else {
+                    button.style.display = 'none';
+                }
+            };
+
+            button.onclick = function () {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            };
+        });
+    </script>
+</body>
+</html>

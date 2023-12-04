@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <title id="top">F1 Mania</title>
+</head>
+
+<body>
+    <header>
+        <nav class="sidebar close">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <img src="logo2.png" alt="Logo da F1 Mania">
+                    </span>
+    
+                    <div class="text logo-text">
+                        <span class="name">F1 Mania</span>
+                        <span class="profession">Blog de notícias</span>
+                    </div>
+                </div>
+    
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+    
+            <div class="menu-bar">
+                <div class="menu">
+    
+                    <li class="search-box">
+                        <i class='bx bx-search icon'></i>
+                        <input type="text" placeholder="Procurar...">
+                    </li>
+    
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="../index.html">
+                                <i class='bx bx-home-alt icon' ></i>
+                                <span class="text nav-text">Página Inicial</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="historia.html">
+                                <i class='bx bx-book-open icon' ></i>
+                                <span class="text nav-text">História da F1</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="resultados.html">
+                                <i class='bx bx-bell icon'></i>
+                                <span class="text nav-text">Resultados</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="perfil.html">
+                                <i class='bx bxs-edit icon'></i>
+                                <span class="text nav-text">Perfis</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="calendario.html">
+                                <i class='bx bx-calendar icon' ></i>
+                                <span class="text nav-text">Calendário</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="contato.html">
+                                <i class='bx bx-user icon'></i>
+                                <span class="text nav-text">Contato</span>
+                            </a>
+                        </li>
+    
+                    </ul>
+                </div>
+    
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="entrar.html">
+                            <i class='bx bx-log-in-circle icon'></i>
+                            <span class="text nav-text">Entrar</span>
+                        </a>
+                    </li>
+    
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text text">Dark mode</span>
+    
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                    
+                </div>
+            </div>
+    
+        </nav>
+    </header>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+    </script>
+
+        <script>
+            var menuImage = document.getElementById("menu-image");
+            var menuTiposf1 = document.getElementById("menu-tipos-f1");
+    
+            // Quando a imagem do menu é clicada, mostrar/ocultar os tipos de livros
+            menuImage.addEventListener("click", function() {
+                if (menuTiposf1.style.display === "none" || menuTiposf1.style.display === "") {
+                    menuTiposf1.style.display = "block"; // Mostrar as opções de tipos de livros
+                } else {
+                    menuTiposf1.style.display = "none"; // Ocultar as opções de tipos de livros
+                }
+            });
+        </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('backToTopBtn');
+
+            window.onscroll = function () {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    button.style.display = 'block';
+                } else {
+                    button.style.display = 'none';
+                }
+            };
+
+            button.onclick = function () {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            };
+        });
+    </script>
+
+    <div id="logo">
+        <h1 class="f1">FÓRMULA 1</h1>
+    </div>
+ 
+    <div class="conteudo">
+    <ul><h1 class="hh">Confira os pilotos e equipes inscritos para a temporada 2023 de Fórmula 1:</h1>
+    <p class="th2">Explore a emocionante temporada da Fórmula 1 enquanto navegamos pelas 10 equipes, apresentando seus dois pilotos titulares, respectivas abreviações e números, oferecendo uma visão completa do vibrante universo das corridas automobilísticas.</p> 
+
+            <div class="all">
+                    <div class="con">
+                <div class="header">
+                    <img src="https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/team%20logos/alfa%20romeo.jpg" alt="Logo da Equipe" class="logo">
+                    <h1 class="f1">Alfa Romeo Racing</h1>
+                    <p><b>Nome Completo:</b><br>Alfa Romeo F1 Team Stake</p>
+                    <p><b>Sede:</b><br> Milão, Itália<br>
+                        Hinwil, Suíça (2019-2023)</p>
+                    <p><b>Chefe de Equipe:</b><br>Alessandro Alunni Bravi</p>
+                    <p><b>Diretor técnico:</b><br>James Key</p>
+                    <p><b>Site oficial:</b><br><a href="https://www.alfaromeo.pt/"></a>https://www.alfaromeo.pt/</p>
+                    <p><b>Nome(s) anterior(es):</b><br>Alfa Romeo S.p.A
+                        (1950-1951)<br>
+                        Autodelta
+                        (1979)<br>
+                        Marlboro Team Alfa Romeo
+                        (1980-1983)<br>
+                        Benetton Alfa Romeo
+                        (1984-1985)<br>
+                        Alfa Romeo Racing
+                        (2019)<br>
+                        Alfa Romeo Racing Orlen
+                        (2020-2021)<br>
+                        Alfa Romeo F1 Team Orlen
+                        (2022)<br>
+                        Alfa Romeo F1 Team Stake
+                        (2022)</p><br>
+
+                    <h1 class="f1">Campeonato Mundial de Fórmula 1 de 2023</h1>
+                    <p><b>Chassis:</b><br>C43</p>
+                    <p><b>Motor:</b><br>Ferrari (V6 turbo)</p>
+                    <p><b>Pneus:</b><br>Pirelli</p>
+                    <p><b>Combustível:</b><br>Shell V-Power</p><br>
+
+                    <h1 class="f1">Histórico na Fórmula 1</h1>
+                    <p><b>Estreia:</b><br>GP da Grã-Bretanha de 1950</p>
+                    <p><b>Último GP:</b><br>GP de Abu Dhabi de 2023</p>
+                    <p><b>Grandes Prêmios:</b><br>214</p>
+                    <p><b>Campeã de Construtores:</b><br>0</p>
+                    <p><b>Campeã de Pilotos:</b><br>2 (1950, 1951)</p>
+                    <p><b>Vitórias:</b><br>10</p>
+                    <p><b>Pódios:</b><br>26</p>
+                    <p><b>Pole Position:</b><br>12</p>
+                    <p><b>Voltas rápidas:</b><br>16</p>
+                    <p><b>Pontos:</b><br>199</p>
+                    <p><b>Posição no último campeonato (2023):</b><br>9º (16 pontos)</p>
+                </div>
+            
+                <div class="team-info">
+                    <div class="history">
+                        <h2 class="f1">História da Equipe</h2>
+                        <p><h2>História da Alfa Romeo na Fórmula 1</h2>
+
+                            <p><strong>Década de 1950:</strong></p>
+                            <ul>
+                                <li>A Alfa Romeo teve uma participação significativa nos primeiros anos da Fórmula 1, especialmente na década de 1950.</li>
+                                <li>Conquistou dois títulos de pilotos consecutivos com Giuseppe Farina em 1950 e Juan Manuel Fangio em 1951.</li>
+                                <li>Ganhou o Campeonato de Construtores em 1951.</li>
+                            </ul>
+                        
+                            <p><strong>Década de 1970:</strong></p>
+                            <ul>
+                                <li>Retornou como fornecedora de motores na década de 1970, fornecendo motores flat-12 para equipes como Brabham e McLaren.</li>
+                                <li>Conquistou algumas vitórias, mas não obteve o mesmo domínio.</li>
+                            </ul>
+                        
+                            <p><strong>Década de 1980:</strong></p>
+                            <ul>
+                                <li>Voltou como equipe de fábrica na década de 1980.</li>
+                                <li>Competiu com carros alimentados por motores V8 turbo, mas sem grande sucesso em termos de resultados.</li>
+                                <li>Participação direta encerrou no final da década de 1980.</li>
+                            </ul>
+                        
+                            <p><strong>Retorno como Patrocinadora:</strong></p>
+                            <ul>
+                                <li>Retornou como patrocinadora e parceira em 2018, associando-se à equipe Sauber, que foi renomeada para Alfa Romeo Racing.</li>
+                                <li>Inicialmente, era uma patrocinadora e se tornou uma parceira mais ativa da equipe com o tempo.</li>
+                            </ul>
+                        
+                            <p><strong>Fase Contemporânea:</strong></p>
+                            <ul>
+                                <li>Nos últimos anos, a Alfa Romeo Racing Orlen, como é conhecida atualmente, tem sido uma presença constante no grid da Fórmula 1.</li>
+                                <li>A equipe contou com pilotos como Kimi Räikkönen e Antonio Giovinazzi.</li>
+                            </ul>
+                        
+                            <p><strong>Participação Atual:</strong></p>
+                            <ul>
+                                <li>A equipe irá se retirar na próxima temporada de 2024 e ser substituída pela Sauber. Para mais informações, veja em <a href="noticia2.html">Alfa Romeo fora F1? Entenda como parceria com Haas esfriou</a></li>
+                            </ul>
+                        </p><br>
+                        <a href="#" class="meu-botao5">Saiba mais</a>
+                    </div><br>
+            
+                    <div class="drivers">
+                        <h2 class="f1">Pilotos Titulares</h2><br>
+                        <div class="driver">
+                            <img class="piloto" src="https://media.formula1.com/content/dam/fom-website/drivers/2023Drivers/bottas.jpg.img.1024.medium.jpg/1677069810695.jpg" alt="Piloto 1">
+                            <div class="driver-info">
+                                <p><b>Valtteri Bottas</b></p>
+                                <p><b>Número:</b><br>77</p>
+                                <p><b>Nacionalidade:</b><br>Finlandês</p>
+                                <p><b>Entrada na Equipe:</b><br>06/09/2021</p>
+                            </div>
+                        </div>
+            
+                        <div class="driver">
+                            <img class="piloto" src="https://media.formula1.com/content/dam/fom-website/drivers/2023Drivers/zhou.jpg.img.1024.medium.jpg/1701089369046.jpg" alt="Piloto 2">
+                            <div class="driver-info">
+                                <p><b>Guanyu Zhou</b></p>
+                                <p><b>Número:</b><br>24</p>
+                                <p><b>Nacionalidade:</b><br>Chinês</p>
+                                <p><b>Entrada na Equipe:</b><br>16/11/2021</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+            <div class="con">
+                <div class="header">
+                    <img src="https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/team%20logos/alpine.jpg" alt="Logo da Equipe" class="logo">
+                    <h1 class="f1">Alpine F1 Team</h1>
+                    <p><b>Nome Completo:</b><br> BWT Alpine F1 Team</p>
+                    <p><b>Sede:</b><br>Enstone, Oxfordshire, no Reino Unido</p>
+                    <p><b>Chefe de Equipe:</b><br>Philippe Krief</p>
+                    <p><b>Diretor técnico:</b><br>	Matt Harman</p>
+                    <p><b>Site oficial:</b><br><a href="alpinecars.com/fr/formule-1"></a>alpinecars.com/fr/formule-1</p>
+                    <p><b>Nome(s) anterior(es):</b><br></p>	Renault F1 Team<br>
+
+                    <h1 class="f1">Campeonato Mundial de Fórmula 1 de 2023</h1>
+                    <p><b>Chassis:</b><br>A523</p>
+                    <p><b>Motor:</b><br>Renault</p>
+                    <p><b>Pneus:</b><br>Pirelli</p>
+                    <p><b>Combustível:</b><br>	BP Ultimate</p><br>
+
+                    <h1 class="f1">Histórico na Fórmula 1</h1>
+                    <p><b>Estreia:</b><br>GP do Barém de 2021</p>
+                    <p><b>Último GP:</b><br>GP de Abu Dhabi de 2023</p>
+                    <p><b>Grandes Prêmios:</b><br>66</p>
+                    <p><b>Campeã de Construtores:</b><br>0</p>
+                    <p><b>Campeã de Pilotos:</b><br>0</p>
+                    <p><b>Vitórias:</b><br>1</p>
+                    <p><b>Pódios:</b><br>4</p>
+                    <p><b>Pole Position:</b><br>0</p>
+                    <p><b>Voltas rápidas:</b><br>0</p>
+                    <p><b>Pontos:</b><br>448</p>
+                    <p><b>Posição no último campeonato (2023):</b><br>6º (120 pontos)</p>
+                </div>
+            
+                <div class="team-info">
+                    <div class="history">
+                        <h2 class="f1">História da Equipe</h2>
+                        <p>A história desta equipe de Fórmula 1 começou em 1981 como a equipe Toleman. Em 1986, a equipe foi renomeada para Benetton Formula, na sequência da sua aquisição em 1985 pela família Benetton.A Renault comprou a equipe Benetton em 2000, e em 2002, ela rebatizou-a de Renault F1 Team. Nas temporadas de 2005 e 2006, Fernando Alonso ganhou o Campeonato de Pilotos com a equipe, e a equipe ganhou os Campeonatos de Construtores (com Giancarlo Fisichella como seu outro piloto). No final de 2009, a Renault vendeu sua participação majoritária na equipe para a Genii Capital. A partir de 2011, a Lotus Cars envolveu-se com a equipe, com ela sendo rebatizada, primeiramente para "Lotus Renault GP" para competir na temporada de 2011, e depois para "Lotus F1 Team" para a temporada de 2012.
+
+                            Após a Lotus sofrer uma grave crise financeira durante a temporada de 2015. Em 3 de dezembro de 2015, a Renault anunciou que havia comprado a equipe de volta para a disputa da temporada de 2016. Com a equipe competindo sob o nome Renault durante as cinco temporadas seguintes.</p><br>
+                            <a href="#" class="meu-botao7">Saiba mais</a>
+                    </div><br>
+            
+                    <div class="drivers">
+                        <h2 class="f1">Pilotos Titulares</h2><br>
+                        <div class="driver">
+                            <img src="https://media.formula1.com/content/dam/fom-website/drivers/2023Drivers/gasly.jpg.img.1920.medium.jpg/1701087615229.jpg" alt="Piloto 1">
+                            <div class="driver-info">
+                                <p><b>Pierre Gasly</b></p>
+                                <p> <b>número:</b><br>10</p>
+                                <p><b>nacionalidade:</b><br>Francês</p>
+                                <p><b>Entrou na Equipe:</b><br> 07/10/2022</p>
+                            </div>
+                        </div>
+            
+                        <div class="driver">
+                            <img src="https://media.formula1.com/content/dam/fom-website/drivers/2023Drivers/ocon.jpg.img.1920.medium.jpg/1677069269007.jpg" alt="Piloto 2">
+                            <div class="driver-info">
+                                <p><b> Esteban Ocon</b></p>
+                                <p><b>Número:</b><br>31</p>
+                                <p><b>Nacionalidade:</b><br>Francês</p>
+                                <p><b>Entrou na Equipe:</b><br>29/07/2019</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+            <div class="con">
+                <div class="header">
+                    <img src="https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/team%20logos/aston%20martin.jpg" alt="Logo da Equipe" class="logo">
+                    <h1 class="f1">Aston Martin Aramco congnizant</h1>
+                    <p><b>Nome Completo:</b><br>Aston Martin Aramco Cognizant Formula One Team</p>
+                    <p><b>Sede:</b><br>	Silverstone, Inglaterra, Reino Unido<br>
+                        Newport Pagnell, Inglaterra, Reino Unido (1959–1960)</p>
+                    <p><b>Chefe de Equipe:</b><br>Mike Krack</p>
+                    <p><b>Diretor técnico:</b><br>Dan Fallows</p>
+                    <p><b>Site oficial:</b><br><a href="www.astonmartinf1.com/en-GB/"></a>www.astonmartinf1.com/en-GB/</p>
+                    <p><b>Nome(s) anterior(es):</b><br>	Racing Point</p><br>
+
+                    <h1 class="f1">Campeonato Mundial de Fórmula 1 de 2023</h1>
+                    <p><b>Chassis:</b><br>AMR23</p>
+                    <p><b>Motor:</b><br>Mercedes</p>
+                    <p><b>Pneus:</b><br>Pirelli</p>
+                    <p><b>Combustível:</b><br></p><br>
+
+                    <h1 class="f1">Histórico na Fórmula 1</h1>
+                    <p><b>Estreia:</b><br>GP dos Países Baixos de 1959</p>
+                    <p><b>Último GP:</b><br>GP de Abu Dhabi de 2023</p>
+                    <p><b>Grandes Prêmios:</b><br>72 (71 largadas)</p>
+                    <p><b>Campeã de Construtores:</b><br>0</p>
+                    <p><b>Campeã de Pilotos:</b><br>0</p>
+                    <p><b>Vitórias:</b><br>0</p>
+                    <p><b>Pódios:</b><br>9</p>
+                    <p><b>Pole Position:</b><br>0</p>
+                    <p><b>Voltas rápidas:</b><br>1</p>
+                    <p><b>Pontos:</b><br>412</p>
+                    <p><b>Posição no último campeonato (2023):</b><br>5° (280 pontos)</p>
+                </div>
+            
+                <div class="team-info">
+                    <div class="history">
+                        <h2 class="f1">História da Equipe</h2>
+                        <p>A Aston Martin está atualmente envolvida na Fórmula 1 como equipe e construtor sob o nome Aston Martin Aramco Cognizant Formula One Team. A equipe está sediada em Silverstone, Reino Unido. A Aston Martin competiu em algumas corridas de Fórmula 1 como construtor entre as temporadas de 1959 e 1960, fornecendo carros para a equipe da David Brown Corporation, porém a fabricante se retirou da categoria sem conseguir marcar nenhum ponto.
+                            A marca Aston Martin retornou para a Fórmula 1 na temporada de 2018 como patrocinador título da equipe Red Bull Racing. Em 31 de janeiro de 2020, foi confirmado que a Aston Martin retornaria a maior categoria do automobilismo mundial como construtor e equipe em 2021, quando a equipe Racing Point foi rebatizada para Aston Martin. A mudança de nome foi em razão do coproprietário da equipe, Lawrence Stroll, ter se tornado acionista da fabricante britânica de carros de luxo</p><br>
+                            <a href="#" class="meu-botao4">Saiba mais</a>
+                    </div><br>
+            
+                    <div class="drivers">
+                        <h2 class="f1">Pilotos Titulares</h2><br>
+                        <div class="driver">
+                            <img src="https://media.formula1.com/content/dam/fom-website/drivers/2023Drivers/alonso.jpg.img.1024.medium.jpg/1701269362697.jpg" alt="Piloto 1">
+                            <div class="driver-info">
+                                <p><b> Fernando Alonso</b></p>
+                                <p><b>Número:</b><br>14 </p>
+                                <p><b>Nacionalidade:</b><br>Espanhol</p>
+                                <p><b>Entrou na Equipe:</b><br>01/08/2022</p>
+                            </div>
+                        </div>
+            
+                        <div class="driver">
+                            <img src="https://media.formula1.com/content/dam/fom-website/drivers/2023Drivers/stroll.jpg.img.1024.medium.jpg/1677069453013.jpg" alt="Piloto 2">
+                            <div class="driver-info">
+                                <p><b> Lance Stroll</b></p>
+                                <p><b>Número:</b><br>18</p>
+                                <p><b>Nacionalidade:</b><br>Canadiano</p>
+                                <p><b>Entrou na Equipe:</b><br> 31/01/2020</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+            <div class="con">
+                <div class="header">
+                    <img src="https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/team%20logos/haas.jpg" alt="Logo da Equipe" class="logo">
+                    <h1 class="f1">Haas F1 team</h1>
+                    <p><b>Nome Completo:</b><br>MoneyGram Haas F1 Team</p>
+                    <p><b>Sede:</b><br>	Kannapolis, Carolina do Norte,
+                        Estados Unidos (principal)
+                        Banbury, Oxfordshire,
+                        Reino Unido (europeia)</p>
+                    <p><b>Chefe de Equipe:</b><br> Günther Steiner</p>
+                    <p><b>Diretor técnico:</b><br>	Simone Resta</p>
+                    <p><b>Site oficial:</b><br><a href="www.haasf1team.com "></a>www.haasf1team.com                </p>
+                    <p><b>Nome(s) anterior(es):</b><br>Não tem</p><br>
+
+                    <h1 class="f1">Campeonato Mundial de Fórmula 1 de 2023</h1>
+                    <p><b>Chassis:</b><br>VF-23</p>
+                    <p><b>Motor:</b><br>Ferrari</p>
+                    <p><b>Pneus:</b><br>Pirelli</p>
+                    <p><b>Combustível:</b><br>Shell V-Power</p><br>
+
+                    <h1 class="f1">Histórico na Fórmula 1</h1>
+                    <p><b>Estreia:</b><br>GP da Austrália de 2016</p>
+                    <p><b>Último GP:</b><br>GP de Abu Dhabi de 2023</p>
+                    <p><b>Grandes Prêmios:</b><br>166</p>
+                    <p><b>Campeã de Construtores:</b><br>0</p>
+                    <p><b>Campeã de Pilotos:</b><br>0</p>
+                    <p><b>Vitórias:</b><br>0</p>
+                    <p><b>Pódios:</b><br>0</p>
+                    <p><b>Pole Position:</b><br>1</p>
+                    <p><b>Voltas rápidas:</b><br>2</p>
+                    <p><b>Pontos:</b><br>249</p>
+                    <p><b>Posição no último campeonato (2023):</b><br>10º (12 pontos)</p>
+                </div>
+            
+                <div class="team-info">
+                    <div class="history">
+                        <h2 class="f1">História da Equipe</h2>
+                        <p>A Haas F1 Team é a primeira equipe estadunidense a ter uma candidatura apresentada desde o fracassado projeto da US F1 Team apresentado em 2010,e se tornando na primeira equipe estadunidense a competir desde a extinta Haas Lola que competiu nos campeonatos de 1985 e 1986. A equipe Haas Lola era de propriedade do ex-chefe da McLaren Teddy Mayer e Carl Haas, que não tem nenhuma relação com Gene Haas.[21]
+
+                            Após o colapso da Marussia F1 Team durante a temporada de 2014 e o leilão de seus ativos, Haas comprou a sede da equipe em Banbury para servir como base futura para as operações da equipe Haas.</p><br>
+                            <a href="#" class="meu-botao3">Saiba mais</a>
+                    </div><br>
+            
+                    <div class="drivers">
+                        <h2 class="f1">Pilotos Titulares</h2><br>
+                        <div class="driver">
+                            <img src="https://media.formula1.com/content/dam/fom-website/drivers/2023Drivers/magnussen.jpg.img.1920.medium.jpg/1677069387823.jpg" alt="Piloto 1">
+                            <div class="driver-info">
+                                <p><b>Kevin Magnussen</b></p>
+                                <p><b>Número:</b><br>20</p>
+                                <p><b>Nacionalidade:</b><br>Dinamarquês</p>
+                                <p><b>Entrou na Equipe:</b><br> 11/11/2016</p>
+                            </div>
+                        </div>
+            
+                        <div class="driver">
+                            <img src="https://media.formula1.com/content/dam/fom-website/drivers/2023Drivers/hulkenberg.jpg.img.1920.medium.jpg/1676983071882.jpg" alt="Piloto 2">
+                            <div class="driver-info">
+                                <p><b>Nico Hülkenberg</b></p>
+                                <p><b>Número:</b><br>27</p>
+                                <p><B>Nacionalidade:</B><br>Alemão</p>
+                                <p><b>Entrou na Equipe:</b><br> 17/11/2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+            <div class="con">
+                <div class="header">
+                    <img src="https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/team%20logos/mclaren.jpg" alt="Logo da Equipe" class="logo">
+                    <h1 class="f1">McLaren Racing</h1>
+                    <p><b>Nome Completo:</b><br>McLaren F1 Team</p>
+                    <p><b>Sede:</b><br>	Woking, Reino Unido</p>
+                    <p><b>Chefe de Equipe:</b><br>Andrea Stella</p>
+                    <p><b>Diretor técnico:</b><br>	Neil Houldey e Peter Prodromou</p>
+                    <p><b>Site oficial:</b><br><a href="mclaren.com/formula1"></a>mclaren.com/formula1</p>
+                    <p><b>Nome(s) anterior(es):</b><br>McLaren Group(2003),<br>McLaren Technology Group (2015), McLaren Group (2017)</p><br>
+
+                    <h1 class="f1">Campeonato Mundial de Fórmula 1 de 2023</h1>
+                    <p><b>Chassis:</b><br>MCL60</p>
+                    <p><b>Motor:</b><br>Mercedes</p>
+                    <p><b>Pneus:</b><br>Pirelli</p>
+                    <p><b>Combustível:</b><br>BP</p><br>
+
+                    <h1 class="f1">Histórico na Fórmula 1</h1>
+                    <p><b>Estreia:</b><br>GP de Mônaco de 1966</p>
+                    <p><b>Último GP:</b><br>GP de Abu Dhabi de 2023</p>
+                    <p><b>Grandes Prêmios:</b><br>950 (946 largadas)</p>
+                    <p><b>Campeã de Construtores:</b><br>8 (1974, 1984, 1985, 1988, 1989, 1990, 1991, 1998)</p>
+                    <p><b>Campeã de Pilotos:</b><br>12 (1974, 1976, 1984, 1985, 1986, 1988, 1989, 1990, 1991, 1998, 1999, 2008)</p>
+                    <p><b>Vitórias:</b><br>183</p>
+                    <p><b>Pódios:</b><br>503</p>
+                    <p><b>Pole Position:</b><br>156</p>
+                    <p><b>Voltas rápidas:</b><br>165</p>
+                    <p><b>Pontos:</b><br>6 291,5</p>
+                    <p><b>Posição no último campeonato (2023):</b><br>4º (302 pontos)</p>
+                </div>
+            
+                <div class="team-info">
+                    <div class="history">
+                        <h2 class="f1">História da Equipe</h2>
+                        <p>É uma das equipes de maior sucesso na categoria, tendo conquistado 8 títulos mundiais de construtores e 12 títulos mundiais de pilotos. O Brasil é o país que mais vezes teve campeões pela McLaren, com Emerson Fittipaldi em 1974 e Ayrton Senna nos anos de 1988, 1990 e 1991. Além da Fórmula 1, destaca-se a sua participação nas 500 Milhas de Indianápolis durante um período histórico, onde o time atravessou o Atlântico para competir e vencer a famosa corrida, mais o campeonato da Can-Am.
+                        Hoje é uma organização que vai muito além da equipe de Fórmula 1. Produziu o esportivo de rua McLaren F1, com motor BMW, até hoje um dos carros de série mais rápidos já feito. Produziu também em sua sede em Woking o esportivo Mercedes-Benz SLR McLaren, em parceria com a Daimler-Chrysler.</p><br>
+                        <a href="#" class="meu-botao6">Saiba mais</a>
+                    </div><br>
+            
+                    <div class="drivers">
+                        <h2 class="f1">Pilotos Titulares</h2><br>
+                        <div class="driver">
+                            <img src="https://media.formula1.com/content/dam/fom-website/drivers/2023Drivers/norris.jpg.img.1920.medium.jpg/1677069505471.jpg" alt="Piloto 1">
+                            <div class="driver-info">
+                                <p><b> Lando Norris</b></p>
+                                <p><b>Número:</b><br>4</p>
+                                <p><b>Nacionalidade:</b><br>Britânico</p>
+                                <p><b>Entrou na Equipe:</b><br> 01/09/2018</p>
+                            </div>
+                        </div>
+            
+                        <div class="driver">
+                            <img src="https://media.formula1.com/content/dam/fom-website/drivers/2023Drivers/piastri.jpg.img.1920.medium.jpg/1676983075734.jpg" alt="Piloto 2">
+                            <div class="driver-info">
+                                <p><b> Oscar Piastri</b></p>
+                                <p><b>Número:</b><br>81</p>
+                                <p><b>Nacionalidade:</b><br>Australiano</p>
+                                <p><b>Entrou na Equipe:</b><br> 02/09/2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+            <div class="con">
+                <div class="header">
+                    <img src="https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/team%20logos/mercedes.jpg" alt="Logo da Equipe" class="logo">
+                    <h1 class="f1">Mercedes-AMG Petronas</h1>
+                    <p><b>Nome Completo:</b><br>Mercedes-AMG Petronas Formula One Team</p>
+                    <p><b>Sede:</b><br>	Brackley, Northamptonshire, Reino Unido
+                        (chassi)
+                        Brixworth, Northamptonshire, Reino Unido
+                        (motor)</p>
+                    <p><b>Chefe de Equipe:</b><br>Toto Wolff</p>
+                    <p><b>Diretor técnico:</b><br>James Allison</p>
+                    <p><b>Site oficial:</b><br><a href="www.mercedesamgf1.com"></a>	www.mercedesamgf1.com</p>
+                    <p><b>Nome(s) anterior(es):</b><br>	Brawn</p><br>
+
+                    <h1 class="f1">Campeonato Mundial de Fórmula 1 de 2023</h1>
+                    <p><b>Chassis:</b><br>F1 W14</p>
+                    <p><b>Motor:</b><br>Mercedes</p>
+                    <p><b>Pneus:</b><br>Pirelli</p>
+                    <p><b>Combustível:</b><br>Petronas Primax</p><br>
+
+                    <h1 class="f1">Histórico na Fórmula 1</h1>
+                    <p><b>Estreia:</b><br>GP da França de 1954</p>
+                    <p><b>Último GP:</b><br>GP de Abu Dhabi de 2023</p>
+                    <p><b>Grandes Prêmios:</b><br>293</p>
+                    <p><b>Campeã de Construtores:</b><br>8 (2014, 2015, 2016, 2017, 2018, 2019, 2020 e 2021)</p>
+                    <p><b>Campeã de Pilotos:</b><br>9 (1954, 1955, 2014, 2015, 2016, 2017, 2018, 2019 e 2020)</p>
+                    <p><b>Vitórias:</b><br>125</p>
+                    <p><b>Pódios:</b><br>289</p>
+                    <p><b>Pole Position:</b><br>137</p>
+                    <p><b>Voltas rápidas:</b><br>105</p>
+                    <p><b>Pontos:</b><br>7 222,5</p>
+                    <p><b>Posição no último campeonato (2023):</b><br>2º (409 pontos)</p>
+                </div>
+            
+                <div class="team-info">
+                    <div class="history">
+                        <h2 class="f1">História da Equipe</h2>
+                        <p><p><strong>Década de 1950:</strong></p>
+                        <ul>
+                            <li>A participação da Mercedes na Fórmula 1 remonta à década de 1950.</li>
+                            <li>Teve sucesso inicial com Juan Manuel Fangio conquistando o título de pilotos em 1954 e 1955.</li>
+                        </ul>
+                    
+                        <p><strong>Década de 1990:</strong></p>
+                        <ul>
+                            <li>Retornou à Fórmula 1 como equipe de fábrica em 1994.</li>
+                            <li>Conquistou o título de construtores em 1998.</li>
+                        </ul>
+                    
+                        <p><strong>Fase Contemporânea:</strong></p>
+                        <ul>
+                            <li>O retorno oficial da Mercedes como equipe de fábrica ocorreu em 2010.</li>
+                            <li>Estabeleceu uma parceria de sucesso com a equipe Brawn GP em 2009, adquirindo a equipe e formando a Mercedes GP.</li>
+                            <li>Domínio recente com a era híbrida turbo, conquistando vários títulos de pilotos e construtores.</li>
+                        </ul>
+                    
+                        <p><strong>Parcerias e Pilotos:</strong></p>
+                        <ul>
+                            <li>Parceria bem-sucedida com Lewis Hamilton, resultando em múltiplos títulos mundiais de pilotos.</li>
+                            <li>Pilotos notáveis incluem Nico Rosberg, Valtteri Bottas, e Michael Schumacher.</li>
+                        </ul>
+                    
+                        <p><strong>Situação Atual:</strong></p>
+                        <ul>
+                            <li>Continua sendo uma força dominante na Fórmula 1, competindo como Mercedes-AMG Petronas Formula One Team.</li>
+                            <li>Mantém uma posição de destaque na era moderna da Fórmula 1.</li>
+                        </ul></p><br>
+                        <a href="#" class="meu-botao8">Saiba mais</a>
+                    </div><br>
+            
+                    <div class="drivers">
+                        <h2 class="f1">Pilotos Titulares</h2><br>
+                        <div class="driver">
+                            <img src="https://media.formula1.com/content/dam/fom-website/drivers/2023Drivers/hamilton.jpg.img.1920.medium.jpg/1677069594164.jpg" alt="Piloto 1">
+                            <div class="driver-info">
+                                <p><b>Lewis Hamilton</b></p>
+                                <p><b>Número:</b><br>44</p>
+                                <p><b>Nacionalidade: </b><br>Britânico.</p>
+                                <p><b>Entrou na Equipe: </b><br>15/03/2018</p>
+                            </div>
+                        </div>
+            
+                        <div class="driver">
+                            <img src="https://media.formula1.com/content/dam/fom-website/drivers/2023Drivers/russell.jpg.img.1920.medium.jpg/1677069334466.jpg" alt="Piloto 2">
+                            <div class="driver-info">
+                                <p><b>George Russell</b></p>
+                                <p><b>Número:</b><br>63</p>
+                                <p><b>Nacionalidade: </b><br>Britânico</p>
+                                <p><b>Entrou na Equipe: </b><br>07/09/2021</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+            <div class="con">
+                <div class="header">
+                    <img src="https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/team%20logos/red%20bull.jpg" alt="Logo da Equipe" class="logo">
+                    <h1 class="f1">Red Bull</h1>
+                    <p><b>Nome Completo:</b><br>Oracle Red Bull Racing</p>
+                    <p><b>Sede:</b><br>	Milton Keynes, Reino Unido</p>
+                    <p><b>Chefe de Equipe:</b><br>Helmut Marko</p>
+                    <p><b>Diretor técnico:</b><br> Pierre Waché</p>
+                    <p><b>Site oficial:</b><br><a href="www.redbullracing.com"></a>	www.redbullracing.com</p>
+                    <p><b>Nome(s) anterior(es):</b><br>	Jaguar</p><br>
+
+                    <h1 class="f1">Campeonato Mundial de Fórmula 1 de 2023</h1>
+                    <p><b>Chassis:</b><br>RB19</p>
+                    <p><b>Motor:</b><br>Honda RBPT</p>
+                    <p><b>Pneus:</b><br>Pirelli</p>
+                    <p><b>Combustível:</b><br>Esso/Mobil Synergy</p><br>
+
+                    <h1 class="f1">Histórico na Fórmula 1</h1>
+                    <p><b>Estreia:</b><br>GP da Austrália de 2005</p>
+                    <p><b>Último GP:</b><br>GP de Abu Dhabi de 2023</p>
+                    <p><b>Grandes Prêmios:</b><br>368 (369 largadas)</p>
+                    <p><b>Campeã de Construtores:</b><br>6 (2010, 2011, 2012, 2013, 2022 e 2023)</p>
+                    <p><b>Campeã de Pilotos:</b><br>7 (2010, 2011, 2012, 2013, 2021, 2022 e 2023)</p>
+                    <p><b>Vitórias:</b><br>113</p>
+                    <p><b>Pódios:</b><br>264</p>
+                    <p><b>Pole Position:</b><br>95</p>
+                    <p><b>Voltas rápidas:</b><br>95</p>
+                    <p><b>Pontos:</b><br>7 248</p>
+                    <p><b>Posição no último campeonato (2023):</b><br>1º (860 pontos)</p>
+                </div>
+            
+                <div class="team-info">
+                    <div class="history">
+                        <h2 class="f1">História da Equipe</h2>
+                        <p>É uma equipe de automobilismo baseada no Reino Unido que compete no Campeonato Mundial de Fórmula 1 sob uma licença austríaca. A equipe disputou a categoria sob uma licença britânica entre 2005 e 2006 e compete sob uma licença austríaca desde 2007.É uma das duas equipes de Fórmula 1 de propriedade da empresa de bebidas Red Bull GmbH, sendo a outra a Scuderia AlphaTauri. A Red Bull Racing foi criada após a Red Bull comprar a equipe Jaguar no final de 2004, e é gerenciada por Christian Horner desde sua formação em 2005Na temporada de 2006, conseguiu o seu primeiro pódio com o terceiro lugar de David Coulthard no Grande Prêmio de Mônaco, e três anos depois, no Grande Prêmio da China de 2009, sua primeira pole position e vitória com Sebastian Vettel. Entre 2010 e 2013, a Red Bull dominou a Fórmula 1, com quatro títulos de construtores enquanto Vettel conquistava o tetracampeonato. A equipe voltou a vencer o campeonato de pilotos em 2021 com Max Verstappen, que também foi o campeão dos campeonatos de 2022 e 2023.</p><br>
+                        <a href="#" class="meu-botao10">Saiba mais</a>
+                    </div><br>
+            
+                    <div class="drivers">
+                        <h2 class="f1">Pilotos Titulares</h2><br>
+                        <div class="driver">
+                            <img src="https://media.formula1.com/content/dam/fom-website/drivers/2023Drivers/verstappen.jpg.img.1920.medium.jpg/1701270073824.jpg" alt="Piloto 1">
+                            <div class="driver-info">
+                                <p><b>Max Verstappen</b></p>
+                                <p><b>Número:</b><br>1</p>
+                                <p><b>Nacionalidade:</b><br Neerlandês></p>
+                                <p><b>Entrou na Equipe:</b><br> 05/05/2016</p>
+                            </div>
+                        </div>
+            
+                        <div class="driver">
+                            <img src="https://media.formula1.com/content/dam/fom-website/drivers/2023Drivers/perez.jpg.img.1920.medium.jpg/1677069773437.jpg" alt="Piloto 2">
+                            <div class="driver-info">
+                                <p><b> Sergio Pérez</b></p>
+                                <p><b>Número:</b><br>11</p>
+                                <p><b>Nacionalidade:</b><br>Mexicano</p>
+                                <p><b>Entrou na Equipe:</b><br> 18/12/2020</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+            <div class="con">
+                <div class="header">
+                    <img src="https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/team%20logos/alphatauri.jpg" alt="Logo da Equipe" class="logo">
+                    <h1 class="f1">Scuderia AlphaTauri</h1>
+                    <p><b>Nome Completo:</b><br>Scuderia AlphaTauri</p>
+                    <p><b>Sede:</b><br>	Faença, Itália</p>
+                    <p><b>Chefe de Equipe:</b><br>Franz Tost</p>
+                    <p><b>Diretor técnico:</b><br>Jody Egginton</p>
+                    <p><b>Site oficial:</b><br><a href="scuderiaalphatauri.com"></a>scuderiaalphatauri.com</p>
+                    <p><b>Nome(s) anterior(es):</b><br>	Scuderia Toro Rosso</p><br>
+
+                    <h1 class="f1">Campeonato Mundial de Fórmula 1 de 2023</h1>
+                    <p><b>Chassis:</b><br>AT04</p>
+                    <p><b>Motor:</b><br>Honda RBPT</p>
+                    <p><b>Pneus:</b><br>Pirelli</p>
+                    <p><b>Combustível:</b><br>Mobil 1</p><br>
+
+                    <h1 class="f1">Histórico na Fórmula 1</h1>
+                    <p><b>Estreia:</b><br>GP da Áustria de 2020</p>
+                    <p><b>Último GP:</b><br>GP de Abu Dhabi de 2023</p>
+                    <p><b>Grandes Prêmios:</b><br>83</p>
+                    <p><b>Campeã de Construtores:</b><br>0</p>
+                    <p><b>Campeã de Pilotos:</b><br>0</p>
+                    <p><b>Vitórias:</b><br>1</p>
+                    <p><b>Pódios:</b><br>2</p>
+                    <p><b>Pole Position:</b><br>0</p>
+                    <p><b>Voltas rápidas:</b><br>2</p>
+                    <p><b>Pontos:</b><br>309</p>
+                    <p><b>Posição no último campeonato (2023):</b><br>8º (25 pontos)</p>
+                </div>
+            
+                <div class="team-info">
+                    <div class="history">
+                        <h2 class="f1">História da Equipe</h2>
+                        <p>A Scuderia AlphaTauri, comumente conhecida como AlphaTauri, é uma equipe e construtor de Fórmula 1 com sede em Faença, na Itália. É uma das duas equipes de Fórmula 1 de propriedade da empresa austríaca de bebidas energéticas Red Bull, a outra sendo a Red Bull Racing. A equipe foi formada, para a disputa da Fórmula 1 a partir da temporada de 2020, após a renomeação da antiga Scuderia Toro Rosso, o nome é derivado da marca de moda da Red Bull, a AlphaTauri.De acordo com Franz Tost e Helmut Marko, a Scuderia AlphaTauri não é uma equipe júnior, mas sim uma equipe irmã da Red Bull Racing. A Scuderia AlphaTauri é a terceira equipe a promover uma marca de moda de roupas como construtor da Fórmula 1, depois da Benetton Formula que participou entre 1986 e 2001, antes de ser vendida para a Renault e, da Andrea Moda que participou sem sucesso em 1992.</p>
+                    <br><a href="#" class="meu-botao2">Saiba mais</a>
+                    </div><br>
+            
+                    <div class="drivers">
+                        <h2 class="f1">Pilotos Titulares</h2><br>
+                        <div class="driver">
+                            <img src="https://media.formula1.com/content/dam/fom-website/drivers/2023Drivers/tsunoda.jpg.img.1920.medium.jpg/1701268830375.jpg" alt="Piloto 1">
+                            <div class="driver-info">
+                                <p><b>Yuki Tsunoda</b></p>
+                                <p><b>Número:</b><br>22</p>
+                                <p><b>Nacionalidade:</b><br>japonês</p>
+                                <p><b>Entrou na Equipe:</b><br> 16/12/2020</p>
+                            </div>
+                        </div>
+            
+                        <div class="driver">
+                            <img src="https://media.formula1.com/content/dam/fom-website/drivers/2023Drivers/ricciardo.jpg.img.1920.medium.jpg/1689928543988.jpg" alt="Piloto 2">
+                            <div class="driver-info">
+                                <p><b> Daniel Ricciardo</b></p>
+                                <p><b>Número:</b><br>3</p>
+                                <p><b>Nacionalidade:</b><br>Australiano </p>
+                                <p><b>Entrou na Equipe:</b><br> 09/07/2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+            <div class="con">
+                <div class="header">
+                    <img src="https://media.formula1.com/content/dam/fom-website/teams/Ferrari/logo-ferrari-18%20.jpg" alt="Logo da Equipe" class="logo">
+                    <h1 class="f1">Scunderia Ferrari</h1>
+                    <p><b>Nome Completo:</b><br>Scuderia Ferrari</p>
+                    <p><b>Sede:</b><br>	Maranello, Itália</p>
+                    <p><b>Chefe de Equipe:</b><br>Frédéric Vasseur</p>
+                    <p><b>Diretor técnico:</b><br>Enrico Cardile</p>
+                    <p><b>Site oficial:</b><br><a href="formula1.ferrari.com"></a>formula1.ferrari.com</p>
+                    <p><b>Nome(s) anterior(es):</b><br></p><br>
+
+                    <h1 class="f1">Campeonato Mundial de Fórmula 1 de 2023</h1>
+                    <p><b>Chassis:</b><br>SF-23</p>
+                    <p><b>Motor:</b><br>Ferrari[</p>
+                    <p><b>Pneus:</b><br>Pirelli</p>
+                    <p><b>Combustível:</b><br>Shell V-Power</p><br>
+
+                    <h1 class="f1">Histórico na Fórmula 1</h1>
+                    <p><b>Estreia:</b><br>GP de Mônaco de 1950</p>
+                    <p><b>Último GP:</b><br>GP de Abu Dhabi de 2023</p>
+                    <p><b>Grandes Prêmios:</b><br> 1 074</p>
+                    <p><b>Campeã de Construtores:</b><br>16 (1961, 1964, 1975, 1976, 1977, 1979, 1982, 1983, 1999, 2000, 2001, 2002, 2003, 2004, 2007, 2008)</p>
+                    <p><b>Campeã de Pilotos:</b><br>15 (1952, 1953, 1956, 1958, 1961, 1964, 1975, 1977, 1979, 2000, 2001, 2002, 2003, 2004, 2007)</p>
+                    <p><b>Vitórias:</b><br>243</p>
+                    <p><b>Pódios:</b><br>807</p>
+                    <p><b>Pole Position:</b><br>249</p>
+                    <p><b>Voltas rápidas:</b><br>259</p>
+                    <p><b>Pontos:</b><br>9 672</p>
+                    <p><b>Posição no último campeonato (2023):</b><br>3º (406 pontos)</p>
+                </div>
+            
+                <div class="team-info">
+                    <div class="history">
+                        <h2 class="f1">História da Equipe</h2>
+                        <p>A Scuderia Ferrari foi fundada por Enzo Ferrari em 1929 e tornou-se a equipe de corrida da Alfa Romeo. Em 1938, a Alfa Romeo tomou a decisão de entrar nas corridas com seu próprio nome, que institui a organização Alfa Corse, que absorveu o que tinha sido a Ferrari. Enzo Ferrari não concordou com esta mudança na política e foi, finalmente, demitido pela Alfa em 1939. Os termos de sua saída proibiu-o de participar do automobilismo em seu próprio nome, por um período de quatro anos.Scuderia Ferrari é uma equipe de automobilismo da montadora italiana Ferrari que compete no campeonato da Fórmula 1. É a equipe mais antiga em atividade na categoria.
+                        A Ferrari é a equipe mais vitoriosa e bem-sucedida da história da F1. No Grande Prêmio da China de 2007 a equipe atingiu a incrível marca de 200 triunfos em Grandes Prêmios</p>
+                    <br><a href="#" class="meu-botao9">Saiba mais</a>
+                    </div><br>
+            
+                    <div class="drivers">
+                        <h2 class="f1">Pilotos Titulares</h2><br>
+                        <div class="driver">
+                            <img src="https://media.formula1.com/content/dam/fom-website/drivers/2023Drivers/leclerc.jpg.img.1920.medium.jpg/1677069223130.jpg" alt="Piloto 1">
+                            <div class="driver-info">
+                                <p><b>Charles Leclerc</b></p>
+                                <p><b>Número:</b><br>16</p>
+                                <p><b>Nacionalidade:</b><br>monegasco</p>
+                                <p><b>Entrou na Equipe:</b><br> 13/05/2020</p>
+                            </div>
+                        </div>
+            
+                        <div class="driver">
+                            <img src="https://media.formula1.com/content/dam/fom-website/drivers/2023Drivers/sainz.jpg.img.1920.medium.jpg/1677069189406.jpg" alt="Piloto 2">
+                            <div class="driver-info">
+                                <p><b> Carlos Sainz Jr.</b></p>
+                                <p><b>Número:</b><br>55</p>
+                                <p><b>Nacionalidade:</b><br> Espanhol </p>
+                                <p><b>Entrou na Equipe:</b><br> 01/02/2015</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+            <div class="con">
+                <div class="header">
+                    <img src="https://media.formula1.com/content/dam/fom-website/2018-redesign-assets/team%20logos/williams%20blue.jpg" alt="Logo da Equipe" class="logo">
+                    <h1 class="f1">Williams Racing</h1>
+                    <p><b>Nome Completo:</b><br>Williams Racing,</p>
+                    <p><b>Sede:</b><br>	Grove, Reino Unido</p>
+                    <p><b>Chefe de Equipe:</b><br>James Vowles</p>
+                    <p><b>Diretor técnico:</b><br>Pat Fry</p>
+                    <p><b>Site oficial:</b><br><a href="www.williamsf1.com"></a>www.williamsf1.com</p>
+                    <p><b>Nome(s) anterior(es):</b><br></p><br>
+
+                    <h1 class="f1">Campeonato Mundial de Fórmula 1 de 2023</h1>
+                    <p><b>Chassis:</b><br>FW45</p>
+                    <p><b>Motor:</b><br>Mercedes</p>
+                    <p><b>Pneus:</b><br>Pirelli</p>
+                    <p><b>Combustível:</b><br>	Petronas Primax</p><br>
+
+                    <h1 class="f1">Histórico na Fórmula 1</h1>
+                    <p><b>Estreia:</b><br>GP da Espanha de 1977</p>
+                    <p><b>Último GP:</b><br>GP de Abu Dhabi de 2023</p>
+                    <p><b>Grandes Prêmios:</b><br>827</p>
+                    <p><b>Campeã de Construtores:</b><br>9 (1980, 1981, 1986, 1987, 1992, 1993, 1994, 1996, 1997)</p>
+                    <p><b>Campeã de Pilotos:</b><br>7 (1980, 1982, 1987, 1992, 1993, 1996, 1997)</p>
+                    <p><b>Vitórias:</b><br>114</p>
+                    <p><b>Pódios:</b><br>313</p>
+                    <p><b>Pole Position:</b><br>128</p>
+                    <p><b>Voltas rápidas:</b><br>133</p>
+                    <p><b>Pontos:</b><br>3 620 </p>
+                    <p><b>Posição no último campeonato (2023):</b><br>7º (28 pontos)</p>
+                </div>
+            
+                <div class="team-info">
+                    <div class="history">
+                        <h2 class="f1">História da Equipe</h2>
+                        <p>A primeira corrida da equipe foi o Grande Prêmio da Espanha de 1977, onde a nova equipe competiu com um chassi da March pilotado pelo belga Patrick Nève. A Williams começou a fabricar seus próprios carros no ano seguinte, e o suíço Clay Regazzoni venceu a primeira corrida da história da equipe no Grande Prêmio da Grã-Bretanha de 1979. No Grande Prêmio da Grã-Bretanha de 1997, o canadense Jacques Villeneuve conquistou a centésima vitória da equipe, tornando a Williams uma das quatro equipes de Fórmula 1, ao lado da Ferrari, da também britânica McLaren e da Mercedes, a vencer cem Grandes Prêmios. Antes do início dos anos de ouro da Ferrari (entre 1999 e 2004), a Williams detinha o recorde de Campeonato de Construtores, ao todo nove — todos conquistados entre 1980 e 1997 —, contra oito da Ferrari e oito da McLaren até a temporada de 1999, quando foi igualada pela escuderia italiana em 2000 quando o recorde foi superado.</p><br>
+                        <a href="#" class="meu-botao">Saiba mais</a>
+                    </div><br>
+            
+                    <div class="drivers">
+                        <h2 class="f1">Pilotos Titulares</h2><br>
+                        <div class="driver">
+                            <img src="https://media.formula1.com/content/dam/fom-website/drivers/2023Drivers/albon.jpg.img.1920.medium.jpg/1689253984120.jpg" alt="Piloto 1">
+                            <div class="driver-info">
+                                <p><b>Alexander Albon </b></p>
+                                <p><b>Número:</b><br>23</p>
+                                <p><b>Nacionalidade:</b><br>anglo-tailandês </p>
+                                <p><b>Entrou na Equipe:</b><br> 08/09/2018</p>
+                            </div>
+                        </div>
+            
+                        <div class="driver">
+                            <img src="https://media.formula1.com/content/dam/fom-website/drivers/2023Drivers/sargeant.jpg.img.1920.medium.jpg/1701272060171.jpg" alt="Piloto 2">
+                            <div class="driver-info">
+                                <p><b>Logan Sargeant</b></p>
+                                <p><b>Número:</b><br>2</p>
+                                <p><b>Nacionalidade:</b><br>estadunidense </p>
+                                <p><b>Entrou na Equipe:</b><br> 01/11/2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+        <footer>
+            <p class="th5">&copy; 2023 Perfis na F1 Mania</p>
+        </footer> 
+        <button onclick="topFunction()" id="backToTopBtn" title="Voltar para o topo"><i class='bx bxs-upvote'></i></button>
+</body>
+</html>

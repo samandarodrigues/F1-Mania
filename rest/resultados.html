@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <title id="top">F1 Mania</title>
+</head>
+
+<body>
+    <header>
+        <nav class="sidebar close">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <img src="logo2.png" alt="Logo da F1 Mania">
+                    </span>
+    
+                    <div class="text logo-text">
+                        <span class="name">F1 Mania</span>
+                        <span class="profession">Blog de notícias</span>
+                    </div>
+                </div>
+    
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+    
+            <div class="menu-bar">
+                <div class="menu">
+    
+                    <li class="search-box">
+                        <i class='bx bx-search icon'></i>
+                        <input type="text" placeholder="Procurar...">
+                    </li>
+    
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="../index.html">
+                                <i class='bx bx-home-alt icon' ></i>
+                                <span class="text nav-text">Página Inicial</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="historia.html">
+                                <i class='bx bx-book-open icon' ></i>
+                                <span class="text nav-text">História da F1</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="resultados.html">
+                                <i class='bx bx-bell icon'></i>
+                                <span class="text nav-text">Resultados</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="perfil.html">
+                                <i class='bx bxs-edit icon'></i>
+                                <span class="text nav-text">Perfis</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="calendario.html">
+                                <i class='bx bx-calendar icon' ></i>
+                                <span class="text nav-text">Calendário</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="contato.html">
+                                <i class='bx bx-user icon'></i>
+                                <span class="text nav-text">Contato</span>
+                            </a>
+                        </li>
+    
+                    </ul>
+                </div>
+    
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="entrar.html">
+                            <i class='bx bx-log-in-circle icon'></i>
+                            <span class="text nav-text">Entrar</span>
+                        </a>
+                    </li>
+    
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text text">Dark mode</span>
+    
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                    
+                </div>
+            </div>
+    
+        </nav>
+    </header>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+    </script>
+
+        <script>
+            var menuImage = document.getElementById("menu-image");
+            var menuTiposf1 = document.getElementById("menu-tipos-f1");
+    
+            // Quando a imagem do menu é clicada, mostrar/ocultar os tipos de livros
+            menuImage.addEventListener("click", function() {
+                if (menuTiposf1.style.display === "none" || menuTiposf1.style.display === "") {
+                    menuTiposf1.style.display = "block"; // Mostrar as opções de tipos de livros
+                } else {
+                    menuTiposf1.style.display = "none"; // Ocultar as opções de tipos de livros
+                }
+            });
+        </script>
+
+    <script>
+        document.addEventListener("click", function (event) {
+            // Crie um elemento de imagem para o carro
+            var car = document.createElement("img");
+            car.src = "https://assets.stickpng.com/images/580b585b2edbce24c47b2c8f.png";
+            car.classList.add("car-animation"); // Adicione a classe de animação
+
+            // Adicione o carro à página
+            document.body.appendChild(car);
+
+            // Remova o carro após a animação terminar
+            car.addEventListener("animationiteration", function () {
+                car.remove();
+            }, { once: true });
+        });
+    </script>
+
+    <div id="logo">
+        <h1 class="f1">FÓRMULA 1</h1>
+    </div>
+
+<h1 class="hh">Confira os Resultados da Temporada:</h1>
+<p class="th2">Embarque numa jornada pelos triunfos e reviravoltas da temporada. Descubra quem se destacou, quem superou desafios e escreveu sua história de sucesso. Confira agora os resultados que moldaram esta temporada inesquecível.</p>
+<table class="pfl" border="1">
+    <caption>
+        Campeonato de Pilotos
+    </caption>
+    <tr class="pfl2">
+        <th>Posição</th>
+        <th>Piloto</th>
+        <th>Nacionalidade</th>
+        <th>Equipe</th>
+        <th>Pontuação</th>
+        <th>Vitória(s)</th>
+        <th>Pódio(s)</th>
+    </tr>
+    <tr>
+        <td>1º</td>
+        <td>Max <b>VERSTAPPEN</b></td>
+        <td>Holandês</td>
+        <td>Red Bull Racing</td>
+        <td>575 🏆</td>
+        <td>19</td>
+        <td>22</td>
+    </tr>
+    <tr class="pfl3">
+        <td>2º</td>
+        <td>Sergio <B>PEREZ</B></td>
+        <td>Mexicano</td>
+        <td>Red Bull Racing</td>
+        <td>285 🥈</td>
+        <td>2</td>
+        <td>9</td>
+    </tr>
+    <tr>
+        <td>3º</td>
+        <td>Lewis <b>HAMILTON</b></td>
+        <td>Britânico</td>
+        <td>Mercedes</td>
+        <td>234 🥉</td>
+        <td>0</td>
+        <td>6</td>
+    </tr>
+    <tr class="pfl3">
+        <td>4º</td>
+        <td>Fernando <b>ALONSO</b></td>
+        <td>Espanhol</td>
+        <td>Aston Martin</td>
+        <td>206</td>
+        <td>0</td>
+        <td>8</td>
+    </tr>
+    <tr>
+        <td>5º</td>
+        <td>Charles <b>LECLERC</b></td>
+        <td>Monegasco</td>
+        <td>Ferrari</td>
+        <td>206</td>
+        <td>0</td>
+        <td>6</td>
+    </tr>
+    <tr class="pfl3">
+        <td>6º</td>
+        <td>Lando <b>NORRIS</b></td>
+        <td>Britânico</td>
+        <td>McLaren</td>
+        <td>205</td>
+        <td>0</td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <td>7°</td>
+        <td>Carlos <b>SAINZ</b></td>
+        <td>Espanhol</td>
+        <td>Ferrari</td>
+        <td>200</td>
+        <td>1</td>
+        <td>3</td>
+    </tr>
+    <tr class="pfl3">
+        <td>8º</td>
+        <td>George <b>RUSSELL</b></td>
+        <td>Britânico</td>
+        <td>Mercedes</td>
+        <td>175</td>
+        <td>0</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>9º</td>
+        <td>Oscar <b>PIASTRI</b></td>
+        <td>Australiano</td>
+        <td>McLaren</td>
+        <td>97</td>
+        <td>0</td>
+        <td>2</td>
+    </tr>
+    <tr class="pfl3">
+        <td>10º</td>
+        <td>Lance <b>STROLL</b></td>
+        <td>Canadense</td>
+        <td>Aston Martin</td>
+        <td>74</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>11º</td>
+        <td>Pierre <b>GASLY</b></td>
+        <td>Francês</td>
+        <td>Alpine</td>
+        <td>62</td>
+        <td>0</td>
+        <td>1</td>
+    </tr>
+    <tr class="pfl3">
+        <td>12°</td>
+        <td>Esteban <b>OCON</b></td>
+        <td>Francês</td>
+        <td>Alpine</td>
+        <td>58</td>
+        <td>0</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>13º</td>
+        <td>Alexander <b>ALBON</b></td>
+        <td>Tailandês</td>
+        <td>Williams</td>
+        <td>27</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+    <tr class="pfl3">
+        <td>14º</td>
+        <td>Yuki <b>TSUNODA</b></td>
+        <td>Japonês</td>
+        <td>AlphaTauri</td>
+        <td>17</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>15º</td>
+        <td>Valtteri <b>BOTTAS</b></td>
+        <td>Finlandês</td>
+        <td>Alfa Romeo</td>
+        <td>10</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+    <tr class="pfl3">
+        <td>16º</td>
+        <td>Nico <b>HULKENBERG</b></td>
+        <td>Alemão</td>
+        <td>Haas F1 Team</td>
+        <td>9</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>17º</td>
+        <td>Daniel <B>RICCIARDO</B>
+        <td>Australiano</td>
+        <td>AlphaTauri</td>
+        <td>6</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+    <tr class="pfl3">
+        <td>18º</td>
+        <td><b>ZHOU</b> Guanyu</td>
+        <td>Chinês</td>
+        <td>AlfaRomeo</td>
+        <td>6</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>19º</td>
+        <td>Kevin <b>MAGNUSSEN</b></td>
+        <td>Dinamarquês</td>
+        <td>Haas F1 Team</td>
+        <td>3</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+    <tr class="pfl3">
+        <td>20º</td>
+        <td>Liam <B>LAWSON</B></td>
+        <td>Neozelandês</td>
+        <td>AlphaTauri</td>
+        <td>2</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>21º</td>
+        <td>Logan <b>SARGEANT</b></td>
+        <td>Americano</td>
+        <td>Williams</td>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+    <tr class="pfl3">
+        <td>22º</td>
+        <td>Nyck <b>DE VRIES</b></td>
+        <td>Holandês</td>
+        <td>AlphaTauri</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+</table>
+<br>
+<table class="pfl" border="1">
+    <caption>
+        Corridas da Temporada antes do Summer Break [PONTUAÇÃO]
+    </caption>
+    <tr class="pfl2">
+        <th>Pos.</th>
+        <th>Piloto</th>
+        <th><u>Bahrein</u></th>
+        <th><u>Arábia Saudita</u></th>
+        <th><u>Austrália</u></th>
+        <th><u>Azerbaijão</u></th>
+        <th><u>Miami</u></th>
+        <th><u>Mônaco</u></th>
+        <th><u>Espanha</u></th>
+        <th><u>Canadá</u></th>
+        <th><u>Áustria</u></th>
+        <th><u>Inglaterra</u></th>
+        <th><u>Hungria</u></th>
+    </tr>
+    <tr class="pqn">
+        <td>1°</td>
+        <td>Ver <img src="https://cdn-1.motorsport.com/static/img/cf/nl-2.svg" class="img"></td>
+        <td>25</td>
+        <td>19</td>
+        <td>25</td>
+        <td>24</td>
+        <td>26</td>
+        <td>25</td>
+        <td>26</td>
+        <td>25</td>
+        <td>34</td>
+        <td>26</td>
+        <td>26</td>
+    </tr>
+    <tr class="pfl3">
+        <td>2°</td>
+        <td>Per <img src="https://cdn-1.motorsport.com/static/img/cf/mx-2.svg" class="img"></td>
+        <td>18</td>
+        <td>25</td>
+        <td>11</td>
+        <td>33</td>
+        <td>18</td>
+        <td>—</td>
+        <td>12</td>
+        <td>9</td>
+        <td>22</td>
+        <td>8</td>
+        <td>15</td>
+    </tr>
+    <tr>
+        <td>3°</td>
+        <td>Ham <img src="https://cdn-1.motorsport.com/static/img/cf/gb-2.svg" class="img"></td>
+        <td>10</td>
+        <td>10</td>
+        <td>18</td>
+        <td>10</td>
+        <td>8</td>
+        <td>13</td>
+        <td>18</td>
+        <td>15</td>
+        <td>4</td>
+        <td>15</td>
+        <td>12</td>
+    </tr>
+    <tr class="pfl3">
+        <td>4°</td>
+        <td>Alo <img src="https://cdn-1.motorsport.com/static/img/cf/es-2.svg" class="img"></td>
+        <td>15</td>
+        <td>15</td>
+        <td>15</td>
+        <td>15</td>
+        <td>15</td>
+        <td>18</td>
+        <td>6</td>
+        <td>18</td>
+        <td>14</td>
+        <td>6</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>5°</td>
+        <td>Lec <img src="https://cdn-1.motorsport.com/static/img/cf/mc-2.svg" class="img"></td>
+        <td>—</td>
+        <td>6</td>
+        <td>—</td>
+        <td>22</td>
+        <td>6</td>
+        <td>8</td>
+        <td>—</td>
+        <td>12</td>
+        <td>18</td>
+        <td>2</td>
+        <td>6</td>
+    </tr>
+    <tr class="pfl3">
+        <td>6°</td>
+        <td>Nor <img src="https://cdn-1.motorsport.com/static/img/cf/gb-2.svg" class="img"></td>
+        <td>—</td>
+        <td>—</td>
+        <td>8</td>
+        <td>2</td>
+        <td>—</td>
+        <td>2</td>
+        <td>—</td>
+        <td>—</td>
+        <td>12</td>
+        <td>18</td>
+        <td>18</td>
+    </tr>
+    <tr>
+        <td>7°</td>
+        <td>Sai <img src="https://cdn-1.motorsport.com/static/img/cf/es-2.svg" class="img"></td>
+        <td>12</td>
+        <td>8</td>
+        <td>—</td>
+        <td>14</td>
+        <td>10</td>
+        <td>4</td>
+        <td>10</td>
+        <td>10</td>
+        <td>14</td>
+        <td>1</td>
+        <td>4</td>
+    </tr>
+    <tr class="pfl3">
+        <td>8°</td>
+        <td>Rus <img src="https://cdn-1.motorsport.com/static/img/cf/gb-2.svg" class="img"></td>
+        <td>6</td>
+        <td>12</td>
+        <td>—</td>
+        <td>10</td>
+        <td>12</td>
+        <td>10</td>
+        <td>15</td>
+        <td>—</td>
+        <td>7</td>
+        <td>10</td>
+        <td>8</td>
+    </tr>
+    <tr>
+        <td>9°</td>
+        <td>Pia <img src="https://cdn-1.motorsport.com/static/img/cf/au-2.svg" class="img"></td>
+        <td>—</td>
+        <td>—</td>
+        <td>4</td>
+        <td>—</td>
+        <td>—</td>
+        <td>1</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>12</td>
+        <td>10</td>
+    </tr>
+    <tr class="pfl3">
+        <td>10°</td>
+        <td>Str <img src="https://cdn-1.motorsport.com/static/img/cf/ca-2.svg" class="img"></td>
+        <td>8</td>
+        <td>—</td>
+        <td>12</td>
+        <td>7</td>
+        <td>—</td>
+        <td>—</td>
+        <td>8</td>
+        <td>2</td>
+        <td>7</td>
+        <td>—</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>11°</td>
+        <td>Gas <img src="https://cdn-1.motorsport.com/static/img/cf/fr-2.svg" class="img"></td>
+        <td>2</td>
+        <td>2</td>
+        <td>—</td>
+        <td>—</td>
+        <td>4</td>
+        <td>6</td>
+        <td>1</td>
+        <td>—</td>
+        <td>1</td>
+        <td>—</td>
+        <td>—</td>
+    </tr>
+    <tr class="pfl3">
+        <td>12°</td>
+        <td>Oco <img src="https://cdn-1.motorsport.com/static/img/cf/fr-2.svg" class="img"></td>
+        <td>—</td>
+        <td>4</td>
+        <td>—</td>
+        <td>—</td>
+        <td>2</td>
+        <td>15</td>
+        <td>4</td>
+        <td>4</td>
+        <td>2</td>
+        <td>—</td>
+        <td>—</td>
+    </tr>
+    <tr>
+        <td>13°</td>
+        <td>Alb <img src="https://cdn-1.motorsport.com/static/img/cf/th-2.svg" class="img"></td>
+        <td>1</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>6</td>
+        <td>—</td>
+        <td>4</td>
+        <td>—</td>
+    </tr>
+    <tr class="pfl3">
+        <td>14°</td>
+        <td>Tsu <img src="https://cdn-1.motorsport.com/static/img/cf/jp-2.svg" class="img"></td>
+        <td>—</td>
+        <td>—</td>
+        <td>1</td>
+        <td>1</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+    </tr>
+    <tr>
+        <td>15°</td>
+        <td>Bot <img src="https://cdn-1.motorsport.com/static/img/cf/fi-2.svg" class="img"></td>
+        <td>4</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>1</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+    </tr>
+    <tr class="pfl3">
+        <td>16°</td>
+        <td>Hul <img src="https://cdn-1.motorsport.com/static/img/cf/de-2.svg" class="img"></td>
+        <td>—</td>
+        <td>—</td>
+        <td>6</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>3</td>
+        <td>—</td>
+        <td>—</td>
+    </tr>
+    <tr>
+        <td>17°</td>
+        <td>Ric <img src="https://cdn-1.motorsport.com/static/img/cf/au-2.svg" class="img"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr class="pfl3">
+        <td>18°</td>
+        <td>Zho <img src="https://cdn-1.motorsport.com/static/img/cf/cn-2.svg" class="img"></td>
+        <td>—</td>
+        <td>—</td>
+        <td>2</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>2</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+    </tr>
+    <tr>
+        <td>19°</td>
+        <td>Mag <img src="https://cdn-1.motorsport.com/static/img/cf/dk-2.svg" class="img"></td>
+        <td>—</td>
+        <td>1</td>
+        <td>—</td>
+        <td>—</td>
+        <td>1</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+    </tr>
+    <tr class="pfl3">
+        <td>20°</td>
+        <td>Law <img src="https://cdn-1.motorsport.com/static/img/cf/nz-2.svg" class="img"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>21°</td>
+        <td>Sar <img src="https://cdn-1.motorsport.com/static/img/cf/us-2.svg" class="img"></td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+    </tr>
+    <tr class="pfl3">
+        <td>22°</td>
+        <td>Dev <img src="https://cdn-1.motorsport.com/static/img/cf/nl-2.svg" class="img"></td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td></td>
+    </tr>
+</table>
+<br>
+<table class="pfl" border="1">
+    <caption>
+        Corridas da Temporada depois do Summer Break [PONTUAÇÃO]
+    </caption>
+    <tr class="pfl2">
+        <th>Pos.</th>
+        <th>Piloto</th>
+        <th><u>Bélgica</u></th>
+        <th><u>Países Baixos</u></th>
+        <th><u>Monza</u></th>
+        <th><u>Singapura</u></th>
+        <th><u>Japão</u></th>
+        <th><u>Qatar</u></th>
+        <th><u>Austin</u></th>
+        <th><u>México</u></th>
+        <th><u>Brasil</u></th>
+        <th><u>Las Vegas</u></th>
+        <th><u>Abu Dhabi</u></th>
+    </tr>
+    <tr class="pqn">
+        <td>1°</td>
+        <td>Ver <img src="https://cdn-1.motorsport.com/static/img/cf/nl-2.svg" class="img2"></td>
+        <td>33</td>
+        <td>25</td>
+        <td>25</td>
+        <td>10</td>
+        <td>26</td>
+        <td>33</td>
+        <td>33</td>
+        <td>25</td>
+        <td>33</td>
+        <td>25</td>
+        <td>25</td>
+    </tr>
+    <tr class="pfl3">
+        <td>2°</td>
+        <td>Per <img src="https://cdn-1.motorsport.com/static/img/cf/mx-2.svg" class="img2"></td>
+        <td>18</td>
+        <td>12</td>
+        <td>18</td>
+        <td>4</td>
+        <td>—</td>
+        <td>1</td>
+        <td>16</td>
+        <td>—</td>
+        <td>18</td>
+        <td>15</td>
+        <td>12</td>
+    </tr>
+    <tr>
+        <td>3°</td>
+        <td>Ham <img src="https://cdn-1.motorsport.com/static/img/cf/gb-2.svg" class="img3"></td>
+        <td>15</td>
+        <td>8</td>
+        <td>8</td>
+        <td>16</td>
+        <td>10</td>
+        <td>4</td>
+        <td>7</td>
+        <td>19</td>
+        <td>6</td>
+        <td>6</td>
+        <td>2</td>
+    </tr>
+    <tr class="pfl3">
+        <td>4°</td>
+        <td>Alo <img src="https://cdn-1.motorsport.com/static/img/cf/es-2.svg" class="img2"></td>
+        <td>10</td>
+        <td>19</td>
+        <td>2</td>
+        <td>—</td>
+        <td>4</td>
+        <td>9</td>
+        <td>—</td>
+        <td>—</td>
+        <td>15</td>
+        <td>2</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <td>5°</td>
+        <td>Lec <img src="https://cdn-1.motorsport.com/static/img/cf/mc-2.svg" class="img2"></td>
+        <td>19</td>
+        <td>—</td>
+        <td>12</td>
+        <td>12</td>
+        <td>12</td>
+        <td>10</td>
+        <td>6</td>
+        <td>15</td>
+        <td>4</td>
+        <td>18</td>
+        <td>18</td>
+    </tr>
+    <tr class="pfl3">
+        <td>6°</td>
+        <td>Nor <img src="https://cdn-1.motorsport.com/static/img/cf/gb-2.svg" class="img2"></td>
+        <td>9</td>
+        <td>6</td>
+        <td>4</td>
+        <td>18</td>
+        <td>18</td>
+        <td>21</td>
+        <td>23</td>
+        <td>10</td>
+        <td>26</td>
+        <td>—</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td>7°</td>
+        <td>Sai <img src="https://cdn-1.motorsport.com/static/img/cf/es-2.svg" class="img2"></td>
+        <td>5</td>
+        <td>10</td>
+        <td>15</td>
+        <td>25</td>
+        <td>8</td>
+        <td>3</td>
+        <td>18</td>
+        <td>12</td>
+        <td>9</td>
+        <td>8</td>
+        <td>—</td>
+    </tr>
+    <tr class="pfl3">
+        <td>8°</td>
+        <td>Rus <img src="https://cdn-1.motorsport.com/static/img/cf/gb-2.svg" class="img2"></td>
+        <td>9</td>
+        <td>—</td>
+        <td>10</td>
+        <td>—</td>
+        <td>6</td>
+        <td>17</td>
+        <td>11</td>
+        <td>8</td>
+        <td>5</td>
+        <td>4</td>
+        <td>15</td>
+    </tr>
+    <tr>
+        <td>9°</td>
+        <td>Pia <img src="https://cdn-1.motorsport.com/static/img/cf/au-2.svg" class="img2"></td>
+        <td>7</td>
+        <td>2</td>
+        <td>—</td>
+        <td>6</td>
+        <td>15</td>
+        <td>26</td>
+        <td>—</td>
+        <td>4</td>
+        <td>—</td>
+        <td>2</td>
+        <td>8</td>
+    </tr>
+    <tr class="pfl3">
+        <td>10°</td>
+        <td>Str <img src="https://cdn-1.motorsport.com/static/img/cf/ca-2.svg" class="img2"></td>
+        <td>2</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>6</td>
+        <td>—</td>
+        <td>10</td>
+        <td>10</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>11°</td>
+        <td>Gas <img src="https://cdn-1.motorsport.com/static/img/cf/fr-2.svg" class="img2"></td>
+        <td>6</td>
+        <td>15</td>
+        <td>—</td>
+        <td>8</td>
+        <td>1</td>
+        <td>—</td>
+        <td>10</td>
+        <td>—</td>
+        <td>6</td>
+        <td>—</td>
+        <td>—</td>
+    </tr>
+    <tr class="pfl3">
+        <td>12°</td>
+        <td>Oco <img src="https://cdn-1.motorsport.com/static/img/cf/fr-2.svg" class="img2"></td>
+        <td>4</td>
+        <td>1</td>
+        <td>—</td>
+        <td>—</td>
+        <td>2</td>
+        <td>6</td>
+        <td>—</td>
+        <td>1</td>
+        <td>1</td>
+        <td>12</td>
+        <td>—</td>
+    </tr>
+    <tr>
+        <td>13°</td>
+        <td>Alb <img src="https://cdn-1.motorsport.com/static/img/cf/th-2.svg" class="img2"></td>
+        <td>—</td>
+        <td>4</td>
+        <td>6</td>
+        <td>—</td>
+        <td>—</td>
+        <td>2</td>
+        <td>2</td>
+        <td>2</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+    </tr>
+    <tr class="pfl3">
+        <td>14°</td>
+        <td>Tsu <img src="https://cdn-1.motorsport.com/static/img/cf/jp-2.svg" class="img2"></td>
+        <td>1</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>5</td>
+        <td>—</td>
+        <td>5</td>
+        <td>—</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>15°</td>
+        <td>Bot <img src="https://cdn-1.motorsport.com/static/img/cf/fi-2.svg" class="img2"></td>
+        <td>—</td>
+        <td>—</td>
+        <td>1</td>
+        <td>—</td>
+        <td>—</td>
+        <td>4</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+    </tr>
+    <tr class="pfl3">
+        <td>16°</td>
+        <td>Hul <img src="https://cdn-1.motorsport.com/static/img/cf/de-2.svg" class="img2"></td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+    </tr>
+    <tr>
+        <td>17°</td>
+        <td>Ric <img src="https://cdn-1.motorsport.com/static/img/cf/au-2.svg" class="img2"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>—</td>
+        <td>6</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+    </tr>
+    <tr class="pfl3">
+        <td>18°</td>
+        <td>Zho <img src="https://cdn-1.motorsport.com/static/img/cf/cn-2.svg" class="img2"></td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>2</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+    </tr>
+    <tr>
+        <td>19°</td>
+        <td>Mag <img src="https://cdn-1.motorsport.com/static/img/cf/dk-2.svg" class="img3"></td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>1</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+    </tr>
+    <tr class="pfl3">
+        <td>20°</td>
+        <td>Law <img src="https://cdn-1.motorsport.com/static/img/cf/nz-2.svg" class="img2"></td>
+        <td></td>
+        <td>—</td>
+        <td>—</td>
+        <td>2</td>
+        <td>—</td>
+        <td>—</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>21°</td>
+        <td>Sar<img src="https://cdn-1.motorsport.com/static/img/cf/us-2.svg" class="img2"></td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>1</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+    </tr>
+    <tr class="pfl3">
+        <td>22°</td>
+        <td>Dev  <img src="https://cdn-1.motorsport.com/static/img/cf/nl-2.svg" class="img2"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<br>
+<table class="pfl" border="1">
+    <caption>
+        Campeonato de Construtoras
+    </caption>
+    <thead class="pfl2">
+        <th>Posição</th>
+        <th>Equipe</th>
+        <th>Pontuação</th>
+        <th>Pilotos Titulares</th>
+        <th>Carro</th>
+        <th>Motor</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1°</td>
+            <td>Red Bull Racing</td>
+            <td>806 🏆</td>
+            <td>Max <b>VERSTAPPEN</b> & Sergio <b>PEREZ</b></td>
+            <td>RB19</td>
+            <td>Honda RBPT</td>
+        </tr>
+        <tr class="pfl3">
+            <td>2°</td>
+            <td>Mercedes</td>
+            <td>392 🥈</td>
+            <td>Lewis <b>HAMILTON</b> & George <b>RUSSELL</b></td>
+            <td>W14</td>
+            <td>Mercedes</td>
+        </tr>
+        <tr>
+            <td>3°</td>
+            <td>Ferrari</td>
+            <td>375 🥉</td>
+            <td>Charles <b>LECLERC</b> & Carlos <b>SAINZ</b></td>
+            <td>SF-23</td>
+            <td>Ferrari</td>
+        </tr>
+        <tr class="pfl3">
+            <td>4°</td>
+            <td>McLaren</td>
+            <td>293</td>
+            <td>Lando <b>NORRIS</b> & Oscar <b>PIASTRI</b></td>
+            <td>MCL60</td>
+            <td>Mercedes</td>
+        </tr>
+        <tr>
+            <td>5°</td>
+            <td>Aston Martin</td>
+            <td>268</td>
+            <td>Fernando <b>ALONSO</b> & Lance <b>STROLL</b></td>
+            <td>AMR23</td>
+            <td>Mercedes</td>
+        </tr>
+        <tr class="pfl3">
+            <td>6°</td>
+            <td>Alpine</td>
+            <td>108</td>
+            <td>Pierre <b>GASLY</b> & Esteban <b>OCON</b></td>
+            <td>A523</td>
+            <td>Renault</td>
+        </tr>
+        <tr>
+            <td>7°</td>
+            <td>Williams</td>
+            <td>28</td>
+            <td>Alexander <b>ALBON</b> & Logan <b>SARGEANT</b></td>
+            <td>FW45</td>
+            <td>Mercedes</td>
+        </tr>
+        <tr class="pfl3">
+            <td>8°</td>
+            <td>AlphaTauri</td>
+            <td>22</td>
+            <td>Yuki <b>TSUNODA</b> & Daniel <b>RICCIARDO</b></td>
+            <td>AT04</td>
+            <td>Honda RBPT</td>
+        </tr>
+        <tr>
+            <td>9°</td>
+            <td>Alfa Romeo</td>
+            <td>16</td>
+            <td>Valtteri <b>BOTTAS</b> & <b>ZHOU</b> Guanyu</td>
+            <td>C43</td>
+            <td>Ferrari</td>
+        </tr>
+        <tr class="pfl3">
+            <td>10°</td>
+            <td>Haas F1 Team</td>
+            <td>12</td>
+            <td>Nico <b>HULKENBERG</b> & Kevin <b>MAGNUSSEN</b></td>
+            <td>VF-23</td>
+            <td>Ferrari</td>
+        </tr>
+    </tbody>
+</table>
+<h2 class="hh">
+    Glossário:
+</h2>
+<details> 
+    <summary class="th2"><u>Explicação dos termos usados acima:</u></summary>
+    <p class="center">
+        <fieldset>
+            <b>🏆:</b> Vencedor do Campeonato.<br>
+            <b>🥈:</b> Vice do Campeonato.<br>
+            <b>🥉:</b> Terceiro lugar do Campeonato.<br>
+            <b class="f1">Summer Break:</b> Férias de verão que aconteceram entre o GP da Bélgica e Holanda.<br>
+            <b class="f1">GP:</b> Abreviação de Grand Prix - Grande Prêmio, em português. Cada corrida em um país é chamada de GP.<br>
+            <b class="f1">Pos.:</b> Posição do piloto.<br>
+            <b class="f1">Travessão "—":</b> Não pontuou (classificação abaixo do P10, não ter terminado a corrida, penalidade ou desclassificação).<br>
+            <b class="f1">Espaço em branco " ":</b> O piloto não participou do GP ou a corrida não aconteceu ainda.<br>
+            <b class="f1">Bahrein:</b> Gulf Air Bahrain Grand Prix / Grande Prêmio do Barém, no Circuito Internacional de Bahrain, na cidade de Sakhir.<br>
+            <b class="f1">Arábia Saudita:</b> STC Saudi Arabian Grand Prix / Grande Prêmio da Arábia Saudita, no Circuito Corniche de Gidá, na cidade de Jeddah.<br>
+            <b class="f1">Austrália:</b> Rolex Australian Grand Prix / Grande Prêmio da Austrália, no Circuito de Albert Park, na cidade de Melbourne.<br>
+            <b class="f1">Azerbaijão:</b> Grande Prêmio do Azerbaijão, no Circuito Urbano de Baku, na capital Bacu.<br>
+            <b class="f1">Miami:</b> Crypto.com Miami Grand Prix / Grande Prêmio de Miami, nos Estados Unidos, no Autódromo Internacional de Miami.<br>
+            <b class="f1">Mônaco:</b> Grande Prêmio de Mônaco, no Circuito de Mônaco, na cidade de Monte Carlo.<br>
+            <b class="f1">Espanha:</b> 2023 Spanish Grand Prix / Grande Prêmio da Espanha, no Circuito de Barcelona-Catalunha, na cidade de Montmeló.<br>
+            <b class="f1">Canadá:</b> Pirelli Canadian GP / Grande Prêmio do Canadá, no Circuito Gilles Villeneuve, na província de Quebec.<br>
+            <b class="f1">Áustria:</b> Rolex Austrian GP / Rolex Austrian GP, no circuito Red Bull Ring, na cidade de Spielberg.<br>
+            <b class="f1">Inglaterra:</b> Aramco British GP / Grande Prêmio da Grã-Bretanha, no Circuito de Silverstone, na vila de Silverstone.<br>
+            <b class="f1">Hungria:</b> Qatar Airways Hungarian GP / Grande Prêmio da Hungria, no circuito Hungaroring, no vilarejo de Mogyoród.<br>
+            <b class="f1">Bélgica:</b> MSC Cruises Belgian GP / Grande Prêmio da Bélgica, no Circuito de Spa-Francorchamps, na província de Liège.<br>
+            <b class="f1">Países Baixos:</b> Heineken Dutch GP / Grande Prêmio dos Países Baixos, no Circuito de Park Zandvoort, na província da Holanda do Norte.<br>
+            <b class="f1">Monza:</b> Pirelli Italian GP / Grande Prêmio da Itália, no Circuito de Monza, na cidade de Monza.<br>
+            <b class="f1">Singapura:</b> Singapore Airlines Singapore GP / Grande Prêmio de Singapura, no Circuito Urbano de Marina Bay, na baía da Marina.<br>
+            <b class="f1">Japão:</b> Lenovo Japanese GP / Grande Prêmio do Japão, no Circuito de Suzuka, na cidade de Suzuka.<br>
+            <b class="f1">Qatar:</b> Qatar Airways Qatar GP / Grande Prêmio do Catar, Circuito Internacional de Losail, na capital Doha.<br>
+            <b class="f1">Austin:</b> Lenovo United States GP / Grande Prêmio dos Estados Unidos 2, no Circuito das Américas, na cidade de Austin.<br>
+            <b class="f1">México:</b> Mexico City GP / Grande Prêmio do México, no Autódromo Hermanos Rodríguez, na capital Cidade do México.<br>
+            <b class="f1">Brasil:</b> Rolex São Paulo GP / Grande Prêmio do Brasil, no Autódromo José Carlos Pace, em Interlagos, São Paulo (SP).<br>
+            <b class="f1">Las Vegas:</b> Heineken Las Vegas GP / Grande Prêmio de Las Vegas, no Circuito Urbano de Las Vegas, nos Estados Unidos.<br>
+            <b class="f1">Abu Dhabi:</b> Etihad Airways Abu Dhabi GP / Grande Prêmio de Abu Dhabi, no Circuito de Yas Marina, na capital dos Emirados Árabes Unidos.<br>
+        </fieldset>
+    </p> 
+</details>
+<h2 class="hh">
+    Site Oficial da Fórmula 1
+</h2>
+<p class="th2">Para informações mais detalhadas sobre esta temporada e anteriores, além de encontrar sobre as outras competições automobilísticas além da F1.</p>
+<p><a href="https://www.formula1.com" target="_blank" class="th2">Clique para visitar o site oficial da Fórmula 1</a></p>
+</div><br>
+<footer>
+    <p class="th5">&copy; 2023 Resultados na F1 Mania</p>
+</footer> 
+<button onclick="topFunction()" id="backToTopBtn" title="Voltar para o topo"><i class='bx bxs-upvote'></i></button>
+</body>
+</html>

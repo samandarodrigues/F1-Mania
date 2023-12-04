@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <title id="top">F1 Mania</title>
+</head>
+
+<body>
+    <header>
+        <nav class="sidebar close">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <img src="logo2.png" alt="Logo da F1 Mania">
+                    </span>
+    
+                    <div class="text logo-text">
+                        <span class="name">F1 Mania</span>
+                        <span class="profession">Blog de notícias</span>
+                    </div>
+                </div>
+    
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+    
+            <div class="menu-bar">
+                <div class="menu">
+    
+                    <li class="search-box">
+                        <i class='bx bx-search icon'></i>
+                        <input type="text" placeholder="Procurar...">
+                    </li>
+    
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="../index.html">
+                                <i class='bx bx-home-alt icon' ></i>
+                                <span class="text nav-text">Página Inicial</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="historia.html">
+                                <i class='bx bx-book-open icon' ></i>
+                                <span class="text nav-text">História da F1</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="resultados.html">
+                                <i class='bx bx-bell icon'></i>
+                                <span class="text nav-text">Resultados</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="perfil.html">
+                                <i class='bx bxs-edit icon'></i>
+                                <span class="text nav-text">Perfis</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="calendario.html">
+                                <i class='bx bx-calendar icon' ></i>
+                                <span class="text nav-text">Calendário</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="contato.html">
+                                <i class='bx bx-user icon'></i>
+                                <span class="text nav-text">Contato</span>
+                            </a>
+                        </li>
+    
+                    </ul>
+                </div>
+    
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="entrar.html">
+                            <i class='bx bx-log-in-circle icon'></i>
+                            <span class="text nav-text">Entrar</span>
+                        </a>
+                    </li>
+    
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text text">Dark mode</span>
+    
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                    
+                </div>
+            </div>
+    
+        </nav>
+    </header>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+    </script>
+
+        <script>
+            var menuImage = document.getElementById("menu-image");
+            var menuTiposf1 = document.getElementById("menu-tipos-f1");
+    
+            // Quando a imagem do menu é clicada, mostrar/ocultar os tipos de livros
+            menuImage.addEventListener("click", function() {
+                if (menuTiposf1.style.display === "none" || menuTiposf1.style.display === "") {
+                    menuTiposf1.style.display = "block"; // Mostrar as opções de tipos de livros
+                } else {
+                    menuTiposf1.style.display = "none"; // Ocultar as opções de tipos de livros
+                }
+            });
+        </script>
+
+    <script>
+        document.addEventListener("click", function (event) {
+            // Crie um elemento de imagem para o carro
+            var car = document.createElement("img");
+            car.src = "https://assets.stickpng.com/images/580b585b2edbce24c47b2c8f.png";
+            car.classList.add("car-animation"); // Adicione a classe de animação
+
+            // Adicione o carro à página
+            document.body.appendChild(car);
+
+            // Remova o carro após a animação terminar
+            car.addEventListener("animationiteration", function () {
+                car.remove();
+            }, { once: true });
+        });
+    </script>
+
+    <div id="logo">
+        <h1 class="f1">FÓRMULA 1</h1>
+    </div>
+
+    <h1 class="hh4">Wolff dá receita contra desinteresse de fãs por causa de domínio da Red Bull</h1>
+    <p class="th2">Corridas como GP do Catar deste ano e melhor trabalho dos rivais de Max Verstappen e cia. são destacados por chefe da Mercedes</p>
+    <img class="imagem-destaque" src="https://cdn-5.motorsport.com/images/amp/6n98XaoY/s1100/max-verstappen-red-bull-racing.webp"><br>
+    <p class="th2">O chefe da Mercedes, <b>Toto Wolff</b>, acredita que a <b>Fórmula 1</b> precisa de mais corridas “pé embaixo”, como o <b>GP do Catar de 2023</b>, em meio a preocupações de que a falta de ultrapassagens e espetáculo continue na próxima temporada.</p>
+    <p class="th2">Os pilotos têm reclamado cada vez mais da necessidade de controlar o superaquecimento dos pneus Pirelli, com a borracha propensa ao desgaste térmico, o que os obriga a diminuir o ritmo em busca de ar mais fresco.</p>
+    <p class="th2">A Pirelli está ciente de um problema que diz dever-se ao fato de as equipes desenvolverem a aerodinâmica de seus novos carros de efeito solo muito mais do que o previsto. Embora esteja investigando a alteração do composto, a pesquisa e a construção necessárias significam que quaisquer pneus novos poderão não aparecer até 2025.</p>
+    <p class="th2">Dado que as equipes agora estão focadas na evolução de seus carros para 2024, há preocupações de que ‘trens’ de DRS em procissão possam perseguir a F1 e prejudicar ainda mais o espetáculo na próxima temporada.</p>
+    <p class="th2">Wolff acredita que a solução é perseguir corridas mais “pé embaixo”, como o GP do Catar, em outubro, em que foram obrigatórias paradas após 18 voltas por questões relacionadas aos pneus.</p>
+    <p class="th2">Questionado pelo F1 Mania sobre suas preocupações, o austríaco respondeu: “Eu não veria isso de forma negativa aqui em novembro, em Abu Dhabi. Temos que esperar e ver o que acontece no Bahrein no próximo ano e como a temporada vai se desenrolar.”</p>
+    <p class="th2">“Vamos esperar para ver como vai acontecer, e acho que vamos ver como os pneus Pirelli vão se comportar nos carros do próximo ano. Mas, no final, quando você olha, as ultrapassagens pioraram.”</p>
+    <p class="th2">"É tudo uma questão de gerenciamento térmico. Então, eu gostaria de ter corridas como no Catar, em que você simplesmente vai a todo vapor."</p><br>
+    <img class="imagem-destaque" src="https://cdn-5.motorsport.com/images/mgl/Y99eDGGY/s800/pirelli-tyres-preparation.webp">
+    <p class="th2">(Fotógrafo: Erik Junius)</p>
+    <p class="th2">O chefe do automobilismo da Pirelli, Mario Isola, alertou contra a criação de um pneu muito durável. Ele prevê que os pilotos irão acelerar a 100% em corridas inteiras, o que significa que não haverá brigas que levem a ultrapassagens.<br><br>
+
+        Isola acrescentou: “Precisamos aproveitar o momento certo para discutir isso adequadamente, envolvendo as equipes e seus estrategistas, porque quando você muda, por exemplo, o nível de desgaste, o risco é que tenhamos todas as corridas em uma parada, todas as equipes fazendo a mesma estratégia.</p><br>
+    <h2 class="hh3">Cabe aos rivais da Red Bull impedir que fãs desliguem a TV</h2>
+    <p class="th2">Além das preocupações com os pneus, há temores de que outra temporada de domínio da Red Bull possa estar por vir, já que ela parou de desenvolver seu carro de 2023 mais cedo para se concentrar no RB20.</p><br>
+    <img class="imagem-destaque" src="https://cdn-8.motorsport.com/images/mgl/0mb1RJa2/s800/toto-wolff-team-principal-and-.webp">
+    <p class="th2">(Fotógrafo: James Sutton / Motorsport Images)</p>
+    <p class="th2">Wolff disse que o domínio de Max Verstappen ainda não dissuadiu o público da F1, mas os rivais devem se esforçar para garantir uma competição saudável e manter o campeonato divertido.</p>
+    <p class="th2">Embora haja uma crença de que a F1 passou a destacar seu envolvimento nas redes sociais devido à queda no número de telespectadores, Wolff disse: “Os números que estamos vendo são fortes.</p>
+    <p class="th2">“Estamos crescendo nas redes sociais; vemos corridas lotadas e esgotadas [embora os promotores reconheçam que qualquer impacto nas vendas do domínio da Red Bull será sentido mais fortemente no próximo ano].”</p>
+    <p class="th2">“Mas na verdade, tudo gira em torno do espetáculo. Se o espetáculo não for bom, nossos torcedores vão nos seguir menos.”</p>
+    <p class="th2">“Mas o que sempre digo no esporte é que gosto da honestidade. O espetáculo acompanha o esporte e isso é uma meritocracia.”</p>
+    <p class="th2">“Na verdade, você não pode impedir isso, então somos nós, a Ferrari e todas as outras equipes que temos que fazer um trabalho melhor para competir com a Red Bull Racing.”</p>
+    <p class="th2">"É claro que existe o risco de que, com um certo atraso, as pessoas digam: 'Bem, de qualquer maneira, já sei o resultado'... mas só precisamos fazer um trabalho melhor."</p>
+    <p class="ntc">________________________________________________________________________________</p>
+    <table class="index">
+        <caption style="font-family: 'Formula', sans-serif; text-align: center;">Leia Também</caption>
+        <tr>
+            <td>
+                <a href="noticia1.html"><u>Após a confirmação de Sargeant na Williams, confira o grid completo da F1 2024</u></a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="noticia2"><u>Alfa Romeo fora F1? Entenda como parceria com Haas esfriou</u></a>
+            </td>
+        </tr>
+    </table><br>
+    <footer>
+        <p class="th5">&copy; 2023 Notícias na F1 Mania</p>
+    </footer> 
+    <button onclick="topFunction()" id="backToTopBtn" title="Voltar para o topo"><i class='bx bxs-upvote'></i></button>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('backToTopBtn');
+
+            window.onscroll = function () {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    button.style.display = 'block';
+                } else {
+                    button.style.display = 'none';
+                }
+            };
+
+            button.onclick = function () {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            };
+        });
+    </script>
+</body>
+</html>

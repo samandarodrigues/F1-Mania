@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <title id="top">F1 Mania</title>
+</head>
+
+<body>
+    <header>
+        <nav class="sidebar close">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <img src="logo2.png" alt="Logo da F1 Mania">
+                    </span>
+    
+                    <div class="text logo-text">
+                        <span class="name">F1 Mania</span>
+                        <span class="profession">Blog de notícias</span>
+                    </div>
+                </div>
+    
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+    
+            <div class="menu-bar">
+                <div class="menu">
+    
+                    <li class="search-box">
+                        <i class='bx bx-search icon'></i>
+                        <input type="text" placeholder="Procurar...">
+                    </li>
+    
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="../index.html">
+                                <i class='bx bx-home-alt icon' ></i>
+                                <span class="text nav-text">Página Inicial</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="historia.html">
+                                <i class='bx bx-book-open icon' ></i>
+                                <span class="text nav-text">História da F1</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="resultados.html">
+                                <i class='bx bx-bell icon'></i>
+                                <span class="text nav-text">Resultados</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="perfil.html">
+                                <i class='bx bxs-edit icon'></i>
+                                <span class="text nav-text">Perfis</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="calendario.html">
+                                <i class='bx bx-calendar icon' ></i>
+                                <span class="text nav-text">Calendário</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="contato.html">
+                                <i class='bx bx-user icon'></i>
+                                <span class="text nav-text">Contato</span>
+                            </a>
+                        </li>
+    
+                    </ul>
+                </div>
+    
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="entrar.html">
+                            <i class='bx bx-log-in-circle icon'></i>
+                            <span class="text nav-text">Entrar</span>
+                        </a>
+                    </li>
+    
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text text">Dark mode</span>
+    
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                    
+                </div>
+            </div>
+    
+        </nav>
+    </header>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+    </script>
+
+        <script>
+            var menuImage = document.getElementById("menu-image");
+            var menuTiposf1 = document.getElementById("menu-tipos-f1");
+    
+            // Quando a imagem do menu é clicada, mostrar/ocultar os tipos de livros
+            menuImage.addEventListener("click", function() {
+                if (menuTiposf1.style.display === "none" || menuTiposf1.style.display === "") {
+                    menuTiposf1.style.display = "block"; // Mostrar as opções de tipos de livros
+                } else {
+                    menuTiposf1.style.display = "none"; // Ocultar as opções de tipos de livros
+                }
+            });
+        </script>
+
+    <script>
+        document.addEventListener("click", function (event) {
+            // Crie um elemento de imagem para o carro
+            var car = document.createElement("img");
+            car.src = "https://assets.stickpng.com/images/580b585b2edbce24c47b2c8f.png";
+            car.classList.add("car-animation"); // Adicione a classe de animação
+
+            // Adicione o carro à página
+            document.body.appendChild(car);
+
+            // Remova o carro após a animação terminar
+            car.addEventListener("animationiteration", function () {
+                car.remove();
+            }, { once: true });
+        });
+    </script>
+
+    <div id="logo">
+        <h1 class="f1">FÓRMULA 1</h1>
+    </div>
+
+    <h1 class="hh4">Alfa Romeo fora F1? Entenda como parceria com Haas esfriou</h1>
+    <p class="th2">Marca italiana não descarta uma parceria com a Peugeot, 'irmã' no Grupo Stellantis.</p>
+    <img class="imagem-destaque" src="https://pbs.twimg.com/media/F_4zAlrXcAAPJUN?format=jpg&name=large"><br>
+    <p class="th2">Surgiram rumores na época do GP de Mônaco deste ano de que a Alfa Romeo poderia patrocinar a Haas quando seu contrato com a Sauber expirasse no final de 2023, no entanto, a fabricante não fez um anúncio oficial sobre quais são seus planos futuros.</p><br>
+    <img class="imagem-destaque" src="https://racer.com/wp-content/uploads/sites/85/2023/11/1019944289-LAT-20231124-GP2322_094347_56I0310-copy.jpeg?w=1000&h=600&crop=1"><br>
+    <p class="th2">Mesmo após o GP de Abu Dhabi, que encerrou a temporada, nenhum anúncio foi feito sobre o assunto, e o site RacingNews365, referindo-se a fontes que trabalham na empresa, publicou que a razão para isso são as negociações paralisadas entre Alfa e Haas.</p>
+    <p class="th2">Segundo a publicação, as duas partes não chegaram a um acordo sobre o tipo de patrocínio que a empresa italiana poderia ter na equipe americana.</p>
+    <p class="th2">A Alfa Romeo assinou um contrato com a Sauber em 2019, o que a tornou o patrocinador principal da equipe suíça, e isso acabou sendo uma jogada particularmente boa, pois parecia ao espectador ocasional que se tratava de uma verdadeira equipe de fábrica.</p><br>
+    <img class="imagem-destaque" src="https://pbs.twimg.com/media/GARnQqzWAAAB9aA?format=jpg&name=4096x4096"><br>
+    <p class="th2">No entanto, a F1 mudou nos últimos anos, a situação financeira das equipes está melhor e o esporte atrai cada vez mais patrocinadores graças à sua crescente popularidade. Como exemplo, a Haas fez da MoneyGram o patrocinador principal. Porém, um dos efeitos colaterais da explosão do esporte é que as equipes hoje exigem mais de seus patrocinadores, e é aí que pode haver uma diferença entre a Haas e a marca que conseguiu seu acordo de patrocínio com a Sauber de forma relativamente barata.</p>
+    <p class="th2">De acordo com o RN365, a Alfa Romeo esperava um acordo semelhante ao que fez com a Sauber, mas este já está abaixo do valor de mercado atual da F1 e, portanto, no final das contas, não deu em nada, o que significa que a lendária marca italiana deixará a F1.</p>
+    <p class="th2">Após o fim do acordo com a Sauber com o término da temporada 2023, a Alfa Romeo descartou a continuidade na Fórmula 1, afirmando que o foco do momento é uma entrada no Campeonato Mundial de Endurance da FIA (WEC).</p>
+    <p class="th2">Agora, o CEO da Alfa, Jean-Philippe Imparato, explicou ao <b>F1 Mania</b> que, com sua companhia determinada em seguir no automobilismo, a ida ao WEC é o caminho mais provável.<br><br>
+        Questionado sobre o porquê da situação com a Haas não ter avançado, Imparato disse: "Não estávamos interessados em fazer uma operação como a que fizemos com a Sauber. Isso nos levaria a apenas colocar nossa marca na carenagem. Não seria algo novo".<br><br>
+        "Começamos a olhar para outras coisas, chegando à conclusão de que a Alfa Romeo não tem nada a ver com o rally. A Stellantis já tem duas marcas envolvidas na Fórmula E, então o foco mudou para o WEC, um mundo na qual a Alfa Romeo tem belas experiências passadas".</p>
+    <img class="imagem-destaque" src="https://cdn-6.motorsport.com/images/mgl/0k7RBGl0/s800/start-action-1.webp">
+    <p class="th2">(Foto tirada por: Ferrari)</p>
+    <p class="th2">Imparato explicou que ainda não há uma decisão final sobre como seria essa entrada, com a Alfa avaliando a melhor forma de fazer isso.<br><br>
+        "O mundo do WEC está vivendo um momento de grande interesse, e quando há muita euforia, é difícil de entender qual nível de investimento é necessário para mirar alto. Vimos em 2015 a escalada sem controle de custos da LMP1, então temos que dar um tempo para entender como tudo ficará".<br><br>
+        "Acredito que seja correto ter uma ideia completa, saber precisamente o que estamos enfrentando antes de nos lançarmos no projeto".<br><br>
+        Uma possibilidade seria uma ligação com a Peugeot, que também é parte do Grupo Stellantis.<br><br>
+        "Obviamente é um cenário que avaliamos. Há marcas da Stellantis que temos um contato próximo de seus programas desportivos, como a DS e a Maserati na Fórmula E. Quando voltarmos às pistas, faremos isso com o apoio da Stellantis, e com a Peugeot já no WEC, a cooperação é possível. Talvez os projetos possam ser paralelos em outros aspectos mas, no fim, somos da mesma família".<br><br>   
+        "Mas, quero deixar claro que, no momento, não vamos confirmar nada. Faremos isso quando tivermos completado o planejamento e a avaliação do investimento".</p>
+        <p class="ntc">________________________________________________________________________________</p>
+    <table class="index">
+        <caption style="font-family: 'Formula', sans-serif; text-align: center;">Leia Também</caption>
+        <tr>
+            <td>
+                <a href="noticia1.html"><u>Após a confirmação de Sargeant na Williams, confira o grid completo da F1 2024</u></a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="noticia4"><u>Mesmo com 'matemática' de Leclerc, Mercedes garante o vice-campeonato de construtores; confira tabela final</u></a>
+            </td>
+        </tr>
+    </table><br>
+    <footer>
+        <p class="th5">&copy; 2023 Notícias na F1 Mania</p>
+    </footer> 
+    <button onclick="topFunction()" id="backToTopBtn" title="Voltar para o topo"><i class='bx bxs-upvote'></i></button>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('backToTopBtn');
+
+            window.onscroll = function () {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    button.style.display = 'block';
+                } else {
+                    button.style.display = 'none';
+                }
+            };
+
+            button.onclick = function () {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            };
+        });
+    </script>
+</body>
+</html>

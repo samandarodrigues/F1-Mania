@@ -1,0 +1,1347 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Formula';
+    src: url(Formula1-Regular.otf), format('opentype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    /* Estilize o carro com uma classe e defina a animação */
+    .car-animation {
+      position: absolute;
+      bottom: 0;
+      left: 0; /* Comece na tela */
+      width: 100px; /* Largura do carro */
+      animation: moveCar 2s linear infinite; /* 4 segundos de animação, movimento linear, repetição infinita */
+  }
+
+  /* Defina a animação de movimento do carro */
+  @keyframes moveCar {
+      0% {
+          left: 0; /* Comece na tela */
+      }
+      100% {
+          left: 100%; /* Mova completamente pela tela para a direita */
+      }
+  }
+
+  /* Media queries para tornar o design responsivo */
+  @media (max-width: 768px) {
+      section {
+          flex-direction: column;
+      }
+
+      article {
+          width: 100%; /* Artigos ocupam a largura total */
+      }
+  }
+
+#logo {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #ff3131;
+    font-family: 'Formula1', sans-serif;
+}
+
+#logo h1 {
+    font-size: 24px;
+    margin: 0;
+    color: white;
+}
+
+/* Estilos para os artigos */
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+article {
+  flex: 1;
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out; /* Adiciona uma transi��o suave */
+  position: relative; /* Adiciona position relative */
+  margin-right: 10px; /* Espa�amento entre os artigos */
+  padding: 20px; /* Add padding for better spacing */
+  border-radius: 8px; /* Add border radius for rounded corners */
+}
+
+article:last-child {
+  margin-right: 0; /* Remove o espa�amento do �ltimo artigo para evitar excesso de espa�o */
+}
+
+article:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05); /* Aumenta a escala ao passar o mouse para dar um efeito de destaque */
+  z-index: 1; /* Ajusta a ordem de empilhamento */
+}
+
+article .image-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  overflow: hidden;
+}
+
+article .image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+article h2 {
+  font-size: 18px;
+  margin: 15px;
+  font-weight: 600;
+  color: rgb(20, 19, 19); /* Altera a cor do texto para preto */
+}
+
+/* Estilo para artigos visitados */
+article:visited h2 {
+  color: rgb(50, 44, 44); /* Cor do texto para artigos visitados */
+}
+
+body.dark article {
+  background-color: #2c2c2c; /* Dark background color for the article */
+  color: white; /* Text color for dark mode */
+  padding: 20px; /* Add padding for better spacing */
+  border-radius: 8px; /* Add border radius for rounded corners */
+  transition: transform 0.3s;
+}
+
+body.dark article h1 {
+  color: #ffcc00; /* Optional: Change h1 text color in dark mode */
+}
+
+body.dark article a {
+  color: #3498db; /* Optional: Change link color in dark mode */
+}
+
+:root{
+    /* ===== Colors ===== */
+    --body-color: #E4E9F7;
+    --sidebar-color: #FFF;
+    --primary-color: #fe5c5c;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #707070;
+
+    /* ====== Transition ====== */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 94%;
+    margin-left: 6%;
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+    position: absolute;
+    overflow-x: hidden;
+}
+
+body.dark, body.dark h2, body.dark p, body.dark th, body.dark td, body.dark ul, body.dark li, body.dark ol{
+  color: white;
+}
+
+
+
+body.dark .index u{
+  color: #4ca9e3;
+  text-align: center;
+}
+
+body.dark table {
+  background-color: #2c2c2c; /* Dark background color for the table */
+  color: white; /* Text color for dark mode */
+  width: 100%; /* Make the table take 100% of the width */
+  border-radius: 5px;
+  border: 1px solid;
+  margin-bottom: 20px;
+  transition: transform 0.3s;
+  margin: 0 auto; /* Centraliza o cont�iner na p�gina */
+  text-align: justify; /* Centraliza o texto dentro do cont�iner */
+}
+
+body.dark table .index {
+  background-color: #2c2c2c; /* Dark background color for the table */
+  color: white; /* Text color for dark mode */
+  width: 100%; /* Make the table take 100% of the width */
+  border-radius: 5px;
+  border: 1px solid;
+  margin-bottom: 20px;
+  transition: transform 0.3s;
+  margin: 0 auto; /* Centraliza o cont�iner na p�gina */
+  text-align: center; /* Centraliza o texto dentro do cont�iner */
+}
+
+body.dark th, body.dark td {
+  border: 1px solid #444; /* Border color for table cells */
+  padding: 8px; /* Add padding for better spacing */
+  text-align: left; /* Align text to the left */
+}
+
+body.dark .index th, body.dark .index td {
+  border: 1px solid #444; /* Border color for table cells */
+  padding: 8px; /* Add padding for better spacing */
+  text-align: center; /* Align text to the left */
+}
+
+body.dark th, body.dark td {
+  border: 1px solid #444; /* Border color for table cells */
+  padding: 8px; /* Add padding for better spacing */
+  text-align: left; /* Align text to the left */
+}
+
+
+body.dark .pfl2 td,
+body.dark .pfl3 td {
+    background-color: #545252; /* Dark background color for table header */
+}
+
+/* Optional: Style even and odd rows differently */
+body.dark .pfl2 tr:nth-child(even),
+body.dark .pfl3 tr:nth-child(even) {
+    background-color: #555353; /* Dark background color for even rows */
+}
+
+/* Optional: Style even and odd rows differently */
+body.dark tr:nth-child(even) {
+  background-color: #252525; /* Dark background color for even rows */
+}
+
+body.dark .pfl{
+  max-width: 1100px;
+  align-items: center;
+  width: 95%;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+
+::selection{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+table.dark .index {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table.dark .index td {
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+/* Style for the clicked link */
+table.dark .index a:visited, article.dark .index p:visited {
+  color: lightgray; /* Set the color you want for visited links */
+}
+
+body.dark{
+    --body-color: #18191a;
+    --sidebar-color: #242526;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #fff;
+    --text-color: #ccc;
+}
+
+/* ===== Sidebar ===== */
+ .sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background: var(--sidebar-color);
+    transition: var(--tran-05);
+    z-index: 100;
+    box-shadow: 3px 0 0 #df2121;  
+}
+.sidebar.close{
+    width: 88px;
+}
+
+/* ===== Reusable code - Here ===== */
+.sidebar li{
+    height: 50px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.sidebar header .image,
+.sidebar .icon{
+    min-width: 60px;
+    border-radius: 6px;
+}
+
+.sidebar .icon{
+    min-width: 60px;
+    border-radius: 6px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.sidebar .text,
+.sidebar .icon{
+    color: var(--text-color);
+    transition: var(--tran-03);
+}
+
+.sidebar .text{
+    font-size: 17px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 1;
+}
+.sidebar.close .text{
+    opacity: 0;
+}
+/* =========================== */
+
+.sidebar header{
+    position: relative;
+}
+
+.sidebar header .image-text{
+    display: flex;
+    align-items: center;
+}
+.sidebar header .logo-text{
+    display: flex;
+    flex-direction: column;
+}
+header .image-text .name {
+    margin-top: 2px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+}
+
+header .image-text .profession{
+    font-size: 16px;
+    margin-top: -2px;
+    display: block;
+}
+
+.sidebar header .image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar header .image img{
+    width: 40px;
+    border-radius: 6px;
+}
+
+.sidebar header .toggle{
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%) rotate(180deg);
+    height: 25px;
+    width: 25px;
+    background-color: var(--primary-color);
+    color: var(--sidebar-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    transition: var(--tran-05);
+}
+
+body.dark .sidebar header .toggle{
+    color: var(--text-color);
+}
+
+.sidebar.close .toggle{
+    transform: translateY(-50%) rotate(0deg);
+}
+
+.sidebar .menu{
+    margin-top: 40px;
+}
+
+.sidebar li.search-box{
+    border-radius: 6px;
+    background-color: var(--primary-color-light);
+    cursor: pointer;
+    transition: var(--tran-05);
+}
+
+.sidebar li.search-box input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: var(--primary-color-light);
+    color: var(--text-color);
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: var(--tran-05);
+}
+.sidebar li a{
+    list-style: none;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: var(--tran-03);
+}
+
+.sidebar li a:hover{
+    background-color: var(--primary-color);
+}
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text{
+    color: var(--sidebar-color);
+}
+body.dark .sidebar li a:hover .icon,
+body.dark .sidebar li a:hover .text{
+    color: var(--text-color);
+}
+
+.sidebar .menu-bar{
+    height: calc(100% - 55px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: scroll;
+}
+.menu-bar::-webkit-scrollbar{
+    display: none;
+}
+.sidebar .menu-bar .mode{
+    border-radius: 6px;
+    background-color: var(--primary-color-light);
+    position: relative;
+    transition: var(--tran-05);
+}
+
+.menu-bar .mode .sun-moon{
+    height: 50px;
+    width: 60px;
+}
+
+.mode .sun-moon i{
+    position: absolute;
+}
+.mode .sun-moon i.sun{
+    opacity: 0;
+}
+body.dark .mode .sun-moon i.sun{
+    opacity: 1;
+}
+body.dark .mode .sun-moon i.moon{
+    opacity: 0;
+}
+
+.menu-bar .bottom-content .toggle-switch{
+    position: absolute;
+    right: 0;
+    height: 100%;
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.toggle-switch .switch{
+    position: relative;
+    height: 22px;
+    width: 40px;
+    border-radius: 25px;
+    background-color: var(--toggle-color);
+    transition: var(--tran-05);
+}
+
+.switch::before{
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background-color: var(--sidebar-color);
+    transition: var(--tran-04);
+}
+
+body.dark .switch::before{
+    left: 20px;
+}
+
+.home{
+    position: absolute;
+    top: 0;
+    top: 0;
+    left: 250px;
+    height: 100vh;
+    width: calc(100% - 250px);
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+}
+.home .text{
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 12px 60px;
+}
+
+.sidebar.close ~ .home{
+    left: 78px;
+    height: 100vh;
+    width: calc(100% - 78px);
+}
+body.dark .home .text{
+    color: var(--text-color);
+}
+
+article p {
+    margin: 0 15px 15px;
+}
+
+/* Estilos para as tabelas */
+body table {
+  background-color: #fff; /* Dark background color for the table */
+  color: black; /* Text color for dark mode */
+  width: 100%; /* Make the table take 100% of the width */
+  border-radius: 5px;
+  border: 1px solid;
+  margin-bottom: 20px;
+  transition: transform 0.3s;
+  margin: 0 auto; /* Centraliza o cont�iner na p�gina */
+  text-align: justify; /* Centraliza o texto dentro do cont�iner */
+}
+
+.pfl {
+    width: 95%;
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+table:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+table caption {
+    background-color: #ff3131;
+    color: white;
+    padding: 10px;
+    font-weight: 600;
+}
+
+table td {
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Rodap� */
+footer {
+    background-color: #ff3131;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Estilize o carro com uma classe e defina a anima��o */
+.car-animation {
+    position: absolute;
+    bottom: 0;
+    left: -100px; /* Comece fora da tela */
+    width: 100px; /* Largura do carro */
+    animation: moveCar 4s linear infinite; /* 4 segundos de anima��o, movimento linear, repeti��o infinita */
+}
+
+/* Defina a anima��o de movimento do carro */
+@keyframes moveCar {
+    0% {
+        left: -100px; /* Comece fora da tela � esquerda */
+    }
+    100% {
+        left: 100%; /* Mova completamente pela tela para a direita */
+    }
+}
+
+p{
+    text-align: justify;
+}
+
+ul{
+    text-align: justify;
+}
+
+.pfl{
+    max-width: 1100px;
+    align-items: center;
+}
+
+.pfl2 {
+    background-color: rgb(213, 213, 213);
+}
+
+.pfl3 {
+    background-color: rgb(239, 239, 239);
+}
+
+.img{
+    width: 27%;
+    height: 12px;
+}
+
+.img2{
+    width: 40%;
+    height: 12px;
+}
+
+.img3{
+    width: 30%;
+    height: 12px;
+}
+
+.f1{
+   font-family: 'Formula', sans-serif;
+}
+
+.fh3{
+  font-family: 'Formula', sans-serif;
+  padding: 10px;
+}
+
+.meu-botao {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid #00A0DE;
+  color: #ffffff;
+  background-color: #00A0DE;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: 10px;
+  margin-left: auto; /* Configuração automática da margem esquerda */
+  margin-right: auto; /* Configuração automática da margem direita */
+}
+
+  .meu-botao:hover {
+    background-color: black;
+    color: #00A0DE;
+  }
+
+  .meu-botao2 {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #20394C;
+    color: #ffffff;
+    background-color: #20394C;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 10px;
+    
+  }
+
+  .meu-botao2:hover {
+    background-color: #ffffff;
+    color: #20394C;
+  }
+
+  .meu-botao3 {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #E6002B;
+    color: #ffffff;
+    background-color: #E6002B;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 10px;
+    
+  }
+
+  .meu-botao3:hover {
+    background-color: #ffffff;
+    color: #E6002B;
+  }
+
+  .meu-botao4 {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #037A68;
+    color: #ffffff;
+    background-color: #037A68 ;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 10px;
+    
+  }
+
+  .meu-botao4:hover {
+    background-color: #ffffff;
+    color: #037A68;
+  }
+
+  .meu-botao5 {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #A42134;
+    color: #ffffff;
+    background-color: #A42134;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 10px;
+    
+  }
+
+  .meu-botao5:hover {
+    background-color: #ffffff;
+    color: #A42134;
+  }
+
+  .meu-botao6 {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #FF8000;
+    color: #ffffff;
+    background-color: #FF8000;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 10px;
+    
+  }
+
+  .meu-botao6:hover {
+    background-color: black;
+    color: #FF8000;
+  }
+
+  .meu-botao7 {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #005BA9;
+    color: #ffffff;
+    background-color: #005BA9;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 10px;
+    
+  }
+
+  .meu-botao7:hover {
+    background-color: #FD4BC7;
+    color: #005BA9;
+  }
+
+  .meu-botao8 {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #00A19C;
+    color: #ffffff;
+    background-color: #00A19C;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 10px;
+    
+  }
+
+  .meu-botao8:hover {
+    background-color: white;
+    color: #00A19C;
+    color: #c6c6c6;
+  }
+
+  .meu-botao9 {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #EF1A2D;
+    color: #ffffff;
+    background-color: #EF1A2D;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 10px;
+    
+  }
+
+  .meu-botao9:hover {
+    background-color: #FFF200;
+    color: #EF1A2D;
+  }
+
+  .meu-botao10 {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #0600EF;
+    color: #ffffff;
+    background-color: #0600EF;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 10px;
+    
+  }
+
+  .meu-botao10:hover {
+    background-color: white;
+    color: #0600EF;
+    color: rgb(219, 10, 64);
+  }
+
+  .fe{
+    font-family: 'Formula', sans-serif;
+    margin: 20px;
+    margin-bottom: -2px;
+  }
+
+  .meu-botao, .meu-botao2, .meu-botao3, .meu-botao4, .meu-botao5, .meu-botao6, .meu-botao7, .meu-botao8, .meu-botao9, .meu-botao10 {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .meu-botao:active {
+    transform: translateX(10px); /* Move 10 pixels para a direita quando clicado */
+  }
+
+  .meu-botao2:active {
+    transform: translateX(10px); /* Move 10 pixels para a direita quando clicado */
+  }
+
+  .meu-botao3:active {
+    transform: translateX(10px); /* Move 10 pixels para a direita quando clicado */
+  }
+
+  .meu-botao4:active {
+    transform: translateX(10px); /* Move 10 pixels para a direita quando clicado */
+  }
+
+  .meu-botao5:active {
+    transform: translateX(10px); /* Move 10 pixels para a direita quando clicado */
+  }
+
+  .meu-botao6:active {
+    transform: translateX(10px); /* Move 10 pixels para a direita quando clicado */
+  }
+
+  .meu-botao7:active {
+    transform: translateX(10px); /* Move 10 pixels para a direita quando clicado */
+  }
+
+  .meu-botao8:active {
+    transform: translateX(10px); /* Move 10 pixels para a direita quando clicado */
+  }
+
+  .meu-botao9:active {
+    transform: translateX(10px); /* Move 10 pixels para a direita quando clicado */
+  }
+
+  .meu-botao10:active {
+    transform: translateX(10px); /* Move 10 pixels para a direita quando clicado */
+  }
+
+  .fh{
+    font-family: 'Formula', sans-serif;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .th{
+    font-size: 16px; /* Tamanho da fonte */
+    line-height: 1.5; /* Altura da linha para melhor legibilidade */
+    color: #333; /* Cor do texto */
+    margin-bottom: 20px; 
+    margin: 0 auto; /* Centraliza o par�grafo na p�gina */
+    max-width: 1000px; /* Define uma largura m�xima para o par�grafo */
+    padding: 10px; /* Adiciona algum espa�amento interno para melhor legibilidade */
+}
+
+.container {
+  max-width: 1000px; /* Largura m�xima do cont�iner */
+  margin: 0 auto; /* Centraliza o cont�iner na p�gina */
+  padding: 20px; /* Adiciona algum espa�amento interno para melhor legibilidade */
+  text-align: justify; /* Centraliza o texto dentro do cont�iner */
+}
+
+.hh{
+  font-family: 'Formula', sans-serif;
+  margin-bottom: 20px; 
+  margin: 0 auto; /* Centraliza o par�grafo na p�gina */
+  max-width: 1150px; /* Define uma largura m�xima para o par�grafo */
+  padding: 20px; /* Adiciona algum espa�amento interno para melhor legibilidade */
+}
+
+.hh2{
+  font-family: 'Formula', sans-serif;
+  margin-left: 93px; /* Adiciona um recuo � esquerda */
+  margin-bottom: -5px;
+}
+
+.hh3{
+  font-family: 'Formula', sans-serif;
+  font-size: 200%;
+  margin-left: 115px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  max-width: 1090px;
+}
+
+.hh4{
+  font-family: 'Formula', sans-serif;
+  font-size: 250%;
+  margin-left: 115px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  max-width: 1090px; /* Define uma largura m�xima para o par�grafo */
+}
+
+.hh5{
+  font-family: 'Formula', sans-serif;
+  font-size: 150%;
+  line-height: 1.5; /* Altura da linha para melhor legibilidade */
+  margin-bottom: 20px; 
+  margin: 0 auto; /* Centraliza o par�grafo na p�gina */
+  max-width: 1000px; /* Define uma largura m�xima para o par�grafo */
+  padding: 10px; /* Adiciona algum espa�amento interno para melhor legibilidade */
+}
+
+.hh6{
+  font-family: 'Formula', sans-serif;
+  font-size: 130%;
+  line-height: 1.5; /* Altura da linha para melhor legibilidade */
+  margin-bottom: 20px; 
+  margin: 0 auto; /* Centraliza o par�grafo na p�gina */
+  max-width: 1000px; /* Define uma largura m�xima para o par�grafo */
+  padding: 10px; /* Adiciona algum espa�amento interno para melhor legibilidade */
+}
+
+.hh7{
+  font-family: 'Formula', sans-serif;
+  font-size: 230%;
+  line-height: 1.5; /* Altura da linha para melhor legibilidade */
+  margin-bottom: 20px; 
+  margin: 0 auto; /* Centraliza o par�grafo na p�gina */
+  max-width: 1000px; /* Define uma largura m�xima para o par�grafo */
+  padding: 10px; /* Adiciona algum espa�amento interno para melhor legibilidade */
+}
+
+.th2{
+  font-size: 16px; /* Tamanho da fonte */
+  line-height: 1.5; /* Altura da linha para melhor legibilidade */
+  color: #333; /* Cor do texto */
+  margin-left: 115px;
+  margin-bottom: 15px;
+  max-width: 1090px; /* Define uma largura m�xima para o par�grafo */
+}
+
+.th3{
+  font-size: 20px; /* Tamanho da fonte */
+  line-height: 1.5; /* Altura da linha para melhor legibilidade */
+  color: black; /* Cor do texto */
+  margin-bottom: 20px; 
+  margin: 0 auto; /* Centraliza o par�grafo na p�gina */
+  max-width: 1000px; /* Define uma largura m�xima para o par�grafo */
+  padding: 10px; /* Adiciona algum espa�amento interno para melhor legibilidade */
+}
+
+.th4{
+  font-size: 20px; /* Tamanho da fonte */
+  line-height: 1.5; /* Altura da linha para melhor legibilidade */
+  color: black; /* Cor do texto */
+  margin-bottom: 20px; 
+  margin: 0 auto; /* Centraliza o par�grafo na p�gina */
+  max-width: 1000px; /* Define uma largura m�xima para o par�grafo */
+  padding: 10px; /* Adiciona algum espa�amento interno para melhor legibilidade */
+  font-family: 'Formula', sans-serif;
+}
+
+.th5{
+  font-size: 16px; /* Tamanho da fonte */
+  line-height: 1.5; /* Altura da linha para melhor legibilidade */
+  color: #ffffff; /* Cor do texto */
+  margin: 0 auto; /* Centraliza o par�grafo na p�gina */
+  max-width: 1000px; /* Define uma largura m�xima para o par�grafo */
+  text-align: justify;
+}
+
+.th3{
+  font-size: 20px; /* Tamanho da fonte */
+  line-height: 1.5; /* Altura da linha para melhor legibilidade */
+  color: black; /* Cor do texto */
+  margin-bottom: 20px; 
+  margin: 0 auto; /* Centraliza o par�grafo na p�gina */
+  max-width: 1000px; /* Define uma largura m�xima para o par�grafo */
+}
+
+body.dark .th3 a{
+  color: #69efeb;
+}
+
+.ft{
+  background-color: #333;
+  width: 100%;
+}
+
+nav{
+  text-align: center;
+}
+
+body.dark {
+  background-color: #1e1e1e; /* Dark background color */
+  color: white; /* Text color in dark mode */
+}
+
+.index {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.index caption {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.index td {
+  padding: 15px;
+  border: 1px solid #333; /* Border color for cells */
+  text-align: center;
+}
+
+.index a {
+  color: darkblue;
+}
+
+.index .image-container {
+  width: 100px;
+  height: 100px;
+  background-color: #333; /* Background color for image container */
+  /* Add styles for your image container */
+}
+
+/* Styling links in dark mode */
+body.dark .index a{
+  color: #4ca9e3; /* Link color in dark mode */
+}
+
+/* Styling table rows in dark mode */
+body.dark .index tr {
+  background-color: #333; /* Background color for table rows in dark mode */
+  text-align: center;
+}
+
+body.dark tr {
+  background-color: #303030; /* Background color for table rows in dark mode */
+  text-align: center;
+}
+
+/* Styling the table header in dark mode */
+body.dark .index th {
+  background-color: #333; /* Background color for table header in dark mode */
+  color: #4ca9e3; /* Text color for table header in dark mode */
+  text-align: center;
+}
+
+.th {
+  list-style: none;
+  padding: 0;
+}
+
+.th a {
+  text-decoration: none;
+  color: #1a436f; /* Link color in light mode */
+  padding: 40px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+body.dark .th a {
+  text-decoration: none;
+  color: #69efeb; /* Link color in dark mode */
+  padding: 40px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.ul2{
+  margin-left: 80px;
+}
+
+.center{
+  justify-content: center;
+  align-items: center;
+}
+
+fieldset {
+  text-align: left;
+  width: 90%;
+  margin-left: 50px;
+}
+
+fieldset b{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Adicione o seguinte c�digo CSS ao seu arquivo de estilo (style.css) */
+.more-updates {
+  text-align: center;
+  padding: 20px 15px;
+  margin-bottom: 20px;
+}
+
+.more-updates2 {
+  text-align: left;
+  margin-bottom: 40px; 
+  margin: 0 auto; /* Centraliza o par�grafo na p�gina */
+  max-width: 1000px; /* Define uma largura m�xima para o par�grafo */
+  padding: 10px; /* Adiciona algum espa�amento interno para melhor legibilidade */
+}
+
+.btn-more-updates {
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: #ff3131; /* Cor de fundo do bot�o */
+  color: #fff; /* Cor do texto do bot�o */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Adicionando transforma��o � transi��o */
+}
+
+.btn-more-updates:hover {
+  background-color: #e32323; /* Mudar a cor de fundo ao passar o mouse */
+}
+
+.btn-more-updates:active {
+  transform: scale(0.95); /* Diminuir o tamanho do bot�o ao ser clicado */
+}
+
+.dark summary.th2 {
+  color: #fff; /* Cor do texto do summary no modo escuro */
+}
+
+.dark a.th2 {
+  color: #69efeb; /* Cor do link no modo escuro */
+}
+
+#backToTopBtn {
+  display: flex;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #df0808;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
+}
+
+.con {
+  display: flex;
+}
+
+.header {
+  flex: 40%; /* A .header ocupa 40% da largura da .con */
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header h1{
+  font-size: 165%;
+}
+
+.team-info {
+  flex: 60%; /* A .team-info ocupa 60% da largura da .con */
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+}
+
+/* Restante do seu CSS... */
+
+.drivers {
+  flex: 1; /* A .drivers ocupa todo o espaço disponível na .team-info */
+}
+
+.driver {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.history{
+  margin-left: 20px;
+}
+
+.history h2.f1{
+  margin-left: -20px;
+  margin-bottom: 10px;
+}
+
+.driver img {
+  max-width: 200px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.all {
+  max-width: 1200px; /* Largura máxima para o container */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.imagem-destaque {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-left: 115px;
+  margin-bottom: 15px;
+  max-width: 1090px; /* Define uma largura m�xima para o par�grafo */
+}
+
+.imagem-destaque2{
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px; 
+  margin: 0 auto; /* Centraliza o par�grafo na p�gina */
+  max-width: 1000px; /* Define uma largura m�xima para o par�grafo */
+} 
+
+.imagem-destaque3{
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+  margin: 0 auto; /* Centraliza o par�grafo na p�gina */
+  max-width: 1150px; /* Define uma largura m�xima para o par�grafo */
+}
+
+p.ntc {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tweet-container {
+  text-align: center;
+  max-width: 600px; /* Defina a largura máxima desejada para o contêiner do tweet */
+  width: 100%;
+  margin: 0 auto; /* Define margens automáticas para centralizar horizontalmente */
+} 
+
+.dark .th4, .dark .th5, .dark .th6{
+  color: white;
+}
+
+.dark .header, .dark .team-info{
+  background-color: #18191a;
+}
+
+.dark .team-info li a{
+  color: #00A19C;
+}
+
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  font-size: 20px;
+  text-align: center;
+}
+
+form button{
+  font-size: 20px;
+}
+
+.logo{
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 15px;
+  max-width: 500px; /* Define uma largura m�xima para o par�grafo */
+}

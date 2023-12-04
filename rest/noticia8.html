@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <title id="top">F1 Mania</title>
+</head>
+
+<body>
+    <header>
+        <nav class="sidebar close">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <img src="logo2.png" alt="Logo da F1 Mania">
+                    </span>
+    
+                    <div class="text logo-text">
+                        <span class="name">F1 Mania</span>
+                        <span class="profession">Blog de notícias</span>
+                    </div>
+                </div>
+    
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+    
+            <div class="menu-bar">
+                <div class="menu">
+    
+                    <li class="search-box">
+                        <i class='bx bx-search icon'></i>
+                        <input type="text" placeholder="Procurar...">
+                    </li>
+    
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="../index.html">
+                                <i class='bx bx-home-alt icon' ></i>
+                                <span class="text nav-text">Página Inicial</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="historia.html">
+                                <i class='bx bx-book-open icon' ></i>
+                                <span class="text nav-text">História da F1</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="resultados.html">
+                                <i class='bx bx-bell icon'></i>
+                                <span class="text nav-text">Resultados</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="perfil.html">
+                                <i class='bx bxs-edit icon'></i>
+                                <span class="text nav-text">Perfis</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="calendario.html">
+                                <i class='bx bx-calendar icon' ></i>
+                                <span class="text nav-text">Calendário</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="contato.html">
+                                <i class='bx bx-user icon'></i>
+                                <span class="text nav-text">Contato</span>
+                            </a>
+                        </li>
+    
+                    </ul>
+                </div>
+    
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="entrar.html">
+                            <i class='bx bx-log-in-circle icon'></i>
+                            <span class="text nav-text">Entrar</span>
+                        </a>
+                    </li>
+    
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text text">Dark mode</span>
+    
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                    
+                </div>
+            </div>
+    
+        </nav>
+    </header>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+    </script>
+
+        <script>
+            var menuImage = document.getElementById("menu-image");
+            var menuTiposf1 = document.getElementById("menu-tipos-f1");
+    
+            // Quando a imagem do menu é clicada, mostrar/ocultar os tipos de livros
+            menuImage.addEventListener("click", function() {
+                if (menuTiposf1.style.display === "none" || menuTiposf1.style.display === "") {
+                    menuTiposf1.style.display = "block"; // Mostrar as opções de tipos de livros
+                } else {
+                    menuTiposf1.style.display = "none"; // Ocultar as opções de tipos de livros
+                }
+            });
+        </script>
+
+    <script>
+        document.addEventListener("click", function (event) {
+            // Crie um elemento de imagem para o carro
+            var car = document.createElement("img");
+            car.src = "https://assets.stickpng.com/images/580b585b2edbce24c47b2c8f.png";
+            car.classList.add("car-animation"); // Adicione a classe de animação
+
+            // Adicione o carro à página
+            document.body.appendChild(car);
+
+            // Remova o carro após a animação terminar
+            car.addEventListener("animationiteration", function () {
+                car.remove();
+            }, { once: true });
+        });
+    </script>
+
+    <div id="logo">
+        <h1 class="f1">FÓRMULA 1</h1>
+    </div>
+<h1 class="hh4">LEGADOS: 6 pilotos brasileiros para ficar de olho para um futuro na F1</h1>
+<p class="th2">Brasileiros são destaques nas categorias de base da F1. Veja quem são;</p>
+<img class="imagem-destaque" src="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2022/09/Felipe-Drugovich-Monza-e1662829166100.jpg?w=1220&h=674&crop=1"><br>
+<p class="th2">O ano de 2022 está sendo um momento de alívio e empolgação para aqueles que tanto sonham em ver um brasileiro como parte do grid da Fórmula 1, algo que não acontece desde Pietro Fittipaldi em 2020 e Felipe Massa como último titular de temporada completa em 2017.
+
+Apesar do hiato de cinco anos, os brasileiros são atuais destaques nas categorias de base, ou seja, na "escada" para a F1.
+
+Porém, quem são eles? Onde correm? Por que se destacam? Confira a lista abaixo.</p>
+
+<h2 class="hh">Pilotos Brasileiros em Destaque</h2>
+
+    <table class="pfl" border="1">
+        <tr class="pfl2">
+            <th>Piloto</th>
+            <th>Categoria</th>
+            <th>Equipe</th>
+            <th>Temporada</th>
+            <th>Pontos</th>
+            <th>Vitórias</th>
+            <th>Pódios</th>
+        </tr>
+        <tr>
+            <td>Felipe Drugovich</td>
+            <td>Fórmula 2</td>
+            <td>MP Motorsport</td>
+            <td>3ª temporada</td>
+            <td>180</td>
+            <td>4</td>
+            <td>7</td>
+        </tr>
+        <tr class="pfl3">
+            <td>Enzo Fittipaldi</td>
+            <td>Fórmula 2</td>
+            <td>Charouz Racing System</td>
+            <td>1ª temporada completa</td>
+            <td>100</td>
+            <td>0</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Caio Collet</td>
+            <td>FIA Fórmula 3</td>
+            <td>Academia de Pilotos da Alpine</td>
+            <td>2ª temporada</td>
+            <td>N/A</td>
+            <td>1</td>
+            <td>N/A</td>
+        </tr>
+        <tr class="pfl3">
+            <td>Gabriel Bortoleto</td>
+            <td>Fórmula Regional Europeia</td>
+            <td>R-Ace GP</td>
+            <td>2ª temporada</td>
+            <td>N/A</td>
+            <td>1</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td>Rafa Câmara</td>
+            <td>Fórmula 4 Italiana e Fórmula 4 ADAC</td>
+            <td>PREMA Racing</td>
+            <td>1ª temporada</td>
+            <td>183</td>
+            <td>2</td>
+            <td>8</td>
+        </tr>
+        <tr class="pfl3">
+            <td>Kiko Porto</td>
+            <td>Indy Pro 2000</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+    </table>
+
+    <p class="ntc">________________________________________________________________________________</p>
+    <table class="index">
+        <caption style="font-family: 'Formula', sans-serif; text-align: center;">Leia Também</caption>
+        <tr>
+            <td>
+                <a href="noticia1.html"><u>Com metas sustentáveis, F1 esbarra na logística do calendário</u></a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="noticia1.html"><u>Consolidado na F1, Verstappen vai em busca do tri em 2023</u></a>
+            </td>
+        </tr>
+    </table><br>
+    <footer>
+        <p class="th5">&copy; 2023 Notícias na F1 Mania</p>
+    </footer> 
+    <button onclick="topFunction()" id="backToTopBtn" title="Voltar para o topo"><i class='bx bxs-upvote'></i></button>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('backToTopBtn');
+
+            window.onscroll = function () {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    button.style.display = 'block';
+                } else {
+                    button.style.display = 'none';
+                }
+            };
+
+            button.onclick = function () {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            };
+        });
+    </script>
+</body>
+</html>

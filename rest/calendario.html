@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <title id="top">F1 Mania</title>
+</head>
+
+<body>
+    <header>
+        <nav class="sidebar close">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <img src="logo2.png" alt="Logo da F1 Mania">
+                    </span>
+    
+                    <div class="text logo-text">
+                        <span class="name">F1 Mania</span>
+                        <span class="profession">Blog de notícias</span>
+                    </div>
+                </div>
+    
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+    
+            <div class="menu-bar">
+                <div class="menu">
+    
+                    <li class="search-box">
+                        <i class='bx bx-search icon'></i>
+                        <input type="text" placeholder="Procurar...">
+                    </li>
+    
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="../index.html">
+                                <i class='bx bx-home-alt icon' ></i>
+                                <span class="text nav-text">Página Inicial</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="historia.html">
+                                <i class='bx bx-book-open icon' ></i>
+                                <span class="text nav-text">História da F1</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="resultados.html">
+                                <i class='bx bx-bell icon'></i>
+                                <span class="text nav-text">Resultados</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="perfil.html">
+                                <i class='bx bxs-edit icon'></i>
+                                <span class="text nav-text">Perfis</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="calendario.html">
+                                <i class='bx bx-calendar icon' ></i>
+                                <span class="text nav-text">Calendário</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="contato.html">
+                                <i class='bx bx-user icon'></i>
+                                <span class="text nav-text">Contato</span>
+                            </a>
+                        </li>
+    
+                    </ul>
+                </div>
+    
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="entrar.html">
+                            <i class='bx bx-log-in-circle icon'></i>
+                            <span class="text nav-text">Entrar</span>
+                        </a>
+                    </li>
+    
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text text">Dark mode</span>
+    
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                    
+                </div>
+            </div>
+    
+        </nav>
+    </header>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+    </script>
+
+        <script>
+            var menuImage = document.getElementById("menu-image");
+            var menuTiposf1 = document.getElementById("menu-tipos-f1");
+    
+            // Quando a imagem do menu é clicada, mostrar/ocultar os tipos de livros
+            menuImage.addEventListener("click", function() {
+                if (menuTiposf1.style.display === "none" || menuTiposf1.style.display === "") {
+                    menuTiposf1.style.display = "block"; // Mostrar as opções de tipos de livros
+                } else {
+                    menuTiposf1.style.display = "none"; // Ocultar as opções de tipos de livros
+                }
+            });
+        </script>
+
+    <script>
+        document.addEventListener("click", function (event) {
+            // Crie um elemento de imagem para o carro
+            var car = document.createElement("img");
+            car.src = "https://assets.stickpng.com/images/580b585b2edbce24c47b2c8f.png";
+            car.classList.add("car-animation"); // Adicione a classe de animação
+
+            // Adicione o carro à página
+            document.body.appendChild(car);
+
+            // Remova o carro após a animação terminar
+            car.addEventListener("animationiteration", function () {
+                car.remove();
+            }, { once: true });
+        });
+    </script>
+
+    <div id="logo">
+        <h1 class="f1">FÓRMULA 1</h1>
+    </div>
+    <ul><h1 class="hh">Confira o calendário com os horários e os resultados de cada uma das atividades da temporada 2023 de Fórmula 1:</h1>
+    <img class="imagem-destaque3" src="https://s2-ge.glbimg.com/FF1pG4RP_F5HO36XWLHUKApGOi4=/0x0:1920x1080/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2023/0/w/o3oI8aSpWU0lnn5JdMwQ/fmrbrv9xwaafv18.jpg"><br>
+
+<ul class="th3">05/03/2023 – <a class="f1">GP do Bahrein</a> – Sakhir </ul>
+<ul class="th3">19/03/2023 – <a class="f1">GP da Arábia Saudita</a> – Jeddah </ul>
+<ul class="th3">02/04/2023 – <a class="f1">GP da Austrália</a> – Melbourne</ul>
+<ul class="th3">30/04/2023 – <a class="f1">GP do Azerbaijão</a> – Baku </ul>
+<ul class="th3">07/05/2023 – <a class="f1">GP de Miami</a> – Miami (EUA) </ul>
+<ul class="th3">28/05/2023 – <a class="f1">GP de Mônaco</a>  – Monte Carlo </ul>
+<ul class="th3">04/06/2023 – <a class="f1">GP da Espanha</a> – Barcelona </ul>
+<ul class="th3">18/06/2023 – <a class="f1">GP do Canadá</a> – Montreal </ul>
+<ul class="th3">02/07/2023 – <a class="f1">GP da Áustria</a> – Red Bull Ring / Spielberg</ul> 
+<ul class="th3">09/07/2023 – <a class="f1">GP da Inglaterra</a> – Silverstone </ul>
+<ul class="th3">23/07/2023 – <a class="f1">GP da Hungria</a> – Hungaroring / Budapeste</ul> 
+<ul class="th3">30/07/2023 – <a class="f1">GP da Bélgica</a> – Spa-Francorchamps</ul> 
+<ul class="th3">27/08/2023 – <a class="f1">GP da Holanda</a> – Zandvoort </ul>
+<ul class="th3">03/09/2023 – <a class="f1">GP da Itália</a> – Monza </ul>
+<ul class="th3">17/09/2023 – <a class="f1">GP de Singapura</a> – Marina Bay</ul> 
+<ul class="th3">24/09/2023 – <a class="f1">GP do Japão</a> – Suzuka </ul>
+<ul class="th3">08/10/2023 – <a class="f1">GP do Qatar</a> – Losail </ul>
+<ul class="th3">22/10/2023 – <a class="f1">GP dos Estados Unidos</a> – COTA / Austin </ul>
+<ul class="th3">29/10/2023 – <a class="f1">GP do México</a> – Cidade do México </ul>
+<ul class="th3">05/11/2023 – <a class="f1">GP de São Paulo</a> – Interlagos / Brasil </ul>
+<ul class="th3">18/11/2023 – <a class="f1">GP de Las Vegas</a> – Las Vegas </ul>
+<ul class="th3">26/11/2023 – <a class="f1">GP de Abu Dabi</a> – Yas Marina</ul> 
+
+<h3 class="th4">Etapa cancelada:</h3>
+<p class="th3">21/05/2023 – <a class="f1"> GP da Emília-Romanha </a> – Ímola (Itália)<br></p>
+<p class="th3">Em decorrência das fortes chuvas que assolam a região de Imola, na Itália, e provocaram enchentes as quais fizeram com que a Fórmula 1 cancelasse a realização do GP da Emilia Romagna. A decisão foi tomada após pedido do vice primeiro-ministro do país, Matteo Salvini.</p>
+<h3 class="th4">Confira os resultados da temporada:</h3>
+<p class="th3"> Na página dos perfis, atualizamos todos os resultados das corridas da 74ª temporada de Fórmula 1. Confira abaixo!</p>
+<div class="more-updates2">
+    <a href="resultado.html" class="btn-more-updates">Resultados</a>
+</div><br>
+    <footer>
+        <p class="th5">&copy; 2023 Calendário na F1 Mania </p>
+    </footer>
+    <button onclick="topFunction()" id="backToTopBtn" title="Voltar para o topo"><i class='bx bxs-upvote'></i></button>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.getElementById('backToTopBtn');
+
+            window.onscroll = function () {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    button.style.display = 'block';
+                } else {
+                    button.style.display = 'none';
+                }
+            };
+
+            button.onclick = function () {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            };
+        });
+    </script>
+</body>
+</html>
